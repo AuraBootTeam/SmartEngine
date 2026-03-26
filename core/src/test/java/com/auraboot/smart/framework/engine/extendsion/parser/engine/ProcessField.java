@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.extendsion.parser.engine;
+package com.auraboot.smart.framework.engine.extendsion.parser.engine;
 
 import java.util.Map;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.constant.ExtensionElementsConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionDecorator;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.constant.ExtensionElementsConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionDecorator;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
 
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
 import lombok.Data;
 
 /**
  * @author zilong.jiangzl
  * @create 2020-07-16 9:42 下午
- * please use @com.alibaba.smart.framework.engine.smart.Property, Example: com.alibaba.smart.framework.engine.test.cases.extensions.CompositePropertiesTest
+ * please use @com.auraboot.smart.framework.engine.smart.Property, Example: com.auraboot.smart.framework.engine.test.cases.extensions.CompositePropertiesTest
  */
 @Data
 @Deprecated

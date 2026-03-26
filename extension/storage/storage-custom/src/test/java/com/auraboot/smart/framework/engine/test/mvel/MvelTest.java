@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.mvel;
+package com.auraboot.smart.framework.engine.test.mvel;
 
 import java.io.Serializable;
 

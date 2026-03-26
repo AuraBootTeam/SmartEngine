@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.model.assembly;
+package com.auraboot.smart.framework.engine.model.assembly;
 
 import java.util.Map;
 

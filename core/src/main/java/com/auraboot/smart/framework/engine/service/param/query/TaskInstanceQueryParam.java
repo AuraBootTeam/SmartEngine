@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.service.param.query;
+package com.auraboot.smart.framework.engine.service.param.query;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -6,8 +6,8 @@ import java.util.List;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import com.alibaba.smart.framework.engine.service.param.query.JsonCondition;
-import com.alibaba.smart.framework.engine.service.param.query.JsonInCondition;
+import com.auraboot.smart.framework.engine.service.param.query.JsonCondition;
+import com.auraboot.smart.framework.engine.service.param.query.JsonInCondition;
 
 
 @Data
@@ -22,7 +22,7 @@ public class TaskInstanceQueryParam extends BaseQueryParam {
 
    private String processDefinitionActivityId;
    /**
-    * @see com.alibaba.smart.framework.engine.constant.TaskInstanceConstant
+    * @see com.auraboot.smart.framework.engine.constant.TaskInstanceConstant
     */
    private String status;
 

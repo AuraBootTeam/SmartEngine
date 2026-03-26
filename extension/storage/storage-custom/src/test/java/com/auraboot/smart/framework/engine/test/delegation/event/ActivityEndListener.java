@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.test.delegation.event;
+package com.auraboot.smart.framework.engine.test.delegation.event;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.listener.Listener;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
-import com.alibaba.smart.framework.engine.test.cases.CamundaEventTest;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.listener.Listener;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.test.cases.CamundaEventTest;
 
 public class ActivityEndListener  implements Listener {
     @Override

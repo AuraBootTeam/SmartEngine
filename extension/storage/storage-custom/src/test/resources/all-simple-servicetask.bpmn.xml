@@ -8,15 +8,15 @@
         <startEvent id="startEvent"/>
         <sequenceFlow id="seq0" sourceRef="startEvent" targetRef="serviceTask0"/>
         <serviceTask id="serviceTask0"
-                     smart:class="com.alibaba.smart.framework.engine.test.delegation.ServiceTask0Delegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.delegation.ServiceTask0Delegation"/>
 
         <sequenceFlow id="seq1" sourceRef="serviceTask0" targetRef="serviceTask1"/>
         <serviceTask id="serviceTask1"
-                     smart:class="com.alibaba.smart.framework.engine.test.delegation.ServiceTask1Delegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.delegation.ServiceTask1Delegation"/>
 
         <sequenceFlow id="seq2" sourceRef="serviceTask1" targetRef="serviceTask2"/>
         <serviceTask id="serviceTask2"
-                     smart:class="com.alibaba.smart.framework.engine.test.delegation.ServiceTask2Delegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.delegation.ServiceTask2Delegation"/>
 
 
         <sequenceFlow id="seq3" sourceRef="serviceTask2" targetRef="endEvent"/>

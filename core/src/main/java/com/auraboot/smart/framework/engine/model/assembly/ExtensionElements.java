@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.model.assembly;
+package com.auraboot.smart.framework.engine.model.assembly;
 
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.dialect;
+package com.auraboot.smart.framework.engine.dialect;
 
 /**
  * Database dialect interface for handling database-specific SQL syntax.

@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.configuration;
+package com.auraboot.smart.framework.engine.configuration;
 
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
 
 import java.util.concurrent.Callable;
 

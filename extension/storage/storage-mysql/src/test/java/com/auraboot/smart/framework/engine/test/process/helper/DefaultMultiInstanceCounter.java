@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.test.process.helper;
+package com.auraboot.smart.framework.engine.test.process.helper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.MultiInstanceCounter;
-import com.alibaba.smart.framework.engine.constant.AdHocConstant;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
-import com.alibaba.smart.framework.engine.service.query.TaskQueryService;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.MultiInstanceCounter;
+import com.auraboot.smart.framework.engine.constant.AdHocConstant;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
+import com.auraboot.smart.framework.engine.service.query.TaskQueryService;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 January  18:03.

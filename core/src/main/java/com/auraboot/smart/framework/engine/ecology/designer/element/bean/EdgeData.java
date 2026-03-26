@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.ecology.designer.element.bean;
+package com.auraboot.smart.framework.engine.ecology.designer.element.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

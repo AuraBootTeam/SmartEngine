@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.model.instance.Instance;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.model.instance.Instance;
 
 /**
  * Snowflake-based distributed ID generator.

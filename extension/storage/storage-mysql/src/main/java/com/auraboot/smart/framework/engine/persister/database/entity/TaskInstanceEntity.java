@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.persister.database.entity;
+package com.auraboot.smart.framework.engine.persister.database.entity;
 
 import java.util.Date;
 

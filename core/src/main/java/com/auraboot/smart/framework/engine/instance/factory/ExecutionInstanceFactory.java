@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.instance.factory;
+package com.auraboot.smart.framework.engine.instance.factory;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.instance.ActivityInstance;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
 
 public interface ExecutionInstanceFactory {
 

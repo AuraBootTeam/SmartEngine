@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.service.query;
+package com.auraboot.smart.framework.engine.service.query;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.model.instance.NotificationInstance;
-import com.alibaba.smart.framework.engine.service.param.query.NotificationQueryParam;
+import com.auraboot.smart.framework.engine.model.instance.NotificationInstance;
+import com.auraboot.smart.framework.engine.service.param.query.NotificationQueryParam;
 
 /**
  * 知会抄送查询服务接口

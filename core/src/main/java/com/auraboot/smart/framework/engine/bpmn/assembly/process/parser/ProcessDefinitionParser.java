@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.process.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.process.parser;
 
 import java.util.List;
 import java.util.Map;
@@ -6,21 +6,21 @@ import java.util.Map;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.ProcessDefinitionImpl;
-import com.alibaba.smart.framework.engine.common.util.CollectionUtil;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.BaseElement;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.model.assembly.IdBasedElement;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.xml.parser.AbstractElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.ProcessDefinitionImpl;
+import com.auraboot.smart.framework.engine.common.util.CollectionUtil;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.BaseElement;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.IdBasedElement;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.xml.parser.AbstractElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 @ExtensionBinding(group = ExtensionConstant.ELEMENT_PARSER, bindKey = ProcessDefinitionImpl.class)
 

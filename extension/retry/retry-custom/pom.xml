@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>smart-engine</artifactId>
-        <groupId>com.alibaba.smart.framework</groupId>
+        <groupId>com.auraboot.smart.framework</groupId>
         <version>4.0.0</version>
         <relativePath>../../../pom.xml</relativePath>
 
@@ -20,7 +20,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.smart.framework</groupId>
+            <groupId>com.auraboot.smart.framework</groupId>
             <artifactId>smart-engine-extension-storage-custom</artifactId>
             <version>${project.version}</version>
         </dependency>

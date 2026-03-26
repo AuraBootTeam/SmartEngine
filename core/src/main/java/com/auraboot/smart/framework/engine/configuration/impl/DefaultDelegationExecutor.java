@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.annotation.Retryable;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.configuration.DelegationExecutor;
-import com.alibaba.smart.framework.engine.configuration.ExceptionProcessor;
-import com.alibaba.smart.framework.engine.configuration.InstanceAccessor;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.ContextBoundedJavaDelegation;
-import com.alibaba.smart.framework.engine.delegation.JavaDelegation;
-import com.alibaba.smart.framework.engine.delegation.TccDelegation;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.annotation.Retryable;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.configuration.DelegationExecutor;
+import com.auraboot.smart.framework.engine.configuration.ExceptionProcessor;
+import com.auraboot.smart.framework.engine.configuration.InstanceAccessor;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.ContextBoundedJavaDelegation;
+import com.auraboot.smart.framework.engine.delegation.JavaDelegation;
+import com.auraboot.smart.framework.engine.delegation.TccDelegation;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
 
-import com.alibaba.smart.framework.engine.util.ThreadPoolUtil;
+import com.auraboot.smart.framework.engine.util.ThreadPoolUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

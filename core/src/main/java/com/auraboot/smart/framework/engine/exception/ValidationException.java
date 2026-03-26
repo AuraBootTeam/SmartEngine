@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.exception;
+package com.auraboot.smart.framework.engine.exception;
 
 public class ValidationException extends EngineException {
 

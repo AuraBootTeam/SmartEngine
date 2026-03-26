@@ -1,27 +1,27 @@
-package com.alibaba.smart.framework.engine.test.sharding;
+package com.auraboot.smart.framework.engine.test.sharding;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.configuration.ConfigurationOption;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.constant.TaskInstanceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.persister.database.dao.UserTaskIndexDAO;
-import com.alibaba.smart.framework.engine.persister.database.entity.UserTaskIndexEntity;
-import com.alibaba.smart.framework.engine.service.param.query.PendingTaskQueryParam;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomVariablePersister;
-import com.alibaba.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
-import com.alibaba.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
-import com.alibaba.smart.framework.engine.test.process.helper.dispatcher.IdAndGroupTaskAssigneeDispatcher;
+import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.constant.TaskInstanceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.persister.database.dao.UserTaskIndexDAO;
+import com.auraboot.smart.framework.engine.persister.database.entity.UserTaskIndexEntity;
+import com.auraboot.smart.framework.engine.service.param.query.PendingTaskQueryParam;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomVariablePersister;
+import com.auraboot.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
+import com.auraboot.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
+import com.auraboot.smart.framework.engine.test.process.helper.dispatcher.IdAndGroupTaskAssigneeDispatcher;
 
 import lombok.Setter;
 import org.junit.Assert;

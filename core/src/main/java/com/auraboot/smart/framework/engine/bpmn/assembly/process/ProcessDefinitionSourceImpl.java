@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.process;
+package com.auraboot.smart.framework.engine.bpmn.assembly.process;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinitionSource;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinitionSource;
 
 import lombok.Data;
 

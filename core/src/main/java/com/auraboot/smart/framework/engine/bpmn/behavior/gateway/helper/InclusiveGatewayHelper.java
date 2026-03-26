@@ -1,30 +1,30 @@
-package com.alibaba.smart.framework.engine.bpmn.behavior.gateway.helper;
+package com.auraboot.smart.framework.engine.bpmn.behavior.gateway.helper;
 
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.tree.ActivityTreeNode;
-import com.alibaba.smart.framework.engine.common.util.CollectionUtil;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.VariablePersister;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.deployment.ProcessDefinitionContainer;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultVariableInstance;
-import com.alibaba.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.VariableInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmProcessDefinition;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.tree.ActivityTreeNode;
+import com.auraboot.smart.framework.engine.common.util.CollectionUtil;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.deployment.ProcessDefinitionContainer;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultVariableInstance;
+import com.auraboot.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.VariableInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import static com.alibaba.smart.framework.engine.deployment.impl.DefaultProcessDefinitionContainer.ACTIVITY_TREE_CACHE;
-import static com.alibaba.smart.framework.engine.deployment.impl.DefaultProcessDefinitionContainer.JOIN_LATCH_COUNT_CACHE;
+import static com.auraboot.smart.framework.engine.deployment.impl.DefaultProcessDefinitionContainer.ACTIVITY_TREE_CACHE;
+import static com.auraboot.smart.framework.engine.deployment.impl.DefaultProcessDefinitionContainer.JOIN_LATCH_COUNT_CACHE;
 
 public class InclusiveGatewayHelper {
     public static final String TRIGGER_ACTIVITY_IDS = "$triggerActivityIds$";

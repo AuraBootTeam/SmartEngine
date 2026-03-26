@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.diagram;
+package com.auraboot.smart.framework.engine.bpmn.assembly.diagram;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.NoneIdBasedElement;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.NoneIdBasedElement;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 August  10:02.

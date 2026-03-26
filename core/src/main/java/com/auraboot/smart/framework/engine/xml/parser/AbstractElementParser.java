@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.xml.parser;
+package com.auraboot.smart.framework.engine.xml.parser;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.exception.ParseException;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.BaseElement;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.exception.ParseException;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.BaseElement;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

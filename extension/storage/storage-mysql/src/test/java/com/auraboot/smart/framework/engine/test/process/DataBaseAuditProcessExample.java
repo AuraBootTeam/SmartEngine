@@ -1,19 +1,19 @@
-package com.alibaba.smart.framework.engine.test.process;
+package com.auraboot.smart.framework.engine.test.process;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.configuration.ConfigurationOption;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ActivityInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
+import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
 
 import org.junit.Assert;
 import org.junit.Test;

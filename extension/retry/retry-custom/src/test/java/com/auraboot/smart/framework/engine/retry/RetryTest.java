@@ -1,25 +1,25 @@
-//package com.alibaba.smart.framework.engine.retry;
+//package com.auraboot.smart.framework.engine.retry;
 //
 //import java.util.HashMap;
 //import java.util.List;
 //import java.util.Map;
 //
-//import com.alibaba.smart.framework.engine.SmartEngine;
-//import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-//import com.alibaba.smart.framework.engine.configuration.impl.DefaultIdGenerator;
-//import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-//import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-//import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-//import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-//import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-//import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-//import com.alibaba.smart.framework.engine.persister.custom.RetryRecordInstance;
-//import com.alibaba.smart.framework.engine.retry.model.instance.RetryRecord;
-//import com.alibaba.smart.framework.engine.retry.service.command.RetryService;
-//import com.alibaba.smart.framework.engine.service.command.ExecutionCommandService;
-//import com.alibaba.smart.framework.engine.service.command.ProcessCommandService;
-//import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-//import com.alibaba.smart.framework.engine.service.query.ExecutionQueryService;
+//import com.auraboot.smart.framework.engine.SmartEngine;
+//import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+//import com.auraboot.smart.framework.engine.configuration.impl.DefaultIdGenerator;
+//import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+//import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+//import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+//import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+//import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+//import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+//import com.auraboot.smart.framework.engine.persister.custom.RetryRecordInstance;
+//import com.auraboot.smart.framework.engine.retry.model.instance.RetryRecord;
+//import com.auraboot.smart.framework.engine.retry.service.command.RetryService;
+//import com.auraboot.smart.framework.engine.service.command.ExecutionCommandService;
+//import com.auraboot.smart.framework.engine.service.command.ProcessCommandService;
+//import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+//import com.auraboot.smart.framework.engine.service.query.ExecutionQueryService;
 //
 //import org.junit.After;
 //import org.junit.Assert;

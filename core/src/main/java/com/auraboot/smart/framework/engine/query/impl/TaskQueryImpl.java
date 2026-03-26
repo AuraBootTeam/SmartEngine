@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.query.impl;
+package com.auraboot.smart.framework.engine.query.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,17 +9,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.dialect.Dialect;
-import com.alibaba.smart.framework.engine.dialect.DialectRegistry;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.storage.TaskInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.query.TaskQuery;
-import com.alibaba.smart.framework.engine.service.param.query.JsonCondition;
-import com.alibaba.smart.framework.engine.service.param.query.JsonInCondition;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.dialect.Dialect;
+import com.auraboot.smart.framework.engine.dialect.DialectRegistry;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.storage.TaskInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.query.TaskQuery;
+import com.auraboot.smart.framework.engine.service.param.query.JsonCondition;
+import com.auraboot.smart.framework.engine.service.param.query.JsonInCondition;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
 
 /**
  * Implementation of TaskQuery fluent API.

@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.service.command;
+package com.auraboot.smart.framework.engine.service.command;
 
-import com.alibaba.smart.framework.engine.model.instance.DeploymentInstance;
-import com.alibaba.smart.framework.engine.service.param.command.CreateDeploymentCommand;
-import com.alibaba.smart.framework.engine.service.param.command.UpdateDeploymentCommand;
+import com.auraboot.smart.framework.engine.model.instance.DeploymentInstance;
+import com.auraboot.smart.framework.engine.service.param.command.CreateDeploymentCommand;
+import com.auraboot.smart.framework.engine.service.param.command.UpdateDeploymentCommand;
 
 /**
  * 将流程定义文件持久化到 数据库里面，并负责调用 RepositoryCommandService 完成解析。

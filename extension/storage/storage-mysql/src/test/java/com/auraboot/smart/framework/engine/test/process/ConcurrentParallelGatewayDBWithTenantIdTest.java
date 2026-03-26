@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.test.process;
+package com.auraboot.smart.framework.engine.test.process;
 
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

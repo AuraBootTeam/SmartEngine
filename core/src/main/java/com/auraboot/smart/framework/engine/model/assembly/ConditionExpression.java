@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.model.assembly;
+package com.auraboot.smart.framework.engine.model.assembly;
 
 /**
  * @author 高海军 帝奇 Apr 14, 2016 2:50:20 PM

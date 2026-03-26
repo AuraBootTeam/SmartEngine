@@ -4,7 +4,7 @@
 
     <bpmn:startEvent id="start">
       <bpmn:extensionElements>
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.delegation.event.ProcessStartListener" event="start" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.delegation.event.ProcessStartListener" event="start" />
       </bpmn:extensionElements>
       <bpmn:outgoing>start-gateway</bpmn:outgoing>
     </bpmn:startEvent>
@@ -13,8 +13,8 @@
         <camunda:properties>
           <camunda:property name="abc" value="def" />
         </camunda:properties>
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.delegation.event.ActivityStartListener" event="start" />
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.delegation.event.ActivityEndListener" event="end" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.delegation.event.ActivityStartListener" event="start" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.delegation.event.ActivityEndListener" event="end" />
       </bpmn:extensionElements>
       <bpmn:incoming>start-gateway</bpmn:incoming>
       <bpmn:outgoing>gateway-end</bpmn:outgoing>
@@ -24,12 +24,12 @@
     <bpmn:endEvent id="end">
       <bpmn:incoming>gateway-end</bpmn:incoming>
       <bpmn:extensionElements>
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.delegation.event.ProcessEndListener" event="end" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.delegation.event.ProcessEndListener" event="end" />
       </bpmn:extensionElements>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="gateway-end" sourceRef="gateway" targetRef="end">
       <bpmn:extensionElements>
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.delegation.event.TakeEventListener" event="take" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.delegation.event.TakeEventListener" event="take" />
       </bpmn:extensionElements>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">a &gt;=1</bpmn:conditionExpression>
     </bpmn:sequenceFlow>

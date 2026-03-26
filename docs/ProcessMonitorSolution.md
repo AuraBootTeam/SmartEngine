@@ -58,9 +58,9 @@ public class ProcessMonitorEvent {
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.configuration.DelegationExecutor;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.configuration.DelegationExecutor;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -109,10 +109,10 @@ public class MonitoringDelegationExecutor implements DelegationExecutor {
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.configuration.ListenerExecutor;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.configuration.ListenerExecutor;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -162,8 +162,8 @@ public class MonitoringListenerExecutor implements ListenerExecutor {
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.common.expression.evaluator.ExpressionEvaluator;
-import com.alibaba.smart.framework.engine.configuration.ConfigurationOption;
+import com.auraboot.smart.framework.engine.common.expression.evaluator.ExpressionEvaluator;
+import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -206,8 +206,8 @@ config.setExpressionEvaluator(
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.configuration.ExceptionProcessor;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.configuration.ExceptionProcessor;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -241,9 +241,9 @@ public class MonitoringExceptionProcessor implements ExceptionProcessor {
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
-import com.alibaba.smart.framework.engine.persister.variable.VariablePersister;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.persister.variable.VariablePersister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -311,15 +311,15 @@ public class MonitoringVariablePersister implements VariablePersister {
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.behavior.TransitionBehavior;
-import com.alibaba.smart.framework.engine.behavior.base.AbstractTransitionBehavior;
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow;
-import com.alibaba.smart.framework.engine.common.expression.ExpressionUtil;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ConditionExpression;
-import com.alibaba.smart.framework.engine.model.assembly.Transition;
+import com.auraboot.smart.framework.engine.behavior.TransitionBehavior;
+import com.auraboot.smart.framework.engine.behavior.base.AbstractTransitionBehavior;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow;
+import com.auraboot.smart.framework.engine.common.expression.ExpressionUtil;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ConditionExpression;
+import com.auraboot.smart.framework.engine.model.assembly.Transition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -363,8 +363,8 @@ public class MonitoringSequenceFlowBehavior extends AbstractTransitionBehavior<S
 ```java
 package com.example.smartengine.config;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
 import com.example.smartengine.monitor.*;
 
 public class MonitorEnabledProcessEngineConfiguration {
@@ -401,10 +401,10 @@ public class MonitorEnabledProcessEngineConfiguration {
 ```java
 package com.example.smartengine.config;
 
-import com.alibaba.smart.framework.engine.configuration.DelegationExecutor;
-import com.alibaba.smart.framework.engine.configuration.ListenerExecutor;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.DelegationExecutor;
+import com.auraboot.smart.framework.engine.configuration.ListenerExecutor;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
 import com.example.smartengine.monitor.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -446,8 +446,8 @@ public class SmartEngineMonitorConfiguration {
 ```java
 package com.example.smartengine.test;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
 import com.example.smartengine.monitor.*;
 import org.junit.Before;
 
@@ -487,9 +487,9 @@ public abstract class MonitorEnabledTestCase {
 ```java
 package com.example.smartengine.config;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
 import com.example.smartengine.monitor.*;
 
 public class MonitorEnabledSmartEngine extends DefaultSmartEngine {
@@ -620,9 +620,9 @@ public static ProcessEngineConfiguration create() {
 ```java
 package com.example.smartengine.monitor;
 
-import com.alibaba.smart.framework.engine.configuration.DelegationExecutor;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.configuration.DelegationExecutor;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -831,7 +831,7 @@ public class BatchMonitorLog {
 [ERROR] ProcessError processInstanceId=PI_123456 activityId=calculate_discount error=NullPointerException
 java.lang.NullPointerException
     at com.example.DiscountCalculator.calculate(DiscountCalculator.java:45)
-    at com.alibaba.smart.framework.engine.delegation.JavaDelegation.execute(JavaDelegation.java:32)
+    at com.auraboot.smart.framework.engine.delegation.JavaDelegation.execute(JavaDelegation.java:32)
     ...
 ```
 
@@ -873,12 +873,12 @@ MONITOR_LOG.info("[MONITOR] ActivityStart traceId={} processInstanceId={} ...",
 ```java
 package com.example.smartengine.config;
 
-import com.alibaba.smart.framework.engine.configuration.DelegationExecutor;
-import com.alibaba.smart.framework.engine.configuration.ExceptionProcessor;
-import com.alibaba.smart.framework.engine.configuration.ListenerExecutor;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.persister.variable.VariablePersister;
+import com.auraboot.smart.framework.engine.configuration.DelegationExecutor;
+import com.auraboot.smart.framework.engine.configuration.ExceptionProcessor;
+import com.auraboot.smart.framework.engine.configuration.ListenerExecutor;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.persister.variable.VariablePersister;
 import com.example.smartengine.monitor.*;
 
 public class CompleteMonitorConfiguration {

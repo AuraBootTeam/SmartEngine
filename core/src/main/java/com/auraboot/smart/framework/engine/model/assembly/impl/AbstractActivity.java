@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.model.assembly.impl;
+package com.auraboot.smart.framework.engine.model.assembly.impl;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
 
 import lombok.Data;
 

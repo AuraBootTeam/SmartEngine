@@ -1,15 +1,15 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.process.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.process.parser;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.ProcessDefinitionSourceImpl;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.BaseElement;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.xml.parser.AbstractElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.ProcessDefinitionSourceImpl;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.BaseElement;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.xml.parser.AbstractElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

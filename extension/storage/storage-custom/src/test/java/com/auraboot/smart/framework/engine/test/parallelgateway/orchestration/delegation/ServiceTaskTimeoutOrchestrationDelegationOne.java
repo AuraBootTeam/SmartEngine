@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.parallelgateway.orchestration.delegation;
+package com.auraboot.smart.framework.engine.test.parallelgateway.orchestration.delegation;
 
 public class ServiceTaskTimeoutOrchestrationDelegationOne extends ServiceTaskTimeoutOrchestrationDelegation {
 

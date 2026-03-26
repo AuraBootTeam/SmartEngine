@@ -1,19 +1,19 @@
-package com.alibaba.smart.framework.engine.bpmn.behavior.event;
+package com.auraboot.smart.framework.engine.bpmn.behavior.event;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.behavior.base.AbstractActivityBehavior;
-import com.alibaba.smart.framework.engine.bpmn.assembly.event.EndEvent;
-import com.alibaba.smart.framework.engine.common.util.DateUtil;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
-import com.alibaba.smart.framework.engine.service.command.ExecutionCommandService;
+import com.auraboot.smart.framework.engine.behavior.base.AbstractActivityBehavior;
+import com.auraboot.smart.framework.engine.bpmn.assembly.event.EndEvent;
+import com.auraboot.smart.framework.engine.common.util.DateUtil;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.service.command.ExecutionCommandService;
 
 @ExtensionBinding(group = ExtensionConstant.ACTIVITY_BEHAVIOR, bindKey = EndEvent.class)
 public class EndEventBehavior extends AbstractActivityBehavior<EndEvent> {

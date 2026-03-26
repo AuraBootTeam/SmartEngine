@@ -1,6 +1,6 @@
 # 术语表（Glossary）
 
-本术语表以 SmartEngine 源码命名为准（核心 model 在 `core/src/main/java/com/alibaba/smart/framework/engine/model`）。
+本术语表以 SmartEngine 源码命名为准（核心 model 在 `core/src/main/java/com/auraboot/smart/framework/engine/model`）。
 
 ## 流程与定义类
 

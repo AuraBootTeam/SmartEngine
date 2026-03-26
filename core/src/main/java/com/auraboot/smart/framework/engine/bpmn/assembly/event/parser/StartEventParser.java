@@ -1,15 +1,15 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.event.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.event.parser;
 
 import java.util.Map;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.event.StartEvent;
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.parser.AbstractBpmnParser;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.bpmn.assembly.event.StartEvent;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.parser.AbstractBpmnParser;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 @ExtensionBinding(group = ExtensionConstant.ELEMENT_PARSER, bindKey = StartEvent.class)
 

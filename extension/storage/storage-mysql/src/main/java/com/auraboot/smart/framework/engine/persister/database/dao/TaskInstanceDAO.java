@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
+import com.auraboot.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
 
 import org.apache.ibatis.annotations.Param;
 

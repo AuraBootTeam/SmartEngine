@@ -1,19 +1,19 @@
-package com.alibaba.smart.framework.engine.ecology.designer;
+package com.auraboot.smart.framework.engine.ecology.designer;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.bpmn.assembly.event.StartEvent;
-import com.alibaba.smart.framework.engine.comments.parser.CommentsTest;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultIdGenerator;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-import com.alibaba.smart.framework.engine.ecology.designer.converter.JsonToBpmnConverter;
-import com.alibaba.smart.framework.engine.ecology.designer.element.bean.*;
-import com.alibaba.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinitionSource;
-import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-import com.alibaba.smart.framework.engine.util.IOUtil;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.bpmn.assembly.event.StartEvent;
+import com.auraboot.smart.framework.engine.comments.parser.CommentsTest;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultIdGenerator;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.ecology.designer.converter.JsonToBpmnConverter;
+import com.auraboot.smart.framework.engine.ecology.designer.element.bean.*;
+import com.auraboot.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinitionSource;
+import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+import com.auraboot.smart.framework.engine.util.IOUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
 import org.junit.Before;
@@ -87,48 +87,48 @@ public class JsonToBpmnConverterTest {
 
         // 验证开始事件
         String startEventId = "startEvent-1763379018399";
-        com.alibaba.smart.framework.engine.bpmn.assembly.event.StartEvent startEvent = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.event.StartEvent) firstProcessDefinition.getIdBasedElementMap().get(startEventId);
+        com.auraboot.smart.framework.engine.bpmn.assembly.event.StartEvent startEvent = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.event.StartEvent) firstProcessDefinition.getIdBasedElementMap().get(startEventId);
         Assert.assertNotNull(startEvent);
         Assert.assertEquals(startEventId, startEvent.getId());
         Assert.assertEquals("开始", startEvent.getName());
 
         // 验证结束事件
         String endEventId = "endEvent-1763379036897";
-        com.alibaba.smart.framework.engine.bpmn.assembly.event.EndEvent endEvent = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.event.EndEvent) firstProcessDefinition.getIdBasedElementMap().get(endEventId);
+        com.auraboot.smart.framework.engine.bpmn.assembly.event.EndEvent endEvent = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.event.EndEvent) firstProcessDefinition.getIdBasedElementMap().get(endEventId);
         Assert.assertNotNull(endEvent);
         Assert.assertEquals(endEventId, endEvent.getId());
         Assert.assertEquals("结束", endEvent.getName());
 
         // 验证用户任务1 - 员工申请
         String userTask1Id = "userTask-1763379019795";
-        com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask userTask1 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask) firstProcessDefinition.getIdBasedElementMap().get(userTask1Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask userTask1 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask) firstProcessDefinition.getIdBasedElementMap().get(userTask1Id);
         Assert.assertNotNull(userTask1);
         Assert.assertEquals(userTask1Id, userTask1.getId());
         Assert.assertEquals("员工申请", userTask1.getName());
 
         // 验证用户任务2 - 领导审批
         String userTask2Id = "userTask-1763379023480";
-        com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask userTask2 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask) firstProcessDefinition.getIdBasedElementMap().get(userTask2Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask userTask2 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask) firstProcessDefinition.getIdBasedElementMap().get(userTask2Id);
         Assert.assertNotNull(userTask2);
         Assert.assertEquals(userTask2Id, userTask2.getId());
         Assert.assertEquals("领导审批", userTask2.getName());
 
         // 验证用户任务3 - HR审批
         String userTask3Id = "userTask-1763379027894";
-        com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask userTask3 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask) firstProcessDefinition.getIdBasedElementMap().get(userTask3Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask userTask3 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask) firstProcessDefinition.getIdBasedElementMap().get(userTask3Id);
         Assert.assertNotNull(userTask3);
         Assert.assertEquals(userTask3Id, userTask3.getId());
         Assert.assertEquals("HR审批", userTask3.getName());
         
         // 验证连线 - 从开始到员工申请
         String flow1Id = "edge-1763379021762";
-        com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow1 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow1Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow1 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow1Id);
         Assert.assertNotNull(flow1);
         Assert.assertEquals(flow1Id, flow1.getId());
         Assert.assertEquals(startEventId, flow1.getSourceRef());
@@ -136,8 +136,8 @@ public class JsonToBpmnConverterTest {
         
         // 验证条件连线1 - 请假天数< 3天
         String flow2Id = "edge-1763379025162";
-        com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow2 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow2Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow2 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow2Id);
         Assert.assertNotNull(flow2);
         Assert.assertEquals(flow2Id, flow2.getId());
         Assert.assertEquals(userTask1Id, flow2.getSourceRef());
@@ -148,8 +148,8 @@ public class JsonToBpmnConverterTest {
         
         // 验证条件连线2 - 请假天数 >=3天
         String flow3Id = "edge-1763379030029";
-        com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow3 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow3Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow3 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow3Id);
         Assert.assertNotNull(flow3);
         Assert.assertEquals(flow3Id, flow3.getId());
         Assert.assertEquals(userTask1Id, flow3.getSourceRef());
@@ -160,8 +160,8 @@ public class JsonToBpmnConverterTest {
 
         // 验证连线 - 领导审批到结束
         String flow4Id = "edge-1763379038895";
-        com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow4 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow4Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow4 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow4Id);
         Assert.assertNotNull(flow4);
         Assert.assertEquals(flow4Id, flow4.getId());
         Assert.assertEquals(userTask2Id, flow4.getSourceRef());
@@ -169,8 +169,8 @@ public class JsonToBpmnConverterTest {
 
         // 验证连线 - HR审批到结束
         String flow5Id = "edge-1763379041329";
-        com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow5 = 
-            (com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow5Id);
+        com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow flow5 = 
+            (com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow) firstProcessDefinition.getIdBasedElementMap().get(flow5Id);
         Assert.assertNotNull(flow5);
         Assert.assertEquals(flow5Id, flow5.getId());
         Assert.assertEquals(userTask3Id, flow5.getSourceRef());

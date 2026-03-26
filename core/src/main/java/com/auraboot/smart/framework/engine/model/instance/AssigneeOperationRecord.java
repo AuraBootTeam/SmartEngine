@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.model.instance;
+package com.auraboot.smart.framework.engine.model.instance;
 
 /**
  * 加签减签操作记录接口

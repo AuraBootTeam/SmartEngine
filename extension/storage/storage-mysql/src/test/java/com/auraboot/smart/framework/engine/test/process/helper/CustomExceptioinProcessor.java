@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.test.process.helper;
+package com.auraboot.smart.framework.engine.test.process.helper;
 
-import com.alibaba.smart.framework.engine.configuration.ExceptionProcessor;
+import com.auraboot.smart.framework.engine.configuration.ExceptionProcessor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

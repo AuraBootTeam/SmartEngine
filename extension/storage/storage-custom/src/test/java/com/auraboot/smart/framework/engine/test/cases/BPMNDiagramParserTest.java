@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
 
 import org.junit.Test;
 

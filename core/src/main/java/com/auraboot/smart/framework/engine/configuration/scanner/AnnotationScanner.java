@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.configuration.scanner;
+package com.auraboot.smart.framework.engine.configuration.scanner;
 
 
 import java.lang.annotation.Annotation;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
 
 /**
  * Created by 高海军 帝奇 74394 on 2019 December  16:03.

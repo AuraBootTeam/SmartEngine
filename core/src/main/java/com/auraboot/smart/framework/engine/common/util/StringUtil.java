@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.common.util;
+package com.auraboot.smart.framework.engine.common.util;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  10:23.

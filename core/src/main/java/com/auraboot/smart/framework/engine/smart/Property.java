@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.smart;
+package com.auraboot.smart.framework.engine.smart;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.constant.ExtensionElementsConstant;
-import com.alibaba.smart.framework.engine.model.assembly.NoneIdBasedElement;
+import com.auraboot.smart.framework.engine.constant.ExtensionElementsConstant;
+import com.auraboot.smart.framework.engine.model.assembly.NoneIdBasedElement;
 
 import lombok.Data;
 

@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.test.storage.dual;
+package com.auraboot.smart.framework.engine.test.storage.dual;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-import com.alibaba.smart.framework.engine.instance.storage.ActivityInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.ProcessInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskAssigneeStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.VariableInstanceStorage;
-import com.alibaba.smart.framework.engine.storage.StorageMode;
-import com.alibaba.smart.framework.engine.storage.StorageRouter;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.instance.storage.ActivityInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.ProcessInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskAssigneeStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.VariableInstanceStorage;
+import com.auraboot.smart.framework.engine.storage.StorageMode;
+import com.auraboot.smart.framework.engine.storage.StorageRouter;
 
 import org.junit.After;
 import org.junit.Before;

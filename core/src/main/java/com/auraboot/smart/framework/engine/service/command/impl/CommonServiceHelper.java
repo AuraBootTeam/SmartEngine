@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.service.command.impl;
+package com.auraboot.smart.framework.engine.service.command.impl;
 
 import java.util.Iterator;
 import java.util.List;
@@ -6,24 +6,24 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.VariablePersister;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.constant.AdHocConstant;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultVariableInstance;
-import com.alibaba.smart.framework.engine.instance.storage.ActivityInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.ProcessInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskAssigneeStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.VariableInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.ActivityInstance;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.constant.AdHocConstant;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultVariableInstance;
+import com.auraboot.smart.framework.engine.instance.storage.ActivityInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.ProcessInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskAssigneeStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.VariableInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  20:38.

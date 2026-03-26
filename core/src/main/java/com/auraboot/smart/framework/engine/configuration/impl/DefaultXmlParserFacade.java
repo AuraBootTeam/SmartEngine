@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -10,18 +10,18 @@ import java.util.Set;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.smart.CustomExtensionElement;
-import com.alibaba.smart.framework.engine.xml.parser.AttributeParser;
-import com.alibaba.smart.framework.engine.xml.parser.ElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.parser.XmlParserFacade;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.smart.CustomExtensionElement;
+import com.auraboot.smart.framework.engine.xml.parser.AttributeParser;
+import com.auraboot.smart.framework.engine.xml.parser.ElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.parser.XmlParserFacade;
 
 /**
  * 默认处理器扩展点 Created by ettear on 16-4-12.

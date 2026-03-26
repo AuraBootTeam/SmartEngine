@@ -1,14 +1,14 @@
-package com.alibaba.smart.framework.engine.retry.impl;
+package com.auraboot.smart.framework.engine.retry.impl;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.hook.LifeCycleHook;
-import com.alibaba.smart.framework.engine.retry.RetryListener;
-import com.alibaba.smart.framework.engine.retry.model.instance.RetryRecord;
-import com.alibaba.smart.framework.engine.retry.service.command.RetryService;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.hook.LifeCycleHook;
+import com.auraboot.smart.framework.engine.retry.RetryListener;
+import com.auraboot.smart.framework.engine.retry.model.instance.RetryRecord;
+import com.auraboot.smart.framework.engine.retry.service.command.RetryService;
 
 /**
  * 默认重试消息监听实现

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.process.bean;
+package com.auraboot.smart.framework.engine.test.process.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

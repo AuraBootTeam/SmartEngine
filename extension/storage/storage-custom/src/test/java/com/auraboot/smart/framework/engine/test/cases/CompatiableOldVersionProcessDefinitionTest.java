@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.constant.ExtensionElementsConstant;
-import com.alibaba.smart.framework.engine.constant.SmartBase;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.model.assembly.IdBasedElement;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.smart.PropertyCompositeKey;
-import com.alibaba.smart.framework.engine.smart.PropertyCompositeValue;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.constant.ExtensionElementsConstant;
+import com.auraboot.smart.framework.engine.constant.SmartBase;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.IdBasedElement;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.smart.PropertyCompositeKey;
+import com.auraboot.smart.framework.engine.smart.PropertyCompositeValue;
 
 import org.junit.Assert;
 import org.junit.Test;

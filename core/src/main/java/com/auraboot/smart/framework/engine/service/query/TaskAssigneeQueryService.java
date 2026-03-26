@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.service.query;
+package com.auraboot.smart.framework.engine.service.query;
 
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeInstance;
 
 /**
  * <p>任务委托信息</p>

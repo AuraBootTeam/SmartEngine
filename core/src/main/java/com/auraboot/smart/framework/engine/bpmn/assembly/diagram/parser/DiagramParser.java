@@ -1,16 +1,16 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.diagram.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.diagram.parser;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.diagram.Diagram;
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.xml.parser.AbstractElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.bpmn.assembly.diagram.Diagram;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.xml.parser.AbstractElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 August  10:02.

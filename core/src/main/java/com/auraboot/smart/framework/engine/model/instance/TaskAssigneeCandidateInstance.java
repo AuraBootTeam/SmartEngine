@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.model.instance;
+package com.auraboot.smart.framework.engine.model.instance;
 
 import lombok.Data;
 

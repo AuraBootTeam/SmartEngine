@@ -1,14 +1,14 @@
-package com.alibaba.smart.framework.engine.test.orchestration;
+package com.auraboot.smart.framework.engine.test.orchestration;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.model.instance.ActivityInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.persister.custom.session.PersisterSession;
-import com.alibaba.smart.framework.engine.service.command.ProcessCommandService;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.persister.custom.session.PersisterSession;
+import com.auraboot.smart.framework.engine.service.command.ProcessCommandService;
 
 import org.junit.After;
 import org.junit.Assert;

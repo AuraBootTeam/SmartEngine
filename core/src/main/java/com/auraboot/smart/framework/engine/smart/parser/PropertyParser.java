@@ -1,15 +1,15 @@
-package com.alibaba.smart.framework.engine.smart.parser;
+package com.auraboot.smart.framework.engine.smart.parser;
 
 import java.util.Map;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.smart.Property;
-import com.alibaba.smart.framework.engine.xml.parser.AbstractElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.smart.Property;
+import com.auraboot.smart.framework.engine.xml.parser.AbstractElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 @ExtensionBinding(group = ExtensionConstant.ELEMENT_PARSER, bindKey = Property.class)
 public class PropertyParser extends AbstractElementParser<Property> {

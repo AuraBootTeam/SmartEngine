@@ -1,14 +1,14 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
-import com.alibaba.smart.framework.engine.annotation.Retryable;
-import com.alibaba.smart.framework.engine.configuration.ExceptionProcessor;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultDelegationExecutor;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.JavaDelegation;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.util.ThreadPoolUtil;
+import com.auraboot.smart.framework.engine.annotation.Retryable;
+import com.auraboot.smart.framework.engine.configuration.ExceptionProcessor;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultDelegationExecutor;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.JavaDelegation;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.util.ThreadPoolUtil;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

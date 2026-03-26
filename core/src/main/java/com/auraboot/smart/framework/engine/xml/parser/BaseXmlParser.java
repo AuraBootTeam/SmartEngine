@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.xml.parser;
+package com.auraboot.smart.framework.engine.xml.parser;
 
-import com.alibaba.smart.framework.engine.hook.LifeCycleHook;
+import com.auraboot.smart.framework.engine.hook.LifeCycleHook;
 
 /**
  * Base interface for artifact parsers. Created by ettear on 16-4-12.

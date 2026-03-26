@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.persister.database.builder;
+package com.auraboot.smart.framework.engine.persister.database.builder;
 
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.persister.database.entity.ProcessInstanceEntity;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.persister.database.entity.ProcessInstanceEntity;
 
 /**
  * @author yanricheng@163.com

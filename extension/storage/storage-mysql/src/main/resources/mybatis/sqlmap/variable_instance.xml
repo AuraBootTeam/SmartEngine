@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.alibaba.smart.framework.engine.persister.database.dao.VariableInstanceDAO">
+<mapper namespace="com.auraboot.smart.framework.engine.persister.database.dao.VariableInstanceDAO">
 
     <sql id="baseColumn">
         id, gmt_create, gmt_modified,process_instance_id,
@@ -9,7 +9,7 @@
     </sql>
 
     <insert id="insert"
-            parameterType="com.alibaba.smart.framework.engine.persister.database.entity.VariableInstanceEntity"
+            parameterType="com.auraboot.smart.framework.engine.persister.database.entity.VariableInstanceEntity"
             keyProperty="id">
         insert into se_variable_instance (<include refid="baseColumn"/>)
         values (#{id}, #{gmtCreate}, #{gmtModified}, #{processInstanceId}, #{executionInstanceId},
@@ -25,7 +25,7 @@
     </delete>
 
     <update id="update"
-            parameterType="com.alibaba.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
+            parameterType="com.auraboot.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
         update se_variable_instance
         <set>
             gmt_modified=CURRENT_TIMESTAMP
@@ -38,7 +38,7 @@
     </update>
 
     <select id="findOne"
-            resultType="com.alibaba.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
+            resultType="com.auraboot.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
         select
         <include refid="baseColumn"/>
         from se_variable_instance where id=#{id}
@@ -46,7 +46,7 @@
     </select>
 
     <select id="findList"
-            resultType="com.alibaba.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
+            resultType="com.auraboot.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
         select
         <include refid="baseColumn"/>
         from se_variable_instance
@@ -54,7 +54,7 @@
     </select>
 
     <select id="findAll"
-            resultType="com.alibaba.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
+            resultType="com.auraboot.smart.framework.engine.persister.database.entity.VariableInstanceEntity">
         select
         <include refid="baseColumn"/>
         from se_variable_instance

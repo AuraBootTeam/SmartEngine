@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.util;
+package com.auraboot.smart.framework.engine.util;
 
 import java.io.BufferedInputStream;
 import java.io.Closeable;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-import com.alibaba.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.exception.EngineException;
 
 public class IOUtil {
 

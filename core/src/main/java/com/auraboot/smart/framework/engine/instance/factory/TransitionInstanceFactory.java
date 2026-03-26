@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.instance.factory;
+package com.auraboot.smart.framework.engine.instance.factory;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.instance.TransitionInstance;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.instance.TransitionInstance;
 
 /**
  * 关联实例工 Created by ettear on 16-4-20.

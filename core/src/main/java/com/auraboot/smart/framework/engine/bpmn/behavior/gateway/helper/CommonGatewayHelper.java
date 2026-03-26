@@ -1,31 +1,31 @@
-package com.alibaba.smart.framework.engine.bpmn.behavior.gateway.helper;
+package com.auraboot.smart.framework.engine.bpmn.behavior.gateway.helper;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.AbstractGateway;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.configuration.ExceptionProcessor;
-import com.alibaba.smart.framework.engine.configuration.ListenerExecutor;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.PvmActivityTask;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.constant.ParallelGatewayConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.context.factory.ContextFactory;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmProcessDefinition;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.AbstractGateway;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.configuration.ExceptionProcessor;
+import com.auraboot.smart.framework.engine.configuration.ListenerExecutor;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.PvmActivityTask;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.constant.ParallelGatewayConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.context.factory.ContextFactory;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 
 import java.util.*;
 import java.util.concurrent.*;
 
-import static com.alibaba.smart.framework.engine.util.ParallelGatewayUtil.*;
-import static com.alibaba.smart.framework.engine.util.ParallelGatewayUtil.hasValidLatchWaitTime;
-import static com.alibaba.smart.framework.engine.util.ParallelGatewayUtil.invoke;
-import static com.alibaba.smart.framework.engine.util.ParallelGatewayUtil.useSpecifiedExecutorServiceIfNeeded;
+import static com.auraboot.smart.framework.engine.util.ParallelGatewayUtil.*;
+import static com.auraboot.smart.framework.engine.util.ParallelGatewayUtil.hasValidLatchWaitTime;
+import static com.auraboot.smart.framework.engine.util.ParallelGatewayUtil.invoke;
+import static com.auraboot.smart.framework.engine.util.ParallelGatewayUtil.useSpecifiedExecutorServiceIfNeeded;
 
 
 public abstract class CommonGatewayHelper {

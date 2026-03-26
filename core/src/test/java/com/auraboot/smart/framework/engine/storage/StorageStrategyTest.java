@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.storage;
+package com.auraboot.smart.framework.engine.storage;
 
-import com.alibaba.smart.framework.engine.storage.strategy.DatabaseStorageStrategy;
-import com.alibaba.smart.framework.engine.storage.strategy.CustomStorageStrategy;
-import com.alibaba.smart.framework.engine.storage.strategy.DualStorageStrategy;
+import com.auraboot.smart.framework.engine.storage.strategy.DatabaseStorageStrategy;
+import com.auraboot.smart.framework.engine.storage.strategy.CustomStorageStrategy;
+import com.auraboot.smart.framework.engine.storage.strategy.DualStorageStrategy;
 
 import org.junit.Assert;
 import org.junit.Test;

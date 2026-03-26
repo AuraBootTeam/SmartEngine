@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.test.cases.extensions;
+package com.auraboot.smart.framework.engine.test.cases.extensions;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.constant.ExtensionElementsConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.smart.PropertyCompositeKey;
-import com.alibaba.smart.framework.engine.smart.PropertyCompositeValue;
-import com.alibaba.smart.framework.engine.test.cases.CustomBaseTestCase;
+import com.auraboot.smart.framework.engine.constant.ExtensionElementsConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.smart.PropertyCompositeKey;
+import com.auraboot.smart.framework.engine.smart.PropertyCompositeValue;
+import com.auraboot.smart.framework.engine.test.cases.CustomBaseTestCase;
 
 import org.junit.Assert;
 import org.junit.Test;

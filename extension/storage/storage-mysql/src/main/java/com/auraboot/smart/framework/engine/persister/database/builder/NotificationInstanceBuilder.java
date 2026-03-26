@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.persister.database.builder;
+package com.auraboot.smart.framework.engine.persister.database.builder;
 
-import com.alibaba.smart.framework.engine.common.util.IdConverter;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultNotificationInstance;
-import com.alibaba.smart.framework.engine.model.instance.NotificationInstance;
-import com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity;
+import com.auraboot.smart.framework.engine.common.util.IdConverter;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultNotificationInstance;
+import com.auraboot.smart.framework.engine.model.instance.NotificationInstance;
+import com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity;
 
 /**
  * Notification instance builder.

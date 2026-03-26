@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.test.process.helper.sequece;
+package com.auraboot.smart.framework.engine.test.process.helper.sequece;
 
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.model.instance.Instance;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.model.instance.Instance;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  23:17.

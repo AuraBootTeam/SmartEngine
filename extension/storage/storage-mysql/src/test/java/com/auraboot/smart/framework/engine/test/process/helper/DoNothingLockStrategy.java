@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.test.process.helper;
+package com.auraboot.smart.framework.engine.test.process.helper;
 
-import com.alibaba.smart.framework.engine.configuration.LockStrategy;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.exception.LockException;
+import com.auraboot.smart.framework.engine.configuration.LockStrategy;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.exception.LockException;
 
 import org.springframework.stereotype.Service;
 

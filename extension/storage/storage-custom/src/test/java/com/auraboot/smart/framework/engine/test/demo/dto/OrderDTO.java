@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.demo.dto;
+package com.auraboot.smart.framework.engine.test.demo.dto;
 
 import lombok.Data;
 

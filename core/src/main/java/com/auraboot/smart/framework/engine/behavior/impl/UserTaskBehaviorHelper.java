@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.behavior.impl;
+package com.auraboot.smart.framework.engine.behavior.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,32 +7,32 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.TaskEventPublisher;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
-import com.alibaba.smart.framework.engine.bpmn.assembly.task.UserTask;
-import com.alibaba.smart.framework.engine.common.util.CollectionUtil;
-import com.alibaba.smart.framework.engine.common.util.MarkDoneUtil;
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.TaskAssigneeDispatcher;
-import com.alibaba.smart.framework.engine.constant.TaskInstanceConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.factory.ExecutionInstanceFactory;
-import com.alibaba.smart.framework.engine.instance.factory.TaskInstanceFactory;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultTaskAssigneeInstance;
-import com.alibaba.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskAssigneeStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.ActivityInstance;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.TaskEventPublisher;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.bpmn.assembly.task.UserTask;
+import com.auraboot.smart.framework.engine.common.util.CollectionUtil;
+import com.auraboot.smart.framework.engine.common.util.MarkDoneUtil;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.TaskAssigneeDispatcher;
+import com.auraboot.smart.framework.engine.constant.TaskInstanceConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.factory.ExecutionInstanceFactory;
+import com.auraboot.smart.framework.engine.instance.factory.TaskInstanceFactory;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultTaskAssigneeInstance;
+import com.auraboot.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskAssigneeStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
 
 /**
  * Created by 高海军 帝奇 74394 on  2020-03-16 00:19.

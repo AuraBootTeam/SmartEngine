@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.test.delegation.BasicServiceTaskDelegation;
-import com.alibaba.smart.framework.engine.test.delegation.ExclusiveTaskDelegation;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.test.delegation.BasicServiceTaskDelegation;
+import com.auraboot.smart.framework.engine.test.delegation.ExclusiveTaskDelegation;
 
 import org.junit.Test;
 

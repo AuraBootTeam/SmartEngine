@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.parallelgateway.orchestration;
+package com.auraboot.smart.framework.engine.test.parallelgateway.orchestration;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,17 +7,17 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.*;
 
-import com.alibaba.smart.framework.engine.configuration.ConfigurationOption;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.persister.common.assistant.pojo.ThreadExecutionResult;
-import com.alibaba.smart.framework.engine.test.cases.CustomBaseTestCase;
+import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.persister.common.assistant.pojo.ThreadExecutionResult;
+import com.auraboot.smart.framework.engine.test.cases.CustomBaseTestCase;
 
-import com.alibaba.smart.framework.engine.util.ThreadPoolUtil;
+import com.auraboot.smart.framework.engine.util.ThreadPoolUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

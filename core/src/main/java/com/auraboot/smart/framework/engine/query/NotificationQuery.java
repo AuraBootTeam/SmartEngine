@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.query;
+package com.auraboot.smart.framework.engine.query;
 
 import java.util.Date;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.model.instance.NotificationInstance;
+import com.auraboot.smart.framework.engine.model.instance.NotificationInstance;
 
 /**
  * Fluent query interface for NotificationInstance.

@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.callactivity;
+package com.auraboot.smart.framework.engine.bpmn.assembly.callactivity;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.impl.AbstractActivity;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.impl.AbstractActivity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

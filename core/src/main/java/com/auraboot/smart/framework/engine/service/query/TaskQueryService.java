@@ -1,12 +1,12 @@
-package com.alibaba.smart.framework.engine.service.query;
+package com.auraboot.smart.framework.engine.service.query;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.service.param.query.PendingTaskQueryParam;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
-import com.alibaba.smart.framework.engine.service.param.query.CompletedTaskQueryParam;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.service.param.query.PendingTaskQueryParam;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
+import com.auraboot.smart.framework.engine.service.param.query.CompletedTaskQueryParam;
 
 /**
  * 用户任务查询服务。

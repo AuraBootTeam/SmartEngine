@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.test.delegation.BasicServiceTaskDelegation;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.test.delegation.BasicServiceTaskDelegation;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,16 +1,16 @@
-package com.alibaba.smart.framework.engine.common.util;
+package com.auraboot.smart.framework.engine.common.util;
 
 import java.util.Date;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.exception.ConcurrentException;
-import com.alibaba.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
-import com.alibaba.smart.framework.engine.instance.storage.TaskInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.util.ObjectUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.exception.ConcurrentException;
+import com.auraboot.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.TaskInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.util.ObjectUtil;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 June  10:35.

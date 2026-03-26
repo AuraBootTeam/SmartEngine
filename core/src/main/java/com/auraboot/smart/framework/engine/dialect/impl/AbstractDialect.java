@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.dialect.impl;
+package com.auraboot.smart.framework.engine.dialect.impl;
 
-import com.alibaba.smart.framework.engine.dialect.Dialect;
-import com.alibaba.smart.framework.engine.dialect.IdGenerationType;
+import com.auraboot.smart.framework.engine.dialect.Dialect;
+import com.auraboot.smart.framework.engine.dialect.IdGenerationType;
 
 /**
  * Abstract base implementation of Dialect with common functionality.

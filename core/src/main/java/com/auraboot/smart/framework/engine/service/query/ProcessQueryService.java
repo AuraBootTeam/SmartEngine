@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.service.query;
+package com.auraboot.smart.framework.engine.service.query;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.service.param.query.ProcessInstanceQueryParam;
-import com.alibaba.smart.framework.engine.service.param.query.CompletedProcessQueryParam;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.service.param.query.ProcessInstanceQueryParam;
+import com.auraboot.smart.framework.engine.service.param.query.CompletedProcessQueryParam;
 
 /**
  * 查询流程实例。

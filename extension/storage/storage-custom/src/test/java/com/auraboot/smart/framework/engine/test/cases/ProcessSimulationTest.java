@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-import com.alibaba.smart.framework.engine.simulation.ProcessSimulation;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+import com.auraboot.smart.framework.engine.simulation.ProcessSimulation;
 
 import org.junit.Assert;
 import org.junit.Test;

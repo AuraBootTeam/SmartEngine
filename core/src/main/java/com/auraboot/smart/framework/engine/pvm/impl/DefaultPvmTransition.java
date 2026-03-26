@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.pvm.impl;
+package com.auraboot.smart.framework.engine.pvm.impl;
 
-import com.alibaba.smart.framework.engine.behavior.TransitionBehavior;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Transition;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.behavior.TransitionBehavior;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Transition;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

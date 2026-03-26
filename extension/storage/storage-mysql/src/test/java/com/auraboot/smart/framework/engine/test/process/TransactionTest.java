@@ -1,14 +1,14 @@
-//package com.alibaba.smart.framework.engine.test.process;
+//package com.auraboot.smart.framework.engine.test.process;
 //
 //
-//import com.alibaba.smart.framework.engine.persister.database.dao.TaskInstanceDAO;
-//import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
-//import com.alibaba.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
-//import com.alibaba.smart.framework.engine.test.process.helper.CustomVariablePersister;
-//import com.alibaba.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
-//import com.alibaba.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
-//import com.alibaba.smart.framework.engine.test.process.helper.TransactionHelper;
-//import com.alibaba.smart.framework.engine.test.process.helper.dispatcher.DefaultTaskAssigneeDispatcher;
+//import com.auraboot.smart.framework.engine.persister.database.dao.TaskInstanceDAO;
+//import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
+//import com.auraboot.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
+//import com.auraboot.smart.framework.engine.test.process.helper.CustomVariablePersister;
+//import com.auraboot.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
+//import com.auraboot.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
+//import com.auraboot.smart.framework.engine.test.process.helper.TransactionHelper;
+//import com.auraboot.smart.framework.engine.test.process.helper.dispatcher.DefaultTaskAssigneeDispatcher;
 //
 //import org.junit.Test;
 //import org.junit.runner.RunWith;

@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.service.query;
+package com.auraboot.smart.framework.engine.service.query;
 
 import java.util.Collection;
 
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
 
 /**
  * 获取内存中的流程定义。

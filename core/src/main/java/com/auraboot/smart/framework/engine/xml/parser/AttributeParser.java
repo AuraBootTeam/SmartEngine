@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.xml.parser;
+package com.auraboot.smart.framework.engine.xml.parser;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLStreamReader;

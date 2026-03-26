@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.callactivity.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.callactivity.parser;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.callactivity.CallActivity;
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.parser.AbstractBpmnParser;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.bpmn.assembly.callactivity.CallActivity;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.parser.AbstractBpmnParser;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 May  14:55.

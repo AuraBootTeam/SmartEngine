@@ -8,7 +8,7 @@
     <process id="Process_1" isExecutable="true">
         <startEvent id="StartEvent_1"/>
         <receiveTask id="createActivity" name="创建活动"
-                     smart:class="com.alibaba.smart.framework.engine.retry.RetryDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.retry.RetryDelegation"/>
         <sequenceFlow id="SequenceFlow_06ih1kj" sourceRef="StartEvent_1" targetRef="createActivity"/>
         <receiveTask id="enroll" name="报名商品"/>
         <sequenceFlow id="SequenceFlow_1m4c83y" sourceRef="createActivity" targetRef="enroll"/>

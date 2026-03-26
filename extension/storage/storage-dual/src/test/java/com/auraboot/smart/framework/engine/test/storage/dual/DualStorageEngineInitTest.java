@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.test.storage.dual;
+package com.auraboot.smart.framework.engine.test.storage.dual;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-import com.alibaba.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
-import com.alibaba.smart.framework.engine.storage.StorageRouter;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
+import com.auraboot.smart.framework.engine.storage.StorageRouter;
 
 import org.junit.After;
 import org.junit.Before;

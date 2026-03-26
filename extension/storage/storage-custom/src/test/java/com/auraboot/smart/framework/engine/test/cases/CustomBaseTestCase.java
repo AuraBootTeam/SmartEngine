@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-import com.alibaba.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
-import com.alibaba.smart.framework.engine.persister.custom.session.PersisterSession;
-import com.alibaba.smart.framework.engine.service.command.ExecutionCommandService;
-import com.alibaba.smart.framework.engine.service.command.ProcessCommandService;
-import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-import com.alibaba.smart.framework.engine.service.query.ExecutionQueryService;
-import com.alibaba.smart.framework.engine.service.query.ProcessQueryService;
-import com.alibaba.smart.framework.engine.service.query.RepositoryQueryService;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
+import com.auraboot.smart.framework.engine.persister.custom.session.PersisterSession;
+import com.auraboot.smart.framework.engine.service.command.ExecutionCommandService;
+import com.auraboot.smart.framework.engine.service.command.ProcessCommandService;
+import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+import com.auraboot.smart.framework.engine.service.query.ExecutionQueryService;
+import com.auraboot.smart.framework.engine.service.query.ProcessQueryService;
+import com.auraboot.smart.framework.engine.service.query.RepositoryQueryService;
 
 import org.junit.After;
 import org.junit.Before;

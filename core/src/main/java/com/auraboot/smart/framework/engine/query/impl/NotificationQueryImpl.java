@@ -1,15 +1,15 @@
-package com.alibaba.smart.framework.engine.query.impl;
+package com.auraboot.smart.framework.engine.query.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.storage.NotificationInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.NotificationInstance;
-import com.alibaba.smart.framework.engine.query.NotificationQuery;
-import com.alibaba.smart.framework.engine.service.param.query.NotificationQueryParam;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.storage.NotificationInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.NotificationInstance;
+import com.auraboot.smart.framework.engine.query.NotificationQuery;
+import com.auraboot.smart.framework.engine.service.param.query.NotificationQueryParam;
 
 /**
  * Implementation of NotificationQuery fluent API.

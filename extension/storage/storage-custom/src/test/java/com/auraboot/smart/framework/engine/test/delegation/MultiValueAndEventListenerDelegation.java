@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.test.delegation;
+package com.auraboot.smart.framework.engine.test.delegation;
 
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.JavaDelegation;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.JavaDelegation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

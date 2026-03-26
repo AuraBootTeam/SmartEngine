@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.pvm.impl;
+package com.auraboot.smart.framework.engine.pvm.impl;
 
-import com.alibaba.smart.framework.engine.behavior.ActivityBehavior;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.behavior.ActivityBehavior;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -8,14 +8,14 @@
 
 ```xml
 <dependency>
-  <groupId>com.alibaba.smart.framework</groupId>
+  <groupId>com.auraboot.smart.framework</groupId>
   <artifactId>smart-engine-core</artifactId>
   <version>3.7.0-SNAPSHOT</version>
 </dependency>
 
 <!-- DataBase 模式：提供关系库存储实现 + MyBatis SQLMap -->
 <dependency>
-  <groupId>com.alibaba.smart.framework</groupId>
+  <groupId>com.auraboot.smart.framework</groupId>
   <artifactId>smart-engine-extension-storage-mysql</artifactId>
   <version>3.7.0-SNAPSHOT</version>
 </dependency>
@@ -63,7 +63,7 @@
 你可以用 Spring JavaConfig / Spring Boot 等价实现，核心是要确保：
 
 - SQLSessionFactory 能加载到 `mybatis/sqlmap/*.xml`
-- 扫描到 `com.alibaba.smart.framework.engine.persister` 下的组件（DAO/Storage/Service）
+- 扫描到 `com.auraboot.smart.framework.engine.persister` 下的组件（DAO/Storage/Service）
 
 ## 4. 初始化引擎（必设项）
 
@@ -115,7 +115,7 @@ engine.getTaskCommandService().claim(tasks.get(0).getInstanceId(), "userA");
 engine.getTaskCommandService().complete(tasks.get(0).getInstanceId(), request);
 ```
 
-> 注意：上面 Command/Param 的具体字段以源码为准（`com.alibaba.smart.framework.engine.service.param.*`）。不同接口有 tenantId 重载，建议你在多租户场景下统一通过 request special key 或显式 tenantId 传入。
+> 注意：上面 Command/Param 的具体字段以源码为准（`com.auraboot.smart.framework.engine.service.param.*`）。不同接口有 tenantId 重载，建议你在多租户场景下统一通过 request special key 或显式 tenantId 传入。
 
 ## 6. 下一步建议
 

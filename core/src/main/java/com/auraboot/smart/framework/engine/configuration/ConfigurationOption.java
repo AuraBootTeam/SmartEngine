@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.configuration;
+package com.auraboot.smart.framework.engine.configuration;
 
-import com.alibaba.smart.framework.engine.configuration.impl.option.DisabledOption;
-import com.alibaba.smart.framework.engine.configuration.impl.option.ExpressionCompileResultCachedOption;
-import com.alibaba.smart.framework.engine.configuration.impl.option.ProcessDefinitionMultiTenantShareOption;
-import com.alibaba.smart.framework.engine.configuration.impl.option.ServiceOrchestrationEnabledOption;
-import com.alibaba.smart.framework.engine.configuration.impl.option.TransferEnabledOption;
-import com.alibaba.smart.framework.engine.configuration.impl.option.*;
+import com.auraboot.smart.framework.engine.configuration.impl.option.DisabledOption;
+import com.auraboot.smart.framework.engine.configuration.impl.option.ExpressionCompileResultCachedOption;
+import com.auraboot.smart.framework.engine.configuration.impl.option.ProcessDefinitionMultiTenantShareOption;
+import com.auraboot.smart.framework.engine.configuration.impl.option.ServiceOrchestrationEnabledOption;
+import com.auraboot.smart.framework.engine.configuration.impl.option.TransferEnabledOption;
+import com.auraboot.smart.framework.engine.configuration.impl.option.*;
 
 /**
  * Created by 高海军 帝奇 74394 on  2020-02-15 21:40.

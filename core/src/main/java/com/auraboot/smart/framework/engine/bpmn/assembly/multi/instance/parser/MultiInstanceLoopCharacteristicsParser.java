@@ -1,18 +1,18 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.multi.instance.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.multi.instance.parser;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.multi.instance.CompletionCondition;
-import com.alibaba.smart.framework.engine.bpmn.assembly.multi.instance.InputDataItem;
-import com.alibaba.smart.framework.engine.bpmn.assembly.multi.instance.MultiInstanceLoopCharacteristics;
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.BaseElement;
-import com.alibaba.smart.framework.engine.xml.parser.AbstractElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.bpmn.assembly.multi.instance.CompletionCondition;
+import com.auraboot.smart.framework.engine.bpmn.assembly.multi.instance.InputDataItem;
+import com.auraboot.smart.framework.engine.bpmn.assembly.multi.instance.MultiInstanceLoopCharacteristics;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.BaseElement;
+import com.auraboot.smart.framework.engine.xml.parser.AbstractElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 September  21:01.

@@ -1,26 +1,26 @@
-package com.alibaba.smart.framework.engine.service.command.impl;
+package com.auraboot.smart.framework.engine.service.command.impl;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.constant.DeploymentStatusConstant;
-import com.alibaba.smart.framework.engine.constant.LogicStatusConstant;
-import com.alibaba.smart.framework.engine.deployment.ProcessDefinitionContainer;
-import com.alibaba.smart.framework.engine.ecology.designer.converter.JsonToBpmnConverter;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.hook.LifeCycleHook;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultDeploymentInstance;
-import com.alibaba.smart.framework.engine.instance.storage.DeploymentInstanceStorage;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.DeploymentInstance;
-import com.alibaba.smart.framework.engine.service.command.DeploymentCommandService;
-import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-import com.alibaba.smart.framework.engine.service.param.command.CreateDeploymentCommand;
-import com.alibaba.smart.framework.engine.service.param.command.UpdateDeploymentCommand;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.constant.DeploymentStatusConstant;
+import com.auraboot.smart.framework.engine.constant.LogicStatusConstant;
+import com.auraboot.smart.framework.engine.deployment.ProcessDefinitionContainer;
+import com.auraboot.smart.framework.engine.ecology.designer.converter.JsonToBpmnConverter;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.hook.LifeCycleHook;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultDeploymentInstance;
+import com.auraboot.smart.framework.engine.instance.storage.DeploymentInstanceStorage;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.DeploymentInstance;
+import com.auraboot.smart.framework.engine.service.command.DeploymentCommandService;
+import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+import com.auraboot.smart.framework.engine.service.param.command.CreateDeploymentCommand;
+import com.auraboot.smart.framework.engine.service.param.command.UpdateDeploymentCommand;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 September  07:47.

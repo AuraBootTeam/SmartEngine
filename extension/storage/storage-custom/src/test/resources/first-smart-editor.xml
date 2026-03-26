@@ -3,7 +3,7 @@
         <startEvent id="startNode" name="开始"/>
         <endEvent id="endNode" name="结束"/>
         <exclusiveGateway id="exclusiveGateway-1582902588950" name="排他网关"/>
-        <serviceTask id="serviceTask-1582902608654" name="服务任务" smart:class="com.alibaba.smart.framework.engine.test.delegation.BasicServiceTaskDelegation">
+        <serviceTask id="serviceTask-1582902608654" name="服务任务" smart:class="com.auraboot.smart.framework.engine.test.delegation.BasicServiceTaskDelegation">
             <extensionElements>
                 <smart:properties>
                     <smart:value name="a" value="1"/>

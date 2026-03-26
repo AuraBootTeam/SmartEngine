@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.pvm.impl;
+package com.auraboot.smart.framework.engine.pvm.impl;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmProcessDefinition;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 
 import lombok.Data;
 

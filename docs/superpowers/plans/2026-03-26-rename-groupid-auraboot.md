@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Rename the project's Maven groupId and Java package from `com.alibaba.smart.framework` to `com.auraboot.smart.framework`, and add fork explanation to README.
+**Goal:** Rename the project's Maven groupId and Java package from `com.auraboot.smart.framework` to `com.auraboot.smart.framework`, and add fork explanation to README.
 
-**Architecture:** Mechanical rename across 840 files. The safe replacement pattern is `com.alibaba.smart` → `com.auraboot.smart` (dot form) and `com/alibaba/smart` → `com/auraboot/smart` (path form). This avoids touching third-party `com.alibaba.fastjson` references. Directory renames use `git mv` to preserve history.
+**Architecture:** Mechanical rename across 840 files. The safe replacement pattern is `com.auraboot.smart` → `com.auraboot.smart` (dot form) and `com/auraboot/smart` → `com/auraboot/smart` (path form). This avoids touching third-party `com.alibaba.fastjson` references. Directory renames use `git mv` to preserve history.
 
 **Tech Stack:** Maven, Java 8, MyBatis, Spring XML, BPMN XML
 
@@ -38,7 +38,7 @@ for dir in \
   extension/storage/storage-mysql/src/test/java; do
   if [ -d "$dir/com/alibaba" ]; then
     mkdir -p "$dir/com/auraboot"
-    git mv "$dir/com/alibaba/smart" "$dir/com/auraboot/smart"
+    git mv "$dir/com/auraboot/smart" "$dir/com/auraboot/smart"
     rmdir "$dir/com/alibaba" 2>/dev/null || true
   fi
 done
@@ -63,7 +63,7 @@ git commit -m "refactor: rename directory structure com/alibaba → com/auraboot
 - [ ] **Step 1: Replace dot-form package references**
 
 ```bash
-# Replace com.alibaba.smart → com.auraboot.smart in ALL files
+# Replace com.auraboot.smart → com.auraboot.smart in ALL files
 find . -type f \( -name '*.java' -o -name '*.xml' -o -name '*.md' -o -name '*.properties' -o -name '*.yml' -o -name '*.yaml' \) \
   -exec sed -i '' 's/com\.alibaba\.smart/com.auraboot.smart/g' {} +
 ```
@@ -71,9 +71,9 @@ find . -type f \( -name '*.java' -o -name '*.xml' -o -name '*.md' -o -name '*.pr
 - [ ] **Step 2: Replace path-form references**
 
 ```bash
-# Replace com/alibaba/smart → com/auraboot/smart in ALL files (MyBatis, Spring XML, etc.)
+# Replace com/auraboot/smart → com/auraboot/smart in ALL files (MyBatis, Spring XML, etc.)
 find . -type f \( -name '*.java' -o -name '*.xml' -o -name '*.md' -o -name '*.properties' \) \
-  -exec sed -i '' 's|com/alibaba/smart|com/auraboot/smart|g' {} +
+  -exec sed -i '' 's|com/auraboot/smart|com/auraboot/smart|g' {} +
 ```
 
 - [ ] **Step 3: Verify no project references remain (only fastjson should remain)**
@@ -90,7 +90,7 @@ Expected: 3 matches (2 pom.xml fastjson deps + 1 Java import)
 
 ```bash
 git add -A
-git commit -m "refactor: rename package com.alibaba.smart → com.auraboot.smart in all file contents"
+git commit -m "refactor: rename package com.auraboot.smart → com.auraboot.smart in all file contents"
 ```
 
 ### Task 3: Update README with fork explanation
@@ -104,7 +104,7 @@ git commit -m "refactor: rename package com.alibaba.smart → com.auraboot.smart
 Add after the first heading, before "Design Philosophy":
 
 ```markdown
-> **Note:** This is a fork of [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine), maintained by the original author. This fork exists because the original repository cannot publish releases to Maven Central. The Maven coordinates have been changed from `com.alibaba.smart.framework` to `com.auraboot.smart.framework`.
+> **Note:** This is a fork of [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine), maintained by the original author. This fork exists because the original repository cannot publish releases to Maven Central. The Maven coordinates have been changed from `com.auraboot.smart.framework` to `com.auraboot.smart.framework`.
 ```
 
 - [ ] **Step 2: Add fork notice to README-zh.md**
@@ -112,7 +112,7 @@ Add after the first heading, before "Design Philosophy":
 Add after the first heading, before "设计理念":
 
 ```markdown
-> **说明：** 本仓库是 [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine) 的 fork，由原作者维护。由于无法在原仓库将 JAR 发布到 Maven 中央仓库，因此创建了此 fork。Maven 坐标已从 `com.alibaba.smart.framework` 变更为 `com.auraboot.smart.framework`。
+> **说明：** 本仓库是 [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine) 的 fork，由原作者维护。由于无法在原仓库将 JAR 发布到 Maven 中央仓库，因此创建了此 fork。Maven 坐标已从 `com.auraboot.smart.framework` 变更为 `com.auraboot.smart.framework`。
 ```
 
 - [ ] **Step 3: Commit**

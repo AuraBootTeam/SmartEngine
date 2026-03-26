@@ -1,14 +1,14 @@
-package com.alibaba.smart.framework.engine.configuration;
+package com.auraboot.smart.framework.engine.configuration;
 
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.annotation.Experiment;
-import com.alibaba.smart.framework.engine.common.expression.evaluator.ExpressionEvaluator;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.dialect.Dialect;
-import com.alibaba.smart.framework.engine.storage.StorageRouter;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.annotation.Experiment;
+import com.auraboot.smart.framework.engine.common.expression.evaluator.ExpressionEvaluator;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.dialect.Dialect;
+import com.auraboot.smart.framework.engine.storage.StorageRouter;
 
 /**
  * @author 高海军 帝奇  2016.11.11

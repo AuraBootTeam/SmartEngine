@@ -6,7 +6,7 @@
     <process id="Process_1" isExecutable="false">
         <startEvent id="StartEvent_1"/>
         <serviceTask id="ServiceTask_1lwj1yt" name="testService"
-                     smart:class="com.alibaba.smart.framework.engine.test.delegation.CreateOrderDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.delegation.CreateOrderDelegation"/>
         <sequenceFlow id="SequenceFlow_1d5oyyt" sourceRef="StartEvent_1" targetRef="ServiceTask_1lwj1yt"/>
         <endEvent id="EndEvent_1e5k645"/>
         <sequenceFlow id="SequenceFlow_1jqnkse" sourceRef="ServiceTask_1lwj1yt" targetRef="EndEvent_1e5k645"/>

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.bpmn.constant;
+package com.auraboot.smart.framework.engine.bpmn.constant;
 
 public interface BpmnNameSpaceConstant {
 

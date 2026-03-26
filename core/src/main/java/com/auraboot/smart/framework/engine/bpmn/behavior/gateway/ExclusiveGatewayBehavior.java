@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.bpmn.behavior.gateway;
+package com.auraboot.smart.framework.engine.bpmn.behavior.gateway;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.behavior.base.AbstractActivityBehavior;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.ExclusiveGateway;
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.helper.CommonGatewayHelper;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.behavior.base.AbstractActivityBehavior;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.ExclusiveGateway;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.helper.CommonGatewayHelper;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 
 @ExtensionBinding(group = ExtensionConstant.ACTIVITY_BEHAVIOR, bindKey = ExclusiveGateway.class)
 public class ExclusiveGatewayBehavior extends AbstractActivityBehavior<ExclusiveGateway> {

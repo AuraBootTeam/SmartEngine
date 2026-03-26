@@ -1,25 +1,25 @@
-package com.alibaba.smart.framework.engine.simulation;
+package com.auraboot.smart.framework.engine.simulation;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.bpmn.assembly.event.EndEvent;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.AbstractGateway;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.ExclusiveGateway;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.ParallelGateway;
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.SequenceFlow;
-import com.alibaba.smart.framework.engine.common.expression.evaluator.MvelExpressionEvaluator;
-import com.alibaba.smart.framework.engine.deployment.ProcessDefinitionContainer;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.model.assembly.ConditionExpression;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmProcessDefinition;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.bpmn.assembly.event.EndEvent;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.AbstractGateway;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.ExclusiveGateway;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.ParallelGateway;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.SequenceFlow;
+import com.auraboot.smart.framework.engine.common.expression.evaluator.MvelExpressionEvaluator;
+import com.auraboot.smart.framework.engine.deployment.ProcessDefinitionContainer;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.assembly.ConditionExpression;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 
 /**
  * @author 高海军 帝奇

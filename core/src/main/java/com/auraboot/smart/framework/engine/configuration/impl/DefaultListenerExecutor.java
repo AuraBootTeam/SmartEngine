@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.common.util.CollectionUtil;
-import com.alibaba.smart.framework.engine.configuration.InstanceAccessor;
-import com.alibaba.smart.framework.engine.configuration.ListenerExecutor;
-import com.alibaba.smart.framework.engine.constant.ExtensionElementsConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.listener.Listener;
-import com.alibaba.smart.framework.engine.listener.ListenerAggregation;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.common.util.CollectionUtil;
+import com.auraboot.smart.framework.engine.configuration.InstanceAccessor;
+import com.auraboot.smart.framework.engine.configuration.ListenerExecutor;
+import com.auraboot.smart.framework.engine.constant.ExtensionElementsConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.listener.Listener;
+import com.auraboot.smart.framework.engine.listener.ListenerAggregation;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 
 /**
  * Created by 高海军 帝奇 74394 on 2020 August  17:52.

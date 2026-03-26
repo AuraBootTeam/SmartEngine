@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.storage;
+package com.auraboot.smart.framework.engine.storage;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
 
 /**
  * Strategy interface for resolving storage implementations.

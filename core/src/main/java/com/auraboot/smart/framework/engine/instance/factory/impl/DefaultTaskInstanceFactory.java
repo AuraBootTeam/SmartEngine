@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.instance.factory.impl;
+package com.auraboot.smart.framework.engine.instance.factory.impl;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.common.util.DateUtil;
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.constant.TaskInstanceConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.factory.TaskInstanceFactory;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultTaskInstance;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.common.util.DateUtil;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.constant.TaskInstanceConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.factory.TaskInstanceFactory;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultTaskInstance;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
 
-import  com.alibaba.smart.framework.engine.common.util.InstanceUtil;
+import  com.auraboot.smart.framework.engine.common.util.InstanceUtil;
 
 /**
  * 默认任务实例工厂实现 Created by ettear on 16-4-20.

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.persister.common.constant;
+package com.auraboot.smart.framework.engine.persister.common.constant;
 
 /**
  * Created by 高海军 帝奇 74394 on 2018 November  11:58.

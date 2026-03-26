@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.test.storage.dual.helper;
+package com.auraboot.smart.framework.engine.test.storage.dual.helper;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.model.instance.Instance;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.model.instance.Instance;
 
 public class TimeBasedIdGenerator implements IdGenerator {
 

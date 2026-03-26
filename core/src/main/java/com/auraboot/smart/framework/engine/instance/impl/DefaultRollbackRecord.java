@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.instance.impl;
+package com.auraboot.smart.framework.engine.instance.impl;
 
-import com.alibaba.smart.framework.engine.model.instance.RollbackRecord;
+import com.auraboot.smart.framework.engine.model.instance.RollbackRecord;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

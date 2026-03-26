@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.event;
+package com.auraboot.smart.framework.engine.bpmn.assembly.event;
 
-import com.alibaba.smart.framework.engine.model.assembly.impl.AbstractActivity;
+import com.auraboot.smart.framework.engine.model.assembly.impl.AbstractActivity;
 
 /**
  * @author 高海军 帝奇 Apr 14, 2016 2:50:20 PM

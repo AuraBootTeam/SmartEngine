@@ -1,18 +1,18 @@
-package com.alibaba.smart.framework.engine.dialect;
+package com.auraboot.smart.framework.engine.dialect;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.alibaba.smart.framework.engine.dialect.impl.DmDialect;
-import com.alibaba.smart.framework.engine.dialect.impl.H2Dialect;
-import com.alibaba.smart.framework.engine.dialect.impl.KingbaseDialect;
-import com.alibaba.smart.framework.engine.dialect.impl.MySqlDialect;
-import com.alibaba.smart.framework.engine.dialect.impl.OceanBaseDialect;
-import com.alibaba.smart.framework.engine.dialect.impl.OracleDialect;
-import com.alibaba.smart.framework.engine.dialect.impl.PostgreSqlDialect;
-import com.alibaba.smart.framework.engine.dialect.impl.SqlServerDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.DmDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.H2Dialect;
+import com.auraboot.smart.framework.engine.dialect.impl.KingbaseDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.MySqlDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.OceanBaseDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.OracleDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.PostgreSqlDialect;
+import com.auraboot.smart.framework.engine.dialect.impl.SqlServerDialect;
 
 /**
  * Registry for database dialects.

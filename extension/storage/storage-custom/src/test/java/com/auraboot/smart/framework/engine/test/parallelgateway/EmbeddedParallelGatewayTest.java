@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.test.parallelgateway;
+package com.auraboot.smart.framework.engine.test.parallelgateway;
 
 import java.util.List;
 import java.util.concurrent.Executors;
 
-import com.alibaba.smart.framework.engine.configuration.LockStrategy;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.helper.ExecutionInstanceHelper;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.test.SimpleFileLockStrategy;
-import com.alibaba.smart.framework.engine.test.cases.CustomBaseTestCase;
+import com.auraboot.smart.framework.engine.configuration.LockStrategy;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.helper.ExecutionInstanceHelper;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.test.SimpleFileLockStrategy;
+import com.auraboot.smart.framework.engine.test.cases.CustomBaseTestCase;
 
 import org.junit.Assert;
 import org.junit.Test;

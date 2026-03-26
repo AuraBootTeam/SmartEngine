@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.smart;
+package com.auraboot.smart.framework.engine.smart;
 
 /**
  * Created by 高海军 帝奇 74394 on  2020-12-16 15:22.

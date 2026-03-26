@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
 import java.util.Set;
 
-import com.alibaba.smart.framework.engine.configuration.VariablePersister;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 October  07:09.

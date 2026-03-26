@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.retry.model.instance;
+package com.auraboot.smart.framework.engine.retry.model.instance;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.model.instance.Instance;
+import com.auraboot.smart.framework.engine.model.instance.Instance;
 
 /**
  * @author zhenhong.tzh

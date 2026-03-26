@@ -1,14 +1,14 @@
-package com.alibaba.smart.framework.engine.service.command.impl;
+package com.auraboot.smart.framework.engine.service.command.impl;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.VariablePersister;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.hook.LifeCycleHook;
-import com.alibaba.smart.framework.engine.instance.storage.VariableInstanceStorage;
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
-import com.alibaba.smart.framework.engine.service.command.VariableCommandService;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.hook.LifeCycleHook;
+import com.auraboot.smart.framework.engine.instance.storage.VariableInstanceStorage;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.service.command.VariableCommandService;
 
 /**
  * 主要变量插入。

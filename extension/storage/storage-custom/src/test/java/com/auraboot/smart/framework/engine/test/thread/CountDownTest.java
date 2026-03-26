@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.thread;
+package com.auraboot.smart.framework.engine.test.thread;
 
 import java.util.concurrent.CountDownLatch;
 

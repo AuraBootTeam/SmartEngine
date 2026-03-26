@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.model.instance;
+package com.auraboot.smart.framework.engine.model.instance;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 September  10:03.

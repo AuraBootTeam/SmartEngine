@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.test.process.helper;
+package com.auraboot.smart.framework.engine.test.process.helper;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.constant.TaskInstanceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.persister.database.dao.TaskInstanceDAO;
-import com.alibaba.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
-import com.alibaba.smart.framework.engine.service.command.ProcessCommandService;
-import com.alibaba.smart.framework.engine.service.command.TaskCommandService;
-import com.alibaba.smart.framework.engine.service.query.TaskQueryService;
-import com.alibaba.smart.framework.engine.test.process.VariableInstanceAndMultiInstanceTest;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.constant.TaskInstanceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.persister.database.dao.TaskInstanceDAO;
+import com.auraboot.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
+import com.auraboot.smart.framework.engine.service.command.ProcessCommandService;
+import com.auraboot.smart.framework.engine.service.command.TaskCommandService;
+import com.auraboot.smart.framework.engine.service.query.TaskQueryService;
+import com.auraboot.smart.framework.engine.test.process.VariableInstanceAndMultiInstanceTest;
 
 import org.junit.Assert;
 import org.springframework.stereotype.Service;

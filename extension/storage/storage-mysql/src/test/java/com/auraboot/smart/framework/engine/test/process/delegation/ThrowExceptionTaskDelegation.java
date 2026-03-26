@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.test.process.delegation;
+package com.auraboot.smart.framework.engine.test.process.delegation;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.TccDelegation;
-import com.alibaba.smart.framework.engine.delegation.TccResult;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.TccDelegation;
+import com.auraboot.smart.framework.engine.delegation.TccResult;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,17 +1,17 @@
-package com.alibaba.smart.framework.engine.util;
+package com.auraboot.smart.framework.engine.util;
 
-import com.alibaba.smart.framework.engine.behavior.ActivityBehavior;
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.ParallelGatewayBehavior;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.common.util.StringUtil;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.PvmActivityTask;
-import com.alibaba.smart.framework.engine.constant.ParallelGatewayConstant;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.behavior.ActivityBehavior;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.ParallelGatewayBehavior;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.common.util.StringUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.PvmActivityTask;
+import com.auraboot.smart.framework.engine.constant.ParallelGatewayConstant;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.exception;
+package com.auraboot.smart.framework.engine.exception;
 
 /**
  * @author 高海军 帝奇  2016.11.11

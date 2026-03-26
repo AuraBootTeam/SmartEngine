@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.pvm;
+package com.auraboot.smart.framework.engine.pvm;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.behavior.ActivityBehavior;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.behavior.ActivityBehavior;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
 
 /**
  * @author 高海军 帝奇  2016.11.11

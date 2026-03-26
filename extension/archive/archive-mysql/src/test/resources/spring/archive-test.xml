@@ -28,7 +28,7 @@
 
     <!-- Mapper Scanner for archive DAO -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.alibaba.smart.framework.engine.archive.dao"/>
+        <property name="basePackage" value="com.auraboot.smart.framework.engine.archive.dao"/>
     </bean>
 
     <!-- Transaction Manager -->
@@ -41,14 +41,14 @@
     </bean>
 
     <!-- Archive Properties -->
-    <bean id="archiveProperties" class="com.alibaba.smart.framework.engine.archive.config.ArchiveProperties">
+    <bean id="archiveProperties" class="com.auraboot.smart.framework.engine.archive.config.ArchiveProperties">
         <property name="enabled" value="true"/>
         <property name="retentionDays" value="1"/>
         <property name="batchSize" value="10"/>
     </bean>
 
     <!-- Archive Service -->
-    <bean id="archiveService" class="com.alibaba.smart.framework.engine.archive.service.DefaultArchiveService">
+    <bean id="archiveService" class="com.auraboot.smart.framework.engine.archive.service.DefaultArchiveService">
         <property name="archiveDAO" ref="archiveDAO"/>
         <property name="archiveProperties" ref="archiveProperties"/>
         <property name="transactionTemplate" ref="transactionTemplate"/>
@@ -58,7 +58,7 @@
     <task:scheduler id="archiveTaskScheduler" pool-size="1"/>
 
     <!-- Archive Scheduler -->
-    <bean id="archiveScheduler" class="com.alibaba.smart.framework.engine.archive.scheduler.ArchiveScheduler">
+    <bean id="archiveScheduler" class="com.auraboot.smart.framework.engine.archive.scheduler.ArchiveScheduler">
         <property name="archiveProperties" ref="archiveProperties"/>
         <property name="archiveService" ref="archiveService"/>
         <property name="taskScheduler" ref="archiveTaskScheduler"/>

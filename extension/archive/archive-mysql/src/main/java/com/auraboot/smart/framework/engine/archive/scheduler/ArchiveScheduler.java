@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.archive.scheduler;
+package com.auraboot.smart.framework.engine.archive.scheduler;
 
 import java.util.concurrent.ScheduledFuture;
 
-import com.alibaba.smart.framework.engine.archive.config.ArchiveProperties;
-import com.alibaba.smart.framework.engine.archive.service.ArchiveService;
+import com.auraboot.smart.framework.engine.archive.config.ArchiveProperties;
+import com.auraboot.smart.framework.engine.archive.service.ArchiveService;
 
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;

@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.instance.impl;
+package com.auraboot.smart.framework.engine.instance.impl;
 
 import java.util.Date;
 
-import com.alibaba.smart.framework.engine.model.instance.LifeCycleInstance;
+import com.auraboot.smart.framework.engine.model.instance.LifeCycleInstance;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

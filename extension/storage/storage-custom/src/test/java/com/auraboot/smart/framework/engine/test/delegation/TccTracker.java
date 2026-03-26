@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.test.delegation;
+package com.auraboot.smart.framework.engine.test.delegation;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.listener.Listener;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.listener.Listener;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 
 /**
  * @author ettear

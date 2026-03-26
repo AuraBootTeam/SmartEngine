@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.test;
+package com.auraboot.smart.framework.engine.test;
 
-import com.alibaba.smart.framework.engine.service.command.NotificationCommandService;
-import com.alibaba.smart.framework.engine.service.command.SupervisionCommandService;
-import com.alibaba.smart.framework.engine.service.command.TaskCommandService;
-import com.alibaba.smart.framework.engine.service.query.NotificationQueryService;
-import com.alibaba.smart.framework.engine.service.query.SupervisionQueryService;
+import com.auraboot.smart.framework.engine.service.command.NotificationCommandService;
+import com.auraboot.smart.framework.engine.service.command.SupervisionCommandService;
+import com.auraboot.smart.framework.engine.service.command.TaskCommandService;
+import com.auraboot.smart.framework.engine.service.query.NotificationQueryService;
+import com.auraboot.smart.framework.engine.service.query.SupervisionQueryService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -78,9 +78,9 @@ public class WorkflowEnhancementIntegrationTest extends DatabaseBaseTestCase {
     public void testExceptionClasses() {
         // 验证自定义异常类可以正常创建
         try {
-            Class.forName("com.alibaba.smart.framework.engine.exception.SupervisionException");
-            Class.forName("com.alibaba.smart.framework.engine.exception.NotificationException");
-            Class.forName("com.alibaba.smart.framework.engine.exception.RollbackException");
+            Class.forName("com.auraboot.smart.framework.engine.exception.SupervisionException");
+            Class.forName("com.auraboot.smart.framework.engine.exception.NotificationException");
+            Class.forName("com.auraboot.smart.framework.engine.exception.RollbackException");
             
             System.out.println("All custom exception classes are properly defined!");
         } catch (ClassNotFoundException e) {

@@ -1,16 +1,16 @@
-package com.alibaba.smart.framework.engine.bpmn.behavior.gateway;
+package com.auraboot.smart.framework.engine.bpmn.behavior.gateway;
 
 import java.util.Collection;
 
-import com.alibaba.smart.framework.engine.behavior.base.AbstractActivityBehavior;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.EventBasedGateway;
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.helper.CommonGatewayHelper;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.behavior.base.AbstractActivityBehavior;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.EventBasedGateway;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.helper.CommonGatewayHelper;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 
 @ExtensionBinding(group = ExtensionConstant.ACTIVITY_BEHAVIOR, bindKey = EventBasedGateway.class)
 public class EventBasedGatewayBehavior extends AbstractActivityBehavior<EventBasedGateway> {

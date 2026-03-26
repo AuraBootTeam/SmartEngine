@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.test.storage.dual.helper;
+package com.auraboot.smart.framework.engine.test.storage.dual.helper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.configuration.TaskAssigneeDispatcher;
-import com.alibaba.smart.framework.engine.constant.AssigneeTypeConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
+import com.auraboot.smart.framework.engine.configuration.TaskAssigneeDispatcher;
+import com.auraboot.smart.framework.engine.constant.AssigneeTypeConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
 
 public class DefaultTaskAssigneeDispatcher implements TaskAssigneeDispatcher {
 

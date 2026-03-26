@@ -1,15 +1,15 @@
-package com.alibaba.smart.framework.engine.smart.parser;
+package com.auraboot.smart.framework.engine.smart.parser;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.assembly.BaseElement;
-import com.alibaba.smart.framework.engine.smart.Properties;
-import com.alibaba.smart.framework.engine.smart.PropertiesElementMarker;
-import com.alibaba.smart.framework.engine.xml.parser.AbstractElementParser;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.assembly.BaseElement;
+import com.auraboot.smart.framework.engine.smart.Properties;
+import com.auraboot.smart.framework.engine.smart.PropertiesElementMarker;
+import com.auraboot.smart.framework.engine.xml.parser.AbstractElementParser;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
 
 /**
  * Extension Elements Parser Created by ettear on 16-4-14.

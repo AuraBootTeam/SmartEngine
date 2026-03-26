@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.model.instance;
+package com.auraboot.smart.framework.engine.model.instance;
 
 import java.util.Date;
 import java.util.List;
@@ -41,7 +41,7 @@ public interface TaskInstance extends LifeCycleInstance {
 
 
     /**
-     * @see com.alibaba.smart.framework.engine.constant.TaskInstanceConstant
+     * @see com.auraboot.smart.framework.engine.constant.TaskInstanceConstant
      * @param status
      */
     void setStatus(String status);

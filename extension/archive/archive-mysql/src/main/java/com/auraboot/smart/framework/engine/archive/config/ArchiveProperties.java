@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.archive.config;
+package com.auraboot.smart.framework.engine.archive.config;
 
 import lombok.Data;
 

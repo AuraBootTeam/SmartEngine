@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.test.query;
+package com.auraboot.smart.framework.engine.test.query;
 
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.common.util.DateUtil;
-import com.alibaba.smart.framework.engine.model.instance.DeploymentInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.persister.database.dao.DeploymentInstanceDAO;
-import com.alibaba.smart.framework.engine.persister.database.dao.ProcessInstanceDAO;
-import com.alibaba.smart.framework.engine.persister.database.dao.TaskInstanceDAO;
-import com.alibaba.smart.framework.engine.persister.database.entity.DeploymentInstanceEntity;
-import com.alibaba.smart.framework.engine.persister.database.entity.ProcessInstanceEntity;
-import com.alibaba.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.common.util.DateUtil;
+import com.auraboot.smart.framework.engine.model.instance.DeploymentInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.persister.database.dao.DeploymentInstanceDAO;
+import com.auraboot.smart.framework.engine.persister.database.dao.ProcessInstanceDAO;
+import com.auraboot.smart.framework.engine.persister.database.dao.TaskInstanceDAO;
+import com.auraboot.smart.framework.engine.persister.database.entity.DeploymentInstanceEntity;
+import com.auraboot.smart.framework.engine.persister.database.entity.ProcessInstanceEntity;
+import com.auraboot.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
 
 import lombok.Setter;
 import org.junit.Assert;

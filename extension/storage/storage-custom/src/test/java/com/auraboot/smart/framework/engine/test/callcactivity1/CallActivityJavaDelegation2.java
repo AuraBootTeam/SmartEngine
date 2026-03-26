@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.test.callcactivity1;
+package com.auraboot.smart.framework.engine.test.callcactivity1;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.JavaDelegation;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.JavaDelegation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

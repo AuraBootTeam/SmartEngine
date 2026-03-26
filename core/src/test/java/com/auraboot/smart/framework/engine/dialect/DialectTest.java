@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.dialect;
+package com.auraboot.smart.framework.engine.dialect;
 
-import com.alibaba.smart.framework.engine.dialect.impl.*;
+import com.auraboot.smart.framework.engine.dialect.impl.*;
 
 import org.junit.Assert;
 import org.junit.Test;

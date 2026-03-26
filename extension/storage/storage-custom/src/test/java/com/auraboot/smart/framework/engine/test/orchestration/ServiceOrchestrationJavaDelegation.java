@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.test.orchestration;
+package com.auraboot.smart.framework.engine.test.orchestration;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.JavaDelegation;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.JavaDelegation;
 
 import lombok.Getter;
 import org.slf4j.Logger;

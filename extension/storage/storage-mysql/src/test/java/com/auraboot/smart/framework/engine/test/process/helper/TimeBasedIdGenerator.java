@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.test.process.helper;
+package com.auraboot.smart.framework.engine.test.process.helper;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.model.instance.Instance;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.model.instance.Instance;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  00:02.

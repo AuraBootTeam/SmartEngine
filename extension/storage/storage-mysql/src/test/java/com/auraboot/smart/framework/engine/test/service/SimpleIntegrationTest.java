@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.test.service;
+package com.auraboot.smart.framework.engine.test.service;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.constant.DeploymentStatusConstant;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.model.instance.DeploymentInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.service.param.command.CreateDeploymentCommand;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomVariablePersister;
-import com.alibaba.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
-import com.alibaba.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
-import com.alibaba.smart.framework.engine.test.process.helper.dispatcher.DefaultTaskAssigneeDispatcher;
-import com.alibaba.smart.framework.engine.util.IOUtil;
+import com.auraboot.smart.framework.engine.constant.DeploymentStatusConstant;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.model.instance.DeploymentInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.service.param.command.CreateDeploymentCommand;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomVariablePersister;
+import com.auraboot.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
+import com.auraboot.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
+import com.auraboot.smart.framework.engine.test.process.helper.dispatcher.DefaultTaskAssigneeDispatcher;
+import com.auraboot.smart.framework.engine.util.IOUtil;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.alibaba.smart.framework.engine.persister.database.dao.UserTaskIndexDAO">
+<mapper namespace="com.auraboot.smart.framework.engine.persister.database.dao.UserTaskIndexDAO">
 
     <sql id="baseColumn">
         id, tenant_id, assignee_id, assignee_type, task_instance_id, process_instance_id,
         process_definition_type, domain_code, extra, task_status, task_gmt_modified, title, priority
     </sql>
 
-    <insert id="insert" parameterType="com.alibaba.smart.framework.engine.persister.database.entity.UserTaskIndexEntity"
+    <insert id="insert" parameterType="com.auraboot.smart.framework.engine.persister.database.entity.UserTaskIndexEntity"
             useGeneratedKeys="true" keyProperty="id">
         insert into se_user_task_index(tenant_id, assignee_id, assignee_type, task_instance_id, process_instance_id,
         process_definition_type, domain_code, extra, task_status, task_gmt_modified, title, priority)
         values (#{tenantId}, #{assigneeId}, #{assigneeType}, #{taskInstanceId}, #{processInstanceId},
-        #{processDefinitionType}, #{domainCode}, #{extra, typeHandler=com.alibaba.smart.framework.engine.persister.database.handler.JsonTypeHandler}, #{taskStatus}, #{taskGmtModified}, #{title}, #{priority})
+        #{processDefinitionType}, #{domainCode}, #{extra, typeHandler=com.auraboot.smart.framework.engine.persister.database.handler.JsonTypeHandler}, #{taskStatus}, #{taskGmtModified}, #{title}, #{priority})
     </insert>
 
     <delete id="deleteByTaskInstanceId">
@@ -109,8 +109,8 @@
     </sql>
 
     <select id="findByAssignee"
-            resultType="com.alibaba.smart.framework.engine.persister.database.entity.UserTaskIndexEntity"
-            parameterType="com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam">
+            resultType="com.auraboot.smart.framework.engine.persister.database.entity.UserTaskIndexEntity"
+            parameterType="com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam">
         select <include refid="baseColumn"/>
         from se_user_task_index
         where 1=1
@@ -125,7 +125,7 @@
     </select>
 
     <select id="countByAssignee" resultType="int"
-            parameterType="com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam">
+            parameterType="com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam">
         select count(*)
         from se_user_task_index
         where 1=1

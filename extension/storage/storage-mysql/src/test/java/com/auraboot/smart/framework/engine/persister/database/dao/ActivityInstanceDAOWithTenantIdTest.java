@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
-import com.alibaba.smart.framework.engine.common.util.DateUtil;
-import com.alibaba.smart.framework.engine.persister.database.entity.ActivityInstanceEntity;
+import com.auraboot.smart.framework.engine.common.util.DateUtil;
+import com.auraboot.smart.framework.engine.persister.database.entity.ActivityInstanceEntity;
 import lombok.Setter;
 import org.junit.Assert;
 import org.junit.Before;

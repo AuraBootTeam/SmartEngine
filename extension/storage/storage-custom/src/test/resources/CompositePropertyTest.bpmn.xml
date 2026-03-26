@@ -16,7 +16,7 @@
       <bpmn:outgoing>Flow_0bngvff</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_0bngvff" sourceRef="theStarter" targetRef="task1" />
-    <bpmn:serviceTask id="task1" name="自动测试任务&#10;" smart:class="com.alibaba.smart.framework.engine.test.delegation.serviceTaskBusinessDelegation1">
+    <bpmn:serviceTask id="task1" name="自动测试任务&#10;" smart:class="com.auraboot.smart.framework.engine.test.delegation.serviceTaskBusinessDelegation1">
       <bpmn:documentation>自动执行的测试任务，取得流程对应的输入参数，并进行打印，同时给流程的返回参数进行赋值。
 </bpmn:documentation>
       <bpmn:extensionElements>
@@ -36,7 +36,7 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0vo9cmf" sourceRef="task1" targetRef="task2" />
     <bpmn:sequenceFlow id="Flow_1bcjsi8" sourceRef="task2" targetRef="theEnd" />
-    <bpmn:serviceTask id="task2" name="自动测试任务2&#10;" smart:class="com.alibaba.smart.framework.engine.test.delegation.serviceTaskBusinessDelegation2">
+    <bpmn:serviceTask id="task2" name="自动测试任务2&#10;" smart:class="com.auraboot.smart.framework.engine.test.delegation.serviceTaskBusinessDelegation2">
       <bpmn:documentation>自动测试任务2</bpmn:documentation>
       <bpmn:extensionElements>
         <smart:properties>

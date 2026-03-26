@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.constant;
+package com.auraboot.smart.framework.engine.constant;
 
 /**
  * @author 高海军 帝奇  2016.11.11

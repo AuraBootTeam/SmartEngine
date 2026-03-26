@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.pvm.impl;
+package com.auraboot.smart.framework.engine.pvm.impl;
 
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
-import com.alibaba.smart.framework.engine.pvm.PvmElement;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.pvm.PvmElement;
 
 /**
  * @author 高海军 帝奇  2016.11.11

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.constant;
+package com.auraboot.smart.framework.engine.constant;
 
 /**
  * 知会通知相关常量

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.storage;
+package com.auraboot.smart.framework.engine.storage;
 
 import java.io.Serializable;
 import java.util.HashMap;

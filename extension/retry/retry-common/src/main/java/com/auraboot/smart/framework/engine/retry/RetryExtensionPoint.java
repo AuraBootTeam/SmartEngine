@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.retry;
+package com.auraboot.smart.framework.engine.retry;
 
-import com.alibaba.smart.framework.engine.hook.LifeCycleHook;
+import com.auraboot.smart.framework.engine.hook.LifeCycleHook;
 
 /**
  * @author zhenhong.tzh

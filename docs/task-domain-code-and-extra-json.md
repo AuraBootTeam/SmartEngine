@@ -108,7 +108,7 @@ task.setExtra("{\"category\":\"leave\",\"days\":5,\"type\":\"annual\"}");
 | `extraJsonIn(String key, String...)` | JSON key IN 查询（varargs） |
 | `extraJsonLike(String key, String)` | JSON key 模糊查询 |
 
-代码位置：`core/src/main/java/com/alibaba/smart/framework/engine/query/TaskQuery.java`
+代码位置：`core/src/main/java/com/auraboot/smart/framework/engine/query/TaskQuery.java`
 
 ---
 
@@ -142,7 +142,7 @@ task.setExtra("{\"category\":\"leave\",\"days\":5,\"type\":\"annual\"}");
 | OceanBase | `JSON_UNQUOTE(JSON_EXTRACT(col, '$.key'))` | `OceanBaseDialect` |
 | SQL Server | `JSON_VALUE(col, '$.key')` | `SqlServerDialect`（继承默认） |
 
-代码位置：`core/src/main/java/com/alibaba/smart/framework/engine/dialect/Dialect.java`
+代码位置：`core/src/main/java/com/auraboot/smart/framework/engine/dialect/Dialect.java`
 
 ### 4.3 配置 Dialect
 
@@ -240,7 +240,7 @@ PostgreSQL 的 `JSONB` 类型需要 MyBatis TypeHandler 确保正确读写。已
 在 MyBatis mapper XML 中已对 `extra` 字段的 insert/update 指定了 TypeHandler：
 
 ```xml
-#{extra, typeHandler=com.alibaba.smart.framework.engine.persister.database.handler.JsonTypeHandler}
+#{extra, typeHandler=com.auraboot.smart.framework.engine.persister.database.handler.JsonTypeHandler}
 ```
 
 ---

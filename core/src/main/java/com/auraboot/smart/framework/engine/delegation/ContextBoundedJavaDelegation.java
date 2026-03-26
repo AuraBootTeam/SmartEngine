@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.delegation;
+package com.auraboot.smart.framework.engine.delegation;
 
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -10,14 +10,14 @@ Maven 示例（按需选择版本）：
 
 ```xml
 <dependency>
-  <groupId>com.alibaba.smart.framework</groupId>
+  <groupId>com.auraboot.smart.framework</groupId>
   <artifactId>smart-engine-core</artifactId>
   <version>3.7.0-SNAPSHOT</version>
 </dependency>
 
 <!-- Custom 存储示例实现（可选；生产环境通常你会自己实现 Storage 接口） -->
 <dependency>
-  <groupId>com.alibaba.smart.framework</groupId>
+  <groupId>com.auraboot.smart.framework</groupId>
   <artifactId>smart-engine-extension-storage-custom</artifactId>
   <version>3.7.0-SNAPSHOT</version>
 </dependency>
@@ -61,10 +61,10 @@ Custom 模式你通常至少要提供：
 最小可运行示例（纯 Java）：
 
 ```java
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
 
 public class Demo {
   public static void main(String[] args) {

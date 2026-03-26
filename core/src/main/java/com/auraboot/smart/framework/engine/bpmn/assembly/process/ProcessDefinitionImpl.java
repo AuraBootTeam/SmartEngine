@@ -1,16 +1,16 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.process;
+package com.auraboot.smart.framework.engine.bpmn.assembly.process;
 
 import java.util.List;
 import java.util.Map;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.annotation.WorkAround;
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.BaseElement;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.model.assembly.IdBasedElement;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.annotation.WorkAround;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.BaseElement;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.IdBasedElement;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
 
 import lombok.Data;
 

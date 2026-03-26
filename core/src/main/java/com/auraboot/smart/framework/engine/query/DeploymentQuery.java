@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.query;
+package com.auraboot.smart.framework.engine.query;
 
-import com.alibaba.smart.framework.engine.model.instance.DeploymentInstance;
+import com.auraboot.smart.framework.engine.model.instance.DeploymentInstance;
 
 /**
  * Fluent query interface for DeploymentInstance.
@@ -108,7 +108,7 @@ public interface DeploymentQuery extends Query<DeploymentQuery, DeploymentInstan
      *
      * @param deploymentStatus the deployment status
      * @return this query for method chaining
-     * @see com.alibaba.smart.framework.engine.constant.DeploymentStatusConstant
+     * @see com.auraboot.smart.framework.engine.constant.DeploymentStatusConstant
      */
     DeploymentQuery deploymentStatus(String deploymentStatus);
 
@@ -126,7 +126,7 @@ public interface DeploymentQuery extends Query<DeploymentQuery, DeploymentInstan
      *
      * @param logicStatus the logic status
      * @return this query for method chaining
-     * @see com.alibaba.smart.framework.engine.constant.LogicStatusConstant
+     * @see com.auraboot.smart.framework.engine.constant.LogicStatusConstant
      */
     DeploymentQuery logicStatus(String logicStatus);
 

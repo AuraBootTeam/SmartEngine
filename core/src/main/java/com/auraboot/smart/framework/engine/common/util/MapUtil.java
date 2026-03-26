@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.common.util;
+package com.auraboot.smart.framework.engine.common.util;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

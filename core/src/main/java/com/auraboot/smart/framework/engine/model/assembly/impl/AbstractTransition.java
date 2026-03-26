@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.model.assembly.impl;
+package com.auraboot.smart.framework.engine.model.assembly.impl;
 
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.model.assembly.Transition;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.Transition;
 
 import lombok.Data;
 

@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.service.command;
+package com.auraboot.smart.framework.engine.service.command;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
 
 /**
  * 主要负责人工任务处理服务。

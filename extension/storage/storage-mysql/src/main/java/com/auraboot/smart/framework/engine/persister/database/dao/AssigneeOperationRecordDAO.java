@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.persister.database.entity.AssigneeOperationRecordEntity;
+import com.auraboot.smart.framework.engine.persister.database.entity.AssigneeOperationRecordEntity;
 
 import org.apache.ibatis.annotations.Param;
 

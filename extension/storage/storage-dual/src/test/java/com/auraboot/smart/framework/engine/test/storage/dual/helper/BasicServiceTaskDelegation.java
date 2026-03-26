@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.test.storage.dual.helper;
+package com.auraboot.smart.framework.engine.test.storage.dual.helper;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.TccDelegation;
-import com.alibaba.smart.framework.engine.delegation.TccResult;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.TccDelegation;
+import com.auraboot.smart.framework.engine.delegation.TccResult;
 
 public class BasicServiceTaskDelegation implements TccDelegation {
 

@@ -10,20 +10,20 @@
 
 
         <serviceTask id="CreateOrderActivity" name="CreateOrderActivity"
-                     smart:class="com.alibaba.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
         <serviceTask id="CreatePaymentOrderActivity" name="CreatePaymentOrderActivity"
-                     smart:class="com.alibaba.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
 
         <receiveTask id="WaitPayCallBackActivity" name="PaySuccessCallBackActivity"
-                     smart:class="com.alibaba.smart.framework.engine.test.retry.delegation.PaymentMQRetryJavaDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.retry.delegation.PaymentMQRetryJavaDelegation"/>
         <receiveTask id="SecurityCheckActivity" name="SecurityCheckActivity" smart:needListenerNormalMQMessage="no"
-                     smart:class="com.alibaba.smart.framework.engine.test.retry.delegation.SecurityMQRetryJavaDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.retry.delegation.SecurityMQRetryJavaDelegation"/>
 
 
         <serviceTask id="CreateDeliveryOrderActivity" name="CreateDeliveryOrderActivity"
-                     smart:class="com.alibaba.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
         <receiveTask id="WaitPeopleCheckActivity" name="WaitPeopleCheckActivity"
-                     smart:class="com.alibaba.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.orchestration.ServiceOrchestrationJavaDelegation"/>
 
         <sequenceFlow id="SequenceFlow_12oxmfc" sourceRef="SecurityResultCheck" targetRef="WaitPeopleCheckActivity">
             <conditionExpression type="mvel"><![CDATA[securityStatus == "WAIT_PEOPLE_CHECK"]]></conditionExpression>

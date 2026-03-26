@@ -1,19 +1,19 @@
-package com.alibaba.smart.framework.engine.instance.factory.impl;
+package com.auraboot.smart.framework.engine.instance.factory.impl;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.common.util.DateUtil;
-import com.alibaba.smart.framework.engine.common.util.IdAndVersionUtil;
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.instance.factory.ProcessInstanceFactory;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.util.ObjectUtil;
+import com.auraboot.smart.framework.engine.common.util.DateUtil;
+import com.auraboot.smart.framework.engine.common.util.IdAndVersionUtil;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.instance.factory.ProcessInstanceFactory;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.util.ObjectUtil;
 
 /**
  * 默认流程实例工厂实现 Created by ettear on 16-4-20.

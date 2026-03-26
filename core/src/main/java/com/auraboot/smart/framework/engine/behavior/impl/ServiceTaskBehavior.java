@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.behavior.impl;
+package com.auraboot.smart.framework.engine.behavior.impl;
 
-import com.alibaba.smart.framework.engine.behavior.base.AbstractActivityBehavior;
-import com.alibaba.smart.framework.engine.bpmn.assembly.task.ServiceTask;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.behavior.base.AbstractActivityBehavior;
+import com.auraboot.smart.framework.engine.bpmn.assembly.task.ServiceTask;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

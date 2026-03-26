@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.dialect;
+package com.auraboot.smart.framework.engine.dialect;
 
 /**
  * Enumeration of ID generation strategies supported by different databases.

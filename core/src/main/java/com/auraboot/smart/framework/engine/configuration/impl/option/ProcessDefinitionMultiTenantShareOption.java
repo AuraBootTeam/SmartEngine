@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.configuration.impl.option;
+package com.auraboot.smart.framework.engine.configuration.impl.option;
 
-import com.alibaba.smart.framework.engine.configuration.ConfigurationOption;
+import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
 
 /**
  * 流程定义是否是多租户模式：默认是多租户模式<br>

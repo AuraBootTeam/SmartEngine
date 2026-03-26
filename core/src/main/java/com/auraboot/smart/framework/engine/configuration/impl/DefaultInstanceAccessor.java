@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
-import com.alibaba.smart.framework.engine.configuration.InstanceAccessor;
-import com.alibaba.smart.framework.engine.util.ClassUtil;
+import com.auraboot.smart.framework.engine.configuration.InstanceAccessor;
+import com.auraboot.smart.framework.engine.util.ClassUtil;
 
 /**
  *

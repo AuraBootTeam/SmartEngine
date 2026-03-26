@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.service.param.query;
+package com.auraboot.smart.framework.engine.service.param.query;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.query.OrderSpec;
+import com.auraboot.smart.framework.engine.query.OrderSpec;
 
 import lombok.Data;
 

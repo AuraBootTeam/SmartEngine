@@ -1,13 +1,13 @@
-package com.alibaba.smart.framework.engine.archive;
+package com.auraboot.smart.framework.engine.archive;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.archive.config.ArchiveProperties;
-import com.alibaba.smart.framework.engine.archive.dao.ArchiveDAO;
-import com.alibaba.smart.framework.engine.archive.service.ArchiveService;
+import com.auraboot.smart.framework.engine.archive.config.ArchiveProperties;
+import com.auraboot.smart.framework.engine.archive.dao.ArchiveDAO;
+import com.auraboot.smart.framework.engine.archive.service.ArchiveService;
 
 import org.junit.Assert;
 import org.junit.Before;

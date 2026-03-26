@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.retry.instance.storage;
+package com.auraboot.smart.framework.engine.retry.instance.storage;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.retry.model.instance.RetryRecord;
-import com.alibaba.smart.framework.engine.retry.service.command.RetryPersistence;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.retry.model.instance.RetryRecord;
+import com.auraboot.smart.framework.engine.retry.service.command.RetryPersistence;
 
 /**
  * @author zhenhong.tzh

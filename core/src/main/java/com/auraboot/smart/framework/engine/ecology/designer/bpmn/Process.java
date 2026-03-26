@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.ecology.designer.bpmn;
+package com.auraboot.smart.framework.engine.ecology.designer.bpmn;
 
 import lombok.Data;
 import java.util.ArrayList;

@@ -9,7 +9,7 @@ SmartEngine 的存储设计核心思想是：
 
 ## 1. Storage 接口清单（核心）
 
-接口位置：`core/src/main/java/com/alibaba/smart/framework/engine/instance/storage/`
+接口位置：`core/src/main/java/com/auraboot/smart/framework/engine/instance/storage/`
 
 - `ActivityInstanceStorage`
 - `DeploymentInstanceStorage`

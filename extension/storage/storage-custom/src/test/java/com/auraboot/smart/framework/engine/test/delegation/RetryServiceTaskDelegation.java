@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.test.delegation;
+package com.auraboot.smart.framework.engine.test.delegation;
 
-import com.alibaba.smart.framework.engine.annotation.Retryable;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.JavaDelegation;
-import com.alibaba.smart.framework.engine.util.ThreadPoolUtil;
+import com.auraboot.smart.framework.engine.annotation.Retryable;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.JavaDelegation;
+import com.auraboot.smart.framework.engine.util.ThreadPoolUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

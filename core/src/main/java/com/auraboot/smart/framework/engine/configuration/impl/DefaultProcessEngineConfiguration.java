@@ -1,21 +1,21 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.common.expression.evaluator.ExpressionEvaluator;
-import com.alibaba.smart.framework.engine.common.expression.evaluator.MvelExpressionEvaluator;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.configuration.*;
-import com.alibaba.smart.framework.engine.configuration.impl.option.DefaultOptionContainer;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.constant.SmartBase;
-import com.alibaba.smart.framework.engine.dialect.Dialect;
-import com.alibaba.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
-import com.alibaba.smart.framework.engine.storage.StorageRouter;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.common.expression.evaluator.ExpressionEvaluator;
+import com.auraboot.smart.framework.engine.common.expression.evaluator.MvelExpressionEvaluator;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.configuration.*;
+import com.auraboot.smart.framework.engine.configuration.impl.option.DefaultOptionContainer;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.constant.SmartBase;
+import com.auraboot.smart.framework.engine.dialect.Dialect;
+import com.auraboot.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
+import com.auraboot.smart.framework.engine.storage.StorageRouter;
 
 import lombok.Data;
 import org.slf4j.Logger;

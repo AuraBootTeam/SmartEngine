@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.persister.common.assistant.pojo;
+package com.auraboot.smart.framework.engine.persister.common.assistant.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

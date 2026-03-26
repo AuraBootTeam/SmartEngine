@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.test.parallelgateway.deprecated;
+package com.auraboot.smart.framework.engine.test.parallelgateway.deprecated;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.persister.custom.session.PersisterSession;
-import com.alibaba.smart.framework.engine.persister.util.InstanceSerializerFacade;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.persister.custom.session.PersisterSession;
+import com.auraboot.smart.framework.engine.persister.util.InstanceSerializerFacade;
 
 import org.junit.Assert;
 import org.junit.Before;

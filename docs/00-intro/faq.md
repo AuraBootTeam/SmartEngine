@@ -28,7 +28,7 @@ SmartEngine 并行网关在运行期会出现多个 ExecutionInstance；join 的
 
 源码中与并行相关的关键点：
 
-- `com.alibaba.smart.framework.engine.util.ParallelGatewayUtil`：线程池选择、latch 等控制参数解析
+- `com.auraboot.smart.framework.engine.util.ParallelGatewayUtil`：线程池选择、latch 等控制参数解析
 - `ParallelGatewayBehavior` & 相关常量：并行网关行为与属性
 - `LockStrategy`：旧的锁扩展点（Deprecated）
 

@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
-import com.alibaba.smart.framework.engine.common.util.DateUtil;
-import com.alibaba.smart.framework.engine.constant.TaskInstanceConstant;
-import com.alibaba.smart.framework.engine.persister.database.entity.TaskAssigneeEntity;
-import com.alibaba.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
-import com.alibaba.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
+import com.auraboot.smart.framework.engine.common.util.DateUtil;
+import com.auraboot.smart.framework.engine.constant.TaskInstanceConstant;
+import com.auraboot.smart.framework.engine.persister.database.entity.TaskAssigneeEntity;
+import com.auraboot.smart.framework.engine.persister.database.entity.TaskInstanceEntity;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryByAssigneeParam;
+import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
 import lombok.Setter;
 import org.junit.Assert;
 import org.junit.Before;

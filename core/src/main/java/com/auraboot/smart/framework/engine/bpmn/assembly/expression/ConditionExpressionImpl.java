@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.expression;
+package com.auraboot.smart.framework.engine.bpmn.assembly.expression;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ConditionExpression;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ConditionExpression;
 
 import lombok.Data;
 

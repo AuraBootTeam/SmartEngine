@@ -1,20 +1,20 @@
-package com.alibaba.smart.framework.engine.test.service;
+package com.auraboot.smart.framework.engine.test.service;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.instance.impl.DefaultVariableInstance;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
-import com.alibaba.smart.framework.engine.service.param.query.PendingTaskQueryParam;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
-import com.alibaba.smart.framework.engine.test.process.helper.CustomVariablePersister;
-import com.alibaba.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
-import com.alibaba.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
-import com.alibaba.smart.framework.engine.test.process.helper.dispatcher.IdAndGroupTaskAssigneeDispatcher;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultVariableInstance;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.service.param.query.PendingTaskQueryParam;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomExceptioinProcessor;
+import com.auraboot.smart.framework.engine.test.process.helper.CustomVariablePersister;
+import com.auraboot.smart.framework.engine.test.process.helper.DefaultMultiInstanceCounter;
+import com.auraboot.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
+import com.auraboot.smart.framework.engine.test.process.helper.dispatcher.IdAndGroupTaskAssigneeDispatcher;
 
 import org.junit.Assert;
 import org.junit.Test;

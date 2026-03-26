@@ -7,7 +7,7 @@
 
         <startEvent id="theStart">
             <extensionElements>
-                <smart:executionListener event="PROCESS_START"  class="com.alibaba.smart.framework.engine.test.ProcessStartListener"/>
+                <smart:executionListener event="PROCESS_START"  class="com.auraboot.smart.framework.engine.test.ProcessStartListener"/>
             </extensionElements>
         </startEvent>
 
@@ -15,21 +15,21 @@
         <sequenceFlow id="flow1" sourceRef="theStart" targetRef="create"/>
 
 
-        <serviceTask id="create" name="Create" smart:class="com.alibaba.smart.framework.engine.test.delegation.Tracker">
+        <serviceTask id="create" name="Create" smart:class="com.auraboot.smart.framework.engine.test.delegation.Tracker">
             <extensionElements>
                 <smart:value name="task1" value="Create task"/>
                 <!-- 测试，这里并不会触发  PROCESS_START -->
-                <smart:executionListener event="PROCESS_START"  class="com.alibaba.smart.framework.engine.test.ProcessStartListener"/>
-                <smart:executionListener event="ACTIVITY_START"  class="com.alibaba.smart.framework.engine.test.StartListener"/>
-                <smart:executionListener event="ACTIVITY_END"  class="com.alibaba.smart.framework.engine.test.EndListener"/>
+                <smart:executionListener event="PROCESS_START"  class="com.auraboot.smart.framework.engine.test.ProcessStartListener"/>
+                <smart:executionListener event="ACTIVITY_START"  class="com.auraboot.smart.framework.engine.test.StartListener"/>
+                <smart:executionListener event="ACTIVITY_END"  class="com.auraboot.smart.framework.engine.test.EndListener"/>
                 <!-- 测试，这里并不会触发 PROCESS_END -->
-                <smart:executionListener event="PROCESS_END"  class="com.alibaba.smart.framework.engine.test.ProcessEndListener"/>
+                <smart:executionListener event="PROCESS_END"  class="com.auraboot.smart.framework.engine.test.ProcessEndListener"/>
             </extensionElements>
         </serviceTask>
 
         <sequenceFlow id="flow2" sourceRef="create" targetRef="pay"/>
 
-        <serviceTask id="pay" name="Pay" smart:class="com.alibaba.smart.framework.engine.test.delegation.Tracker">
+        <serviceTask id="pay" name="Pay" smart:class="com.auraboot.smart.framework.engine.test.delegation.Tracker">
             <extensionElements>
                 <smart:value name="task2" value="Pay task"/>
                 <smart:properties>
@@ -42,7 +42,7 @@
 
         <endEvent id="theEnd">
             <extensionElements>
-                <smart:executionListener event="PROCESS_END"  class="com.alibaba.smart.framework.engine.test.ProcessEndListener"/>
+                <smart:executionListener event="PROCESS_END"  class="com.auraboot.smart.framework.engine.test.ProcessEndListener"/>
             </extensionElements>
         </endEvent>
 

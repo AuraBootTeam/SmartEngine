@@ -1,26 +1,26 @@
-package com.alibaba.smart.framework.engine.test.cases;
+package com.auraboot.smart.framework.engine.test.cases;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.common.util.CollectionUtil;
-import com.alibaba.smart.framework.engine.common.util.MapUtil;
-import com.alibaba.smart.framework.engine.configuration.DelegationExecutor;
-import com.alibaba.smart.framework.engine.configuration.ListenerExecutor;
-import com.alibaba.smart.framework.engine.constant.ExtensionElementsConstant;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.listener.ListenerAggregation;
-import com.alibaba.smart.framework.engine.model.assembly.Activity;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElements;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
-import com.alibaba.smart.framework.engine.test.delegation.OrchestrationAdapter;
-import com.alibaba.smart.framework.engine.test.delegation.OrchestrationAdapterImplement;
-import com.alibaba.smart.framework.engine.util.ClassUtil;
+import com.auraboot.smart.framework.engine.common.util.CollectionUtil;
+import com.auraboot.smart.framework.engine.common.util.MapUtil;
+import com.auraboot.smart.framework.engine.configuration.DelegationExecutor;
+import com.auraboot.smart.framework.engine.configuration.ListenerExecutor;
+import com.auraboot.smart.framework.engine.constant.ExtensionElementsConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.listener.ListenerAggregation;
+import com.auraboot.smart.framework.engine.model.assembly.Activity;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElements;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.test.delegation.OrchestrationAdapter;
+import com.auraboot.smart.framework.engine.test.delegation.OrchestrationAdapterImplement;
+import com.auraboot.smart.framework.engine.util.ClassUtil;
 
 import org.junit.Assert;
 import org.junit.Test;

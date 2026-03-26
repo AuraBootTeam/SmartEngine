@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.service.param.query;
+package com.auraboot.smart.framework.engine.service.param.query;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -34,12 +34,12 @@ public class DeploymentInstanceQueryParam extends BaseQueryParam {
     private String deploymentUserId;
 
     /**
-     * @see com.alibaba.smart.framework.engine.constant.DeploymentStatusConstant
+     * @see com.auraboot.smart.framework.engine.constant.DeploymentStatusConstant
      */
     private String deploymentStatus;
 
     /**
-     * @see com.alibaba.smart.framework.engine.constant.LogicStatusConstant
+     * @see com.auraboot.smart.framework.engine.constant.LogicStatusConstant
      */
     private String logicStatus;
 }

@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.persister.database.builder;
+package com.auraboot.smart.framework.engine.persister.database.builder;
 
-import com.alibaba.smart.framework.engine.configuration.VariablePersister;
-import com.alibaba.smart.framework.engine.instance.impl.DefaultVariableInstance;
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
-import com.alibaba.smart.framework.engine.persister.database.entity.VariableInstanceEntity;
-import com.alibaba.smart.framework.engine.persister.database.service.RelationshipDatabaseVariableInstanceStorage;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultVariableInstance;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.persister.database.entity.VariableInstanceEntity;
+import com.auraboot.smart.framework.engine.persister.database.service.RelationshipDatabaseVariableInstanceStorage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,29 +1,29 @@
-package com.alibaba.smart.framework.engine;
+package com.auraboot.smart.framework.engine;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.service.command.DeploymentCommandService;
-import com.alibaba.smart.framework.engine.service.command.ExecutionCommandService;
-import com.alibaba.smart.framework.engine.service.command.NotificationCommandService;
-import com.alibaba.smart.framework.engine.service.command.ProcessCommandService;
-import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-import com.alibaba.smart.framework.engine.service.command.SupervisionCommandService;
-import com.alibaba.smart.framework.engine.service.command.TaskCommandService;
-import com.alibaba.smart.framework.engine.service.command.VariableCommandService;
-import com.alibaba.smart.framework.engine.service.query.ActivityQueryService;
-import com.alibaba.smart.framework.engine.service.query.DeploymentQueryService;
-import com.alibaba.smart.framework.engine.service.query.ExecutionQueryService;
-import com.alibaba.smart.framework.engine.service.query.NotificationQueryService;
-import com.alibaba.smart.framework.engine.service.query.ProcessQueryService;
-import com.alibaba.smart.framework.engine.service.query.RepositoryQueryService;
-import com.alibaba.smart.framework.engine.service.query.SupervisionQueryService;
-import com.alibaba.smart.framework.engine.service.query.TaskAssigneeQueryService;
-import com.alibaba.smart.framework.engine.service.query.TaskQueryService;
-import com.alibaba.smart.framework.engine.service.query.VariableQueryService;
-import com.alibaba.smart.framework.engine.query.DeploymentQuery;
-import com.alibaba.smart.framework.engine.query.NotificationQuery;
-import com.alibaba.smart.framework.engine.query.ProcessInstanceQuery;
-import com.alibaba.smart.framework.engine.query.SupervisionQuery;
-import com.alibaba.smart.framework.engine.query.TaskQuery;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.service.command.DeploymentCommandService;
+import com.auraboot.smart.framework.engine.service.command.ExecutionCommandService;
+import com.auraboot.smart.framework.engine.service.command.NotificationCommandService;
+import com.auraboot.smart.framework.engine.service.command.ProcessCommandService;
+import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+import com.auraboot.smart.framework.engine.service.command.SupervisionCommandService;
+import com.auraboot.smart.framework.engine.service.command.TaskCommandService;
+import com.auraboot.smart.framework.engine.service.command.VariableCommandService;
+import com.auraboot.smart.framework.engine.service.query.ActivityQueryService;
+import com.auraboot.smart.framework.engine.service.query.DeploymentQueryService;
+import com.auraboot.smart.framework.engine.service.query.ExecutionQueryService;
+import com.auraboot.smart.framework.engine.service.query.NotificationQueryService;
+import com.auraboot.smart.framework.engine.service.query.ProcessQueryService;
+import com.auraboot.smart.framework.engine.service.query.RepositoryQueryService;
+import com.auraboot.smart.framework.engine.service.query.SupervisionQueryService;
+import com.auraboot.smart.framework.engine.service.query.TaskAssigneeQueryService;
+import com.auraboot.smart.framework.engine.service.query.TaskQueryService;
+import com.auraboot.smart.framework.engine.service.query.VariableQueryService;
+import com.auraboot.smart.framework.engine.query.DeploymentQuery;
+import com.auraboot.smart.framework.engine.query.NotificationQuery;
+import com.auraboot.smart.framework.engine.query.ProcessInstanceQuery;
+import com.auraboot.smart.framework.engine.query.SupervisionQuery;
+import com.auraboot.smart.framework.engine.query.TaskQuery;
 
 /**
  * @author 高海军 帝奇

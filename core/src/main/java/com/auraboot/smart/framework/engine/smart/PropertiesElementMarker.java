@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.smart;
+package com.auraboot.smart.framework.engine.smart;
 
 
 public interface PropertiesElementMarker {

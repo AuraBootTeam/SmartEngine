@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.service.command;
+package com.auraboot.smart.framework.engine.service.command;
 
-import com.alibaba.smart.framework.engine.model.instance.VariableInstance;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
 
 /**
  * 主要变量插入。

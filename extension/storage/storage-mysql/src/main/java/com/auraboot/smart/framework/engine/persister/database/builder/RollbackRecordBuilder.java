@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.persister.database.builder;
+package com.auraboot.smart.framework.engine.persister.database.builder;
 
-import com.alibaba.smart.framework.engine.instance.impl.DefaultRollbackRecord;
-import com.alibaba.smart.framework.engine.model.instance.RollbackRecord;
-import com.alibaba.smart.framework.engine.persister.database.entity.RollbackRecordEntity;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultRollbackRecord;
+import com.auraboot.smart.framework.engine.model.instance.RollbackRecord;
+import com.auraboot.smart.framework.engine.persister.database.entity.RollbackRecordEntity;
 
 /**
  * 流程回退记录Builder - 负责Model和Entity之间的转换

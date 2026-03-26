@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.configuration;
+package com.auraboot.smart.framework.engine.configuration;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.alibaba.smart.framework.engine.model.instance.Instance;
+import com.auraboot.smart.framework.engine.model.instance.Instance;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  23:17.

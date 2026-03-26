@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.dialect.impl;
+package com.auraboot.smart.framework.engine.dialect.impl;
 
-import com.alibaba.smart.framework.engine.dialect.IdGenerationType;
+import com.auraboot.smart.framework.engine.dialect.IdGenerationType;
 
 /**
  * 人大金仓 (KingbaseES) database dialect implementation.

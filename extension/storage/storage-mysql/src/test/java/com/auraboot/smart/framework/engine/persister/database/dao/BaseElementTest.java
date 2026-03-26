@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

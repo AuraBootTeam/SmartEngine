@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.query.impl;
+package com.auraboot.smart.framework.engine.query.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.query.OrderSpec;
-import com.alibaba.smart.framework.engine.query.Query;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.query.OrderSpec;
+import com.auraboot.smart.framework.engine.query.Query;
 
 /**
  * Abstract base implementation for fluent query API.

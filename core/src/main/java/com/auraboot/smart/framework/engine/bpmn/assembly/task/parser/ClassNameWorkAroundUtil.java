@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.task.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.task.parser;
 
 import javax.xml.stream.XMLStreamReader;
 
-import com.alibaba.smart.framework.engine.constant.SmartBase;
+import com.auraboot.smart.framework.engine.constant.SmartBase;
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  20:53.

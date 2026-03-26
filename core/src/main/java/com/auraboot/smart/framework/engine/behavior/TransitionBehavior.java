@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.behavior;
+package com.auraboot.smart.framework.engine.behavior;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Transition;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Transition;
 
 /**
  * @author 高海军 帝奇  2016.11.11

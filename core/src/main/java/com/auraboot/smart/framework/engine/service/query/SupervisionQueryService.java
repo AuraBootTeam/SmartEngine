@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.service.query;
+package com.auraboot.smart.framework.engine.service.query;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.model.instance.SupervisionInstance;
-import com.alibaba.smart.framework.engine.service.param.query.SupervisionQueryParam;
+import com.auraboot.smart.framework.engine.model.instance.SupervisionInstance;
+import com.auraboot.smart.framework.engine.service.param.query.SupervisionQueryParam;
 
 /**
  * 督办管理查询服务接口

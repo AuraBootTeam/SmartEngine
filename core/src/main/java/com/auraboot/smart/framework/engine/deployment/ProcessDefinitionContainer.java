@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.deployment;
+package com.auraboot.smart.framework.engine.deployment;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.tree.ActivityTreeNode;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.pvm.PvmProcessDefinition;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.tree.ActivityTreeNode;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmProcessDefinition;
 
 /**
  * @author 高海军 帝奇  2016.11.11

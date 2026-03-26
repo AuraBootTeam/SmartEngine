@@ -1,12 +1,12 @@
-package com.alibaba.smart.framework.engine.test.storage.dual;
+package com.auraboot.smart.framework.engine.test.storage.dual;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
-import com.alibaba.smart.framework.engine.instance.storage.ProcessInstanceStorage;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.extension.scanner.SimpleAnnotationScanner;
+import com.auraboot.smart.framework.engine.instance.storage.ProcessInstanceStorage;
 
 import org.junit.After;
 import org.junit.Test;
@@ -47,7 +47,7 @@ public class BackwardCompatibilityTest {
 
         // SERVICE group lookups should still work (non-storage types)
         Object servicePoint = scanner.getExtensionPoint(ExtensionConstant.SERVICE,
-            com.alibaba.smart.framework.engine.service.command.RepositoryCommandService.class);
+            com.auraboot.smart.framework.engine.service.command.RepositoryCommandService.class);
         assertNotNull("SERVICE group extension point should still work", servicePoint);
     }
 
@@ -60,7 +60,7 @@ public class BackwardCompatibilityTest {
         // SERVICE group should work normally (these are not routed through StorageRouter)
         Object repoService = config.getAnnotationScanner()
             .getExtensionPoint(ExtensionConstant.SERVICE,
-                com.alibaba.smart.framework.engine.service.command.ProcessCommandService.class);
+                com.auraboot.smart.framework.engine.service.command.ProcessCommandService.class);
         assertNotNull("ProcessCommandService should be resolved via original mechanism", repoService);
     }
 }

@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.behavior.base;
+package com.auraboot.smart.framework.engine.behavior.base;
 
-import com.alibaba.smart.framework.engine.behavior.TransitionBehavior;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.model.assembly.Transition;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.behavior.TransitionBehavior;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.model.assembly.Transition;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 
 /**
  * @author 高海军 帝奇  2016.11.11

@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.extension.scanner;
+package com.auraboot.smart.framework.engine.extension.scanner;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -17,15 +17,15 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.configuration.scanner.ExtensionBindingResult;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.storage.StorageRouter;
-import com.alibaba.smart.framework.engine.util.ClassUtil;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.configuration.scanner.ExtensionBindingResult;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.storage.StorageRouter;
+import com.auraboot.smart.framework.engine.util.ClassUtil;
 
 import lombok.Getter;
 import lombok.Setter;

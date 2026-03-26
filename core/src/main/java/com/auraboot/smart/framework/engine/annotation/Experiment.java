@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.annotation;
+package com.auraboot.smart.framework.engine.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

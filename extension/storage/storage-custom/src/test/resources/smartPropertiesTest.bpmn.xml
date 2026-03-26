@@ -6,13 +6,13 @@
         <startEvent id="StartEvent_1"/>
         <exclusiveGateway id="ExclusiveGateway_1otbxkp"/>
         <serviceTask id="ServiceTask_056ab4g" name="Right"
-                     smart:class="com.alibaba.smart.framework.engine.test.delegation.RightJavaDelegation">
+                     smart:class="com.auraboot.smart.framework.engine.test.delegation.RightJavaDelegation">
             <extensionElements>
                 <smart:properties>
                     <smart:value name="value" value="right"/>
                 </smart:properties>
                 <smart:executionListener event="ACTIVITY_START,ACTIVITY_END"
-                                         class="com.alibaba.smart.framework.engine.test.StartListener"/>
+                                         class="com.auraboot.smart.framework.engine.test.StartListener"/>
             </extensionElements>
         </serviceTask>
         <sequenceFlow id="SequenceFlow_1mxsbfh" sourceRef="StartEvent_1" targetRef="ExclusiveGateway_1otbxkp"/>

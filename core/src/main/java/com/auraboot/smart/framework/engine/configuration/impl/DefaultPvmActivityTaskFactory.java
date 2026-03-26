@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.configuration.impl;
+package com.auraboot.smart.framework.engine.configuration.impl;
 
 
-import com.alibaba.smart.framework.engine.configuration.PvmActivityTask;
-import com.alibaba.smart.framework.engine.configuration.PvmActivityTaskFactory;
+import com.auraboot.smart.framework.engine.configuration.PvmActivityTask;
+import com.auraboot.smart.framework.engine.configuration.PvmActivityTaskFactory;
 
 public  class DefaultPvmActivityTaskFactory implements PvmActivityTaskFactory {
 

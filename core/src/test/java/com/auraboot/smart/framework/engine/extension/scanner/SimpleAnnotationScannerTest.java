@@ -1,9 +1,9 @@
-package com.alibaba.smart.framework.engine.extension.scanner;
+package com.auraboot.smart.framework.engine.extension.scanner;
 
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.configuration.scanner.ExtensionBindingResult;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.configuration.scanner.ExtensionBindingResult;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -25,7 +25,7 @@ public class SimpleAnnotationScannerTest {
 
     @Test
     public void scan() {
-        SimpleAnnotationScanner simpleAnnotationScanner = new SimpleAnnotationScanner("com.alibaba.smart.framework.engine.extension.scanner");
+        SimpleAnnotationScanner simpleAnnotationScanner = new SimpleAnnotationScanner("com.auraboot.smart.framework.engine.extension.scanner");
         simpleAnnotationScanner.scan(null,
              ExtensionBinding.class);
 

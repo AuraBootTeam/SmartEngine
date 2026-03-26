@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.storage.strategy;
+package com.auraboot.smart.framework.engine.storage.strategy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -9,10 +9,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.storage.StorageContext;
-import com.alibaba.smart.framework.engine.storage.StorageMode;
-import com.alibaba.smart.framework.engine.storage.StorageStrategy;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.storage.StorageContext;
+import com.auraboot.smart.framework.engine.storage.StorageMode;
+import com.auraboot.smart.framework.engine.storage.StorageStrategy;
 
 /**
  * Storage strategy for dual-write mode.

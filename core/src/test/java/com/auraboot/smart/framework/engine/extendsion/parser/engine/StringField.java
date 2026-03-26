@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.extendsion.parser.engine;
+package com.auraboot.smart.framework.engine.extendsion.parser.engine;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.model.assembly.NoneIdBasedElement;
+import com.auraboot.smart.framework.engine.model.assembly.NoneIdBasedElement;
 
 import lombok.Data;
 

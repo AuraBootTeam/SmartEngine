@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.common.util;
+package com.auraboot.smart.framework.engine.common.util;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.alibaba.smart.framework.engine.exception.ValidationException;
+import com.auraboot.smart.framework.engine.exception.ValidationException;
 
 /**
  * ID type converter utility class.

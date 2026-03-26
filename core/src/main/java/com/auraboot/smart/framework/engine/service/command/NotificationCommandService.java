@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.service.command;
+package com.auraboot.smart.framework.engine.service.command;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.model.instance.NotificationInstance;
+import com.auraboot.smart.framework.engine.model.instance.NotificationInstance;
 
 /**
  * 知会抄送命令服务接口

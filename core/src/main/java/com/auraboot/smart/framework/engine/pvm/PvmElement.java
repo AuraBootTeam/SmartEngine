@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.pvm;
+package com.auraboot.smart.framework.engine.pvm;
 
-import com.alibaba.smart.framework.engine.hook.LifeCycleHook;
-import com.alibaba.smart.framework.engine.model.assembly.ExtensionElementContainer;
+import com.auraboot.smart.framework.engine.hook.LifeCycleHook;
+import com.auraboot.smart.framework.engine.model.assembly.ExtensionElementContainer;
 
 /**
  * @author 高海军 帝奇  2016.11.11

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.alibaba.smart.framework.engine.persister.database.dao.NotificationInstanceDAO">
+<mapper namespace="com.auraboot.smart.framework.engine.persister.database.dao.NotificationInstanceDAO">
 
     <sql id="baseColumn">
         id, gmt_create, gmt_modified, process_instance_id, task_instance_id,
@@ -19,13 +19,13 @@
             <if test="taskInstanceIdList != null">
                 and task_instance_id in
                 <foreach item="item" index="index" separator="," open="(" close=")" collection="taskInstanceIdList">
-                    #{item, typeHandler=com.alibaba.smart.framework.engine.persister.database.handler.SmartIdTypeHandler}
+                    #{item, typeHandler=com.auraboot.smart.framework.engine.persister.database.handler.SmartIdTypeHandler}
                 </foreach>
             </if>
             <if test="processInstanceIdList != null">
                 and process_instance_id in
                 <foreach item="item" index="index" separator="," open="(" close=")" collection="processInstanceIdList">
-                    #{item, typeHandler=com.alibaba.smart.framework.engine.persister.database.handler.SmartIdTypeHandler}
+                    #{item, typeHandler=com.auraboot.smart.framework.engine.persister.database.handler.SmartIdTypeHandler}
                 </foreach>
             </if>
             <if test="notificationStartTime != null">and gmt_create <![CDATA[>=]]> #{notificationStartTime}</if>
@@ -33,7 +33,7 @@
         </where>
     </sql>
 
-    <insert id="insert" parameterType="com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity"
+    <insert id="insert" parameterType="com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity"
             keyProperty="id">
         insert into se_notification_instance(<include refid="baseColumn"/>)
         values (#{id}, #{gmtCreate}, #{gmtModified}, #{processInstanceId}, #{taskInstanceId},
@@ -41,7 +41,7 @@
         #{readStatus}, #{readTime}, #{tenantId})
     </insert>
 
-    <update id="update" parameterType="com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
+    <update id="update" parameterType="com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
         update se_notification_instance
         <set>
             gmt_modified = CURRENT_TIMESTAMP
@@ -54,7 +54,7 @@
         <if test="notificationInstanceEntity.tenantId != null"> and tenant_id = #{notificationInstanceEntity.tenantId} </if>
     </update>
 
-    <select id="findOne" resultType="com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
+    <select id="findOne" resultType="com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
         select
         <include refid="baseColumn"/>
         from se_notification_instance 
@@ -62,7 +62,7 @@
         <if test="tenantId != null"> and tenant_id = #{tenantId} </if>
     </select>
 
-    <select id="findByReceiver" resultType="com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
+    <select id="findByReceiver" resultType="com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
         select
         <include refid="baseColumn"/>
         from se_notification_instance 
@@ -81,7 +81,7 @@
         <if test="tenantId != null"> and tenant_id = #{tenantId} </if>
     </select>
 
-    <select id="findBySender" resultType="com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
+    <select id="findBySender" resultType="com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity">
         select
         <include refid="baseColumn"/>
         from se_notification_instance 
@@ -125,8 +125,8 @@
         <if test="tenantId != null"> and tenant_id = #{tenantId} </if>
     </delete>
 
-    <select id="findByQuery" resultType="com.alibaba.smart.framework.engine.persister.database.entity.NotificationInstanceEntity"
-            parameterType="com.alibaba.smart.framework.engine.service.param.query.NotificationQueryParam">
+    <select id="findByQuery" resultType="com.auraboot.smart.framework.engine.persister.database.entity.NotificationInstanceEntity"
+            parameterType="com.auraboot.smart.framework.engine.service.param.query.NotificationQueryParam">
         select <include refid="baseColumn"/>
         from se_notification_instance
         <include refid="query_condition"/>
@@ -135,7 +135,7 @@
     </select>
 
     <select id="countByQuery" resultType="int"
-            parameterType="com.alibaba.smart.framework.engine.service.param.query.NotificationQueryParam">
+            parameterType="com.auraboot.smart.framework.engine.service.param.query.NotificationQueryParam">
         select count(*)
         from se_notification_instance
         <include refid="query_condition"/>

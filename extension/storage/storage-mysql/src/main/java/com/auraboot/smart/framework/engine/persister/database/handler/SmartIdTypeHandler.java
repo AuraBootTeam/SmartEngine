@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.persister.database.handler;
+package com.auraboot.smart.framework.engine.persister.database.handler;
 
 import java.io.Serializable;
 import java.sql.CallableStatement;
@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.alibaba.smart.framework.engine.configuration.IdGenerator;
+import com.auraboot.smart.framework.engine.configuration.IdGenerator;
 
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;

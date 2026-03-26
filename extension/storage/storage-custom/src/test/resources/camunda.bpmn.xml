@@ -22,13 +22,13 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="toEnd2" sourceRef="bigTask" targetRef="end" />
     <bpmn:sequenceFlow id="toEnd1" sourceRef="littleTask" targetRef="end" />
-    <bpmn:serviceTask id="littleTask" camunda:class="com.alibaba.smart.framework.engine.test.delegation.Tracker">
+    <bpmn:serviceTask id="littleTask" camunda:class="com.auraboot.smart.framework.engine.test.delegation.Tracker">
       <bpmn:extensionElements>
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.StartListener" event="start" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.StartListener" event="start" />
         <camunda:properties>
           <camunda:property name="from" value="koubei" />
         </camunda:properties>
-        <camunda:executionListener class="com.alibaba.smart.framework.engine.test.EndListener" event="end" />
+        <camunda:executionListener class="com.auraboot.smart.framework.engine.test.EndListener" event="end" />
       </bpmn:extensionElements>
       <bpmn:incoming>toLittle</bpmn:incoming>
       <bpmn:outgoing>toEnd1</bpmn:outgoing>

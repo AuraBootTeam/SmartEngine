@@ -1,26 +1,26 @@
-package com.alibaba.smart.framework.engine.bpmn.behavior.gateway;
+package com.auraboot.smart.framework.engine.bpmn.behavior.gateway;
 
-import com.alibaba.smart.framework.engine.behavior.base.AbstractActivityBehavior;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.InclusiveGateway;
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.helper.CommonGatewayHelper;
-import com.alibaba.smart.framework.engine.bpmn.behavior.gateway.tree.ActivityTreeNode;
-import com.alibaba.smart.framework.engine.configuration.VariablePersister;
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.exception.EngineException;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.pvm.PvmActivity;
-import com.alibaba.smart.framework.engine.pvm.PvmTransition;
-import com.alibaba.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.behavior.base.AbstractActivityBehavior;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.InclusiveGateway;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.helper.CommonGatewayHelper;
+import com.auraboot.smart.framework.engine.bpmn.behavior.gateway.tree.ActivityTreeNode;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
+import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.alibaba.smart.framework.engine.bpmn.behavior.gateway.helper.InclusiveGatewayHelper.*;
+import static com.auraboot.smart.framework.engine.bpmn.behavior.gateway.helper.InclusiveGatewayHelper.*;
 
 /**
  * 代码逻辑整体说明:

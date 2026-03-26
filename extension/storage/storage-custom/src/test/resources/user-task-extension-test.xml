@@ -6,7 +6,7 @@
                 <smart:properties>
                     <smart:value name="c" value="d"/>
                 </smart:properties>
-                <smart:executionListener event="ACTIVITY_START" class="com.alibaba.smart.framework.engine.test.StartListener"/>
+                <smart:executionListener event="ACTIVITY_START" class="com.auraboot.smart.framework.engine.test.StartListener"/>
             </extensionElements>
             <multiInstanceLoopCharacteristics >
                 <completionCondition xsi:type="mvel">${nrOfCompletedInstances >= 1}

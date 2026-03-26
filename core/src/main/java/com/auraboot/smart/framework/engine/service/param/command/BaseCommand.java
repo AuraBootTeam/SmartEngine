@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.service.param.command;
+package com.auraboot.smart.framework.engine.service.param.command;
 
-import com.alibaba.smart.framework.engine.service.param.query.PaginateQueryParam;
+import com.auraboot.smart.framework.engine.service.param.query.PaginateQueryParam;
 import lombok.Data;
 
 

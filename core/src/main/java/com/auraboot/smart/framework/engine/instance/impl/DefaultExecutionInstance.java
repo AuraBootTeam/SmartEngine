@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.instance.impl;
+package com.auraboot.smart.framework.engine.instance.impl;
 
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

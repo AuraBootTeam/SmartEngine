@@ -1,12 +1,12 @@
-package com.alibaba.smart.framework.engine.test.delegation;
+package com.auraboot.smart.framework.engine.test.delegation;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.smart.framework.engine.context.ExecutionContext;
-import com.alibaba.smart.framework.engine.delegation.TccDelegation;
-import com.alibaba.smart.framework.engine.delegation.TccResult;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.delegation.TccDelegation;
+import com.auraboot.smart.framework.engine.delegation.TccResult;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

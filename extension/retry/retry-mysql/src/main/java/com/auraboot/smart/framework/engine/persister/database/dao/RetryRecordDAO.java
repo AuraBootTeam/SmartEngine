@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
-import com.alibaba.smart.framework.engine.persister.database.entity.RetryRecordEntity;
+import com.auraboot.smart.framework.engine.persister.database.entity.RetryRecordEntity;
 
 import org.springframework.stereotype.Repository;
 

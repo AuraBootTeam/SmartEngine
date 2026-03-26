@@ -1,12 +1,12 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.gateway.parser;
+package com.auraboot.smart.framework.engine.bpmn.assembly.gateway.parser;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.InclusiveGateway;
-import com.alibaba.smart.framework.engine.bpmn.assembly.gateway.InclusiveGateway;
-import com.alibaba.smart.framework.engine.bpmn.assembly.process.parser.AbstractBpmnParser;
-import com.alibaba.smart.framework.engine.extension.annotation.ExtensionBinding;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.xml.parser.ParseContext;
-import com.alibaba.smart.framework.engine.xml.util.XmlParseUtil;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.InclusiveGateway;
+import com.auraboot.smart.framework.engine.bpmn.assembly.gateway.InclusiveGateway;
+import com.auraboot.smart.framework.engine.bpmn.assembly.process.parser.AbstractBpmnParser;
+import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.xml.parser.ParseContext;
+import com.auraboot.smart.framework.engine.xml.util.XmlParseUtil;
 
 import javax.xml.stream.XMLStreamReader;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.configuration.impl.option;
+package com.auraboot.smart.framework.engine.configuration.impl.option;
 
-import com.alibaba.smart.framework.engine.configuration.ConfigurationOption;
+import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
 
 
 public class EagerFlushEnabledOption implements ConfigurationOption {

@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.persister.database.dao;
+package com.auraboot.smart.framework.engine.persister.database.dao;
 
 import java.util.List;
 
-import com.alibaba.smart.framework.engine.persister.database.entity.RollbackRecordEntity;
+import com.auraboot.smart.framework.engine.persister.database.entity.RollbackRecordEntity;
 
 import org.apache.ibatis.annotations.Param;
 

@@ -1,7 +1,7 @@
-package com.alibaba.smart.framework.engine.instance.factory;
+package com.auraboot.smart.framework.engine.instance.factory;
 
-import com.alibaba.smart.framework.engine.model.instance.DeploymentInstance;
-import com.alibaba.smart.framework.engine.service.param.command.CreateDeploymentCommand;
+import com.auraboot.smart.framework.engine.model.instance.DeploymentInstance;
+import com.auraboot.smart.framework.engine.service.param.command.CreateDeploymentCommand;
 
 /**
  * 流程实例工厂 Created by ettear on 16-4-20.

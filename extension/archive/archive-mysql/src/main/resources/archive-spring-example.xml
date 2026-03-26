@@ -15,7 +15,7 @@
     <!-- Property placeholder (if not already configured) -->
     <!-- <context:property-placeholder location="classpath:application.properties" ignore-unresolvable="true"/> -->
 
-    <bean id="archiveProperties" class="com.alibaba.smart.framework.engine.archive.config.ArchiveProperties">
+    <bean id="archiveProperties" class="com.auraboot.smart.framework.engine.archive.config.ArchiveProperties">
         <property name="enabled" value="${smart-engine.archive.enabled:false}"/>
         <property name="retentionDays" value="${smart-engine.archive.retention-days:90}"/>
         <property name="batchSize" value="${smart-engine.archive.batch-size:100}"/>
@@ -27,7 +27,7 @@
     <!-- Example: p:mapperLocations="classpath:mybatis/sqlmap/*.xml,classpath*:mybatis/sqlmap/archive.xml" -->
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.alibaba.smart.framework.engine.archive.dao"/>
+        <property name="basePackage" value="com.auraboot.smart.framework.engine.archive.dao"/>
     </bean>
 
     <!-- ===== Transaction Template ===== -->
@@ -36,7 +36,7 @@
     </bean>
 
     <!-- ===== Archive Service ===== -->
-    <bean id="archiveService" class="com.alibaba.smart.framework.engine.archive.service.DefaultArchiveService">
+    <bean id="archiveService" class="com.auraboot.smart.framework.engine.archive.service.DefaultArchiveService">
         <property name="archiveDAO" ref="archiveDAO"/>
         <property name="archiveProperties" ref="archiveProperties"/>
         <property name="transactionTemplate" ref="archiveTransactionTemplate"/>
@@ -46,7 +46,7 @@
     <task:scheduler id="archiveTaskScheduler" pool-size="1"/>
 
     <!-- ===== Archive Scheduler ===== -->
-    <bean id="archiveScheduler" class="com.alibaba.smart.framework.engine.archive.scheduler.ArchiveScheduler"
+    <bean id="archiveScheduler" class="com.auraboot.smart.framework.engine.archive.scheduler.ArchiveScheduler"
           init-method="start" destroy-method="stop">
         <property name="archiveProperties" ref="archiveProperties"/>
         <property name="archiveService" ref="archiveService"/>

@@ -1,6 +1,6 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.gateway;
+package com.auraboot.smart.framework.engine.bpmn.assembly.gateway;
 
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

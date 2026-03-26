@@ -1,14 +1,14 @@
-package com.alibaba.smart.framework.engine.test.process;
+package com.auraboot.smart.framework.engine.test.process;
 
-import com.alibaba.smart.framework.engine.configuration.LockStrategy;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ExecutionInstance;
-import com.alibaba.smart.framework.engine.model.instance.InstanceStatus;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.test.DatabaseBaseTestCase;
-import com.alibaba.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
-import com.alibaba.smart.framework.engine.util.ThreadPoolUtil;
+import com.auraboot.smart.framework.engine.configuration.LockStrategy;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
+import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.test.DatabaseBaseTestCase;
+import com.auraboot.smart.framework.engine.test.process.helper.DoNothingLockStrategy;
+import com.auraboot.smart.framework.engine.util.ThreadPoolUtil;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

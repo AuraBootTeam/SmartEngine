@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.configuration.scanner;
+package com.auraboot.smart.framework.engine.configuration.scanner;
 
 import java.util.Map;
 

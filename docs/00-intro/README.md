@@ -35,7 +35,7 @@
 
 ## 重要提示（先读这条）
 
-1. **SmartEngine 是“轻量业务编排引擎”**：核心接口以 CQRS 风格拆分为 *Command/Query* 服务（见 `com.alibaba.smart.framework.engine.SmartEngine`）。
+1. **SmartEngine 是“轻量业务编排引擎”**：核心接口以 CQRS 风格拆分为 *Command/Query* 服务（见 `com.auraboot.smart.framework.engine.SmartEngine`）。
 2. **两种运行模式**：  
    - **Custom 模式**：偏“嵌入式 + 自定义存储”，适合你已经有自己的持久化/任务体系。  
    - **DataBase 模式**：引擎提供一套关系型存储（MyBatis），并可支持 userTask 待办等增强权限。

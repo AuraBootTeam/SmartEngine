@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.persister.database.builder;
+package com.auraboot.smart.framework.engine.persister.database.builder;
 
-import com.alibaba.smart.framework.engine.instance.impl.DefaultTaskTransferRecord;
-import com.alibaba.smart.framework.engine.model.instance.TaskTransferRecord;
-import com.alibaba.smart.framework.engine.persister.database.entity.TaskTransferRecordEntity;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultTaskTransferRecord;
+import com.auraboot.smart.framework.engine.model.instance.TaskTransferRecord;
+import com.auraboot.smart.framework.engine.persister.database.entity.TaskTransferRecordEntity;
 
 /**
  * 任务移交记录Builder - 负责Model和Entity之间的转换

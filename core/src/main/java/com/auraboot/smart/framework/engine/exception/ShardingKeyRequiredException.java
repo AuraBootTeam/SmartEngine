@@ -1,4 +1,4 @@
-package com.alibaba.smart.framework.engine.exception;
+package com.auraboot.smart.framework.engine.exception;
 
 /**
  * Thrown when a query that requires a sharding key (processInstanceId) is invoked

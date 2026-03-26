@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.alibaba.smart.framework</groupId>
+        <groupId>com.auraboot.smart.framework</groupId>
         <artifactId>smart-engine</artifactId>
         <version>4.0.0</version>
         <relativePath>../../../pom.xml</relativePath>

@@ -1,10 +1,10 @@
-package com.alibaba.smart.framework.engine.bpmn.assembly.task;
+package com.auraboot.smart.framework.engine.bpmn.assembly.task;
 
 import javax.xml.namespace.QName;
 
-import com.alibaba.smart.framework.engine.bpmn.assembly.multi.instance.MultiInstanceLoopCharacteristics;
-import com.alibaba.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.impl.AbstractTask;
+import com.auraboot.smart.framework.engine.bpmn.assembly.multi.instance.MultiInstanceLoopCharacteristics;
+import com.auraboot.smart.framework.engine.bpmn.constant.BpmnNameSpaceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.impl.AbstractTask;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

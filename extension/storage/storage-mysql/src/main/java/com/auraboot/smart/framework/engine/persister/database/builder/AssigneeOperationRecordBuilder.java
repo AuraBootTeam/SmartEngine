@@ -1,8 +1,8 @@
-package com.alibaba.smart.framework.engine.persister.database.builder;
+package com.auraboot.smart.framework.engine.persister.database.builder;
 
-import com.alibaba.smart.framework.engine.instance.impl.DefaultAssigneeOperationRecord;
-import com.alibaba.smart.framework.engine.model.instance.AssigneeOperationRecord;
-import com.alibaba.smart.framework.engine.persister.database.entity.AssigneeOperationRecordEntity;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultAssigneeOperationRecord;
+import com.auraboot.smart.framework.engine.model.instance.AssigneeOperationRecord;
+import com.auraboot.smart.framework.engine.persister.database.entity.AssigneeOperationRecordEntity;
 
 /**
  * 加签减签操作记录Builder - 负责Model和Entity之间的转换

@@ -1,11 +1,11 @@
-package com.alibaba.smart.framework.engine.storage.strategy;
+package com.auraboot.smart.framework.engine.storage.strategy;
 
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.scanner.AnnotationScanner;
-import com.alibaba.smart.framework.engine.extension.constant.ExtensionConstant;
-import com.alibaba.smart.framework.engine.storage.StorageContext;
-import com.alibaba.smart.framework.engine.storage.StorageMode;
-import com.alibaba.smart.framework.engine.storage.StorageStrategy;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.scanner.AnnotationScanner;
+import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
+import com.auraboot.smart.framework.engine.storage.StorageContext;
+import com.auraboot.smart.framework.engine.storage.StorageMode;
+import com.auraboot.smart.framework.engine.storage.StorageStrategy;
 
 /**
  * Storage strategy for database mode.

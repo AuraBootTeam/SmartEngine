@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.alibaba.smart.framework</groupId>
+    <groupId>com.auraboot.smart.framework</groupId>
     <artifactId>smart-engine</artifactId>
     <!--  mvn versions:set -DnewVersion=4.0.0 -DgenerateBackupPoms=false  -->
     <!--  mvn versions:set -DnewVersion=3.7.0-SNAPSHOT -DgenerateBackupPoms=false  -->
@@ -451,7 +451,7 @@
                     <relocations>
                         <relocation>
                             <pattern>com.esotericsoftware.reflectasm</pattern>
-                            <shadedPattern>com.alibaba.smart.framework.engine.shaded.com.esotericsoftware.reflectasm
+                            <shadedPattern>com.auraboot.smart.framework.engine.shaded.com.esotericsoftware.reflectasm
                             </shadedPattern>
                         </relocation>
                     </relocations>

@@ -1,25 +1,25 @@
-package com.alibaba.smart.framework.engine.test.query;
+package com.auraboot.smart.framework.engine.test.query;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.smart.framework.engine.SmartEngine;
-import com.alibaba.smart.framework.engine.configuration.ProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
-import com.alibaba.smart.framework.engine.configuration.impl.DefaultSmartEngine;
-import com.alibaba.smart.framework.engine.constant.TaskInstanceConstant;
-import com.alibaba.smart.framework.engine.model.assembly.ProcessDefinition;
-import com.alibaba.smart.framework.engine.model.instance.ProcessInstance;
-import com.alibaba.smart.framework.engine.model.instance.TaskInstance;
-import com.alibaba.smart.framework.engine.persister.custom.session.PersisterSession;
-import com.alibaba.smart.framework.engine.query.TaskQuery;
-import com.alibaba.smart.framework.engine.query.ProcessInstanceQuery;
-import com.alibaba.smart.framework.engine.query.SupervisionQuery;
-import com.alibaba.smart.framework.engine.query.NotificationQuery;
-import com.alibaba.smart.framework.engine.service.command.ProcessCommandService;
-import com.alibaba.smart.framework.engine.service.command.RepositoryCommandService;
-import com.alibaba.smart.framework.engine.service.command.TaskCommandService;
+import com.auraboot.smart.framework.engine.SmartEngine;
+import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultProcessEngineConfiguration;
+import com.auraboot.smart.framework.engine.configuration.impl.DefaultSmartEngine;
+import com.auraboot.smart.framework.engine.constant.TaskInstanceConstant;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
+import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.persister.custom.session.PersisterSession;
+import com.auraboot.smart.framework.engine.query.TaskQuery;
+import com.auraboot.smart.framework.engine.query.ProcessInstanceQuery;
+import com.auraboot.smart.framework.engine.query.SupervisionQuery;
+import com.auraboot.smart.framework.engine.query.NotificationQuery;
+import com.auraboot.smart.framework.engine.service.command.ProcessCommandService;
+import com.auraboot.smart.framework.engine.service.command.RepositoryCommandService;
+import com.auraboot.smart.framework.engine.service.command.TaskCommandService;
 
 import org.junit.After;
 import org.junit.Assert;

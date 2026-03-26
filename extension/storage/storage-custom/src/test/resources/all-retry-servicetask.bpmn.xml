@@ -10,7 +10,7 @@
         <sequenceFlow id="seq0" sourceRef="startEvent" targetRef="serviceTask0"/>
 
         <serviceTask id="serviceTask0"
-                     smart:class="com.alibaba.smart.framework.engine.test.delegation.RetryServiceTaskDelegation"/>
+                     smart:class="com.auraboot.smart.framework.engine.test.delegation.RetryServiceTaskDelegation"/>
 
         <sequenceFlow id="seq1" sourceRef="serviceTask0" targetRef="endEvent"/>
 
