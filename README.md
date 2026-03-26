@@ -1,5 +1,7 @@
 # SmartEngine
 
+> **Note:** This is a fork of [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine), maintained by the original author. This fork exists because the original repository cannot publish releases to Maven Central. The Maven coordinates have been changed from `com.alibaba.smart.framework` to `com.auraboot.smart.framework`.
+
 SmartEngine is a lightweight business orchestration engine. It's used widely in Alibaba Group.
 It can be used to orchestrate multiple service in microservice architecture, start/signal a process instance in a very high-performance way with low-storage cost, and also can be used in traditional process approval scenarios.
 

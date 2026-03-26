@@ -1,6 +1,8 @@
 # SmartEngine
 
-SmartEngine 是一款轻量级业务编排引擎，在阿里巴巴集团内部广泛使用。  
+> **说明：** 本仓库是 [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine) 的 fork，由原作者维护。由于无法在原仓库将 JAR 发布到 Maven 中央仓库，因此创建了此 fork。Maven 坐标已从 `com.alibaba.smart.framework` 变更为 `com.auraboot.smart.framework`。
+
+SmartEngine 是一款轻量级业务编排引擎，在阿里巴巴集团内部广泛使用。
 它可用于微服务架构中的多服务编排，以高性能、低存储成本的方式启动/触发流程实例，同时也能应用于传统审批流程场景。
 
 [English](./README.md)
