@@ -12,11 +12,11 @@
         <camunda:executionListener class="listener1" event="take" />
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
-    <bpmn:serviceTask id="service1" name="service1" camunda:class="com.alibaba.smart.framework.engine.test.callcactivity1.CallActivityJavaDelegation1">
+    <bpmn:serviceTask id="service1" name="service1" camunda:class="com.auraboot.smart.framework.engine.test.callcactivity1.CallActivityJavaDelegation1">
       <bpmn:incoming>Flow_0fhmm41</bpmn:incoming>
       <bpmn:outgoing>Flow_0i3txvb</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="service2" name="service2" camunda:class="com.alibaba.smart.framework.engine.test.callcactivity1.CallActivityJavaDelegation2">
+    <bpmn:serviceTask id="service2" name="service2" camunda:class="com.auraboot.smart.framework.engine.test.callcactivity1.CallActivityJavaDelegation2">
       <bpmn:incoming>Flow_0il9l93</bpmn:incoming>
       <bpmn:outgoing>Flow_0b9hun8</bpmn:outgoing>
     </bpmn:serviceTask>
