@@ -1,5 +1,10 @@
 # SmartEngine
 
+[![CI](https://github.com/AuraBootTeam/SmartEngine/actions/workflows/ci.yml/badge.svg)](https://github.com/AuraBootTeam/SmartEngine/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/AuraBootTeam/SmartEngine/actions/workflows/codeql.yml/badge.svg)](https://github.com/AuraBootTeam/SmartEngine/actions/workflows/codeql.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/com.auraboot.smart.framework/smart-engine)](https://central.sonatype.com/artifact/com.auraboot.smart.framework/smart-engine)
+[![License](https://img.shields.io/github/license/AuraBootTeam/SmartEngine)](LICENSE)
+
 > **Note:** This is a fork of [alibaba/SmartEngine](https://github.com/alibaba/SmartEngine), maintained by the original author. This fork exists because the original repository cannot publish releases to Maven Central. The Maven coordinates have been changed from `com.alibaba.smart.framework` to `com.auraboot.smart.framework`.
 
 SmartEngine is a lightweight business orchestration engine. It's used widely in Alibaba Group.
