@@ -63,13 +63,39 @@ public interface TaskCommandService {
     ProcessInstance rollbackTask(String taskId, String targetActivityId, String reason, String tenantId);
 
     /**
+     * 任务回退到指定节点（显式操作人）。
+     *
+     * <p>{@code operatorUserId} 记录到 se_process_rollback_record.operator_user_id（NOT NULL）。
+     * 旧的四参重载从任务的 claimUserId 推断操作人，但任务仅被分派而未被认领时
+     * claimUserId 为 null，会触发非空约束违反。调用方应传入真实操作人。
+     * {@code operatorUserId} 为 null 时回退到 claimUserId（向后兼容）。
+     */
+    ProcessInstance rollbackTask(String taskId, String targetActivityId, String reason, String operatorUserId, String tenantId);
+
+    /**
      * 增强的加签操作，支持操作记录
      */
     void addTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason);
 
     /**
+     * 增强的加签操作，支持操作记录与显式操作人。
+     *
+     * <p>{@code operatorUserId} 记录到 se_assignee_operation_record.operator_user_id（NOT NULL）。
+     * 为 null 时回退到任务 claimUserId（向后兼容）。调用方应传入真实操作人，
+     * 避免任务未认领时操作人为 null 触发非空约束违反。
+     */
+    void addTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason, String operatorUserId);
+
+    /**
      * 增强的减签操作，支持操作记录
      */
     void removeTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason);
+
+    /**
+     * 增强的减签操作，支持操作记录与显式操作人。
+     *
+     * <p>语义同 {@link #addTaskAssigneeCandidateWithReason} 的操作人重载。
+     */
+    void removeTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason, String operatorUserId);
 
 }
