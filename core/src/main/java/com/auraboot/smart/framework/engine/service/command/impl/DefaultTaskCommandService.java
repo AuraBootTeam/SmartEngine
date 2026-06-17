@@ -351,6 +351,12 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
     @Override
     public ProcessInstance rollbackTask(String taskId, String targetActivityId, String reason, String tenantId) {
+        // Backward-compatible: no explicit operator -> fall back to claimUserId.
+        return rollbackTask(taskId, targetActivityId, reason, null, tenantId);
+    }
+
+    @Override
+    public ProcessInstance rollbackTask(String taskId, String targetActivityId, String reason, String operatorUserId, String tenantId) {
         TaskInstance taskInstance = taskInstanceStorage.find(taskId, tenantId, processEngineConfiguration);
 
         if (taskInstance == null) {
@@ -372,7 +378,9 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
         record.setRollbackType("specific");
         record.setFromActivityId(currentActivityId);
         record.setToActivityId(targetActivityId);
-        record.setOperatorUserId(taskInstance.getClaimUserId()); // 使用当前任务处理人作为操作人
+        // 操作人优先用调用方显式传入的真实操作人；缺省时回退到任务认领人
+        // （任务仅被分派而未认领时 claimUserId 为 null，会触发 operator_user_id 非空约束违反）。
+        record.setOperatorUserId(operatorUserId != null ? operatorUserId : taskInstance.getClaimUserId());
         record.setRollbackReason(reason);
         record.setTenantId(tenantId);
 
@@ -391,6 +399,12 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
     @Override
     public void addTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason) {
+        // Backward-compatible: no explicit operator -> fall back to claimUserId.
+        addTaskAssigneeCandidateWithReason(taskId, tenantId, taskAssigneeCandidateInstance, reason, null);
+    }
+
+    @Override
+    public void addTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason, String operatorUserId) {
         // 执行原有的加签逻辑
         addTaskAssigneeCandidate(taskId, tenantId, taskAssigneeCandidateInstance);
 
@@ -402,9 +416,11 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
         // 获取任务实例以获取操作人
         TaskInstance taskInstance = taskInstanceStorage.find(taskId, tenantId, processEngineConfiguration);
-        if (taskInstance != null) {
-            record.setOperatorUserId(taskInstance.getClaimUserId());
-        }
+        // 操作人优先用调用方显式传入的真实操作人；缺省时回退到任务认领人
+        // （任务仅被分派而未认领时 claimUserId 为 null，会触发 operator_user_id 非空约束违反）。
+        record.setOperatorUserId(operatorUserId != null
+            ? operatorUserId
+            : (taskInstance != null ? taskInstance.getClaimUserId() : null));
 
         record.setOperationType("add_assignee");
         record.setTargetUserId(taskAssigneeCandidateInstance.getAssigneeId());
@@ -422,6 +438,12 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
     @Override
     public void removeTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason) {
+        // Backward-compatible: no explicit operator -> fall back to claimUserId.
+        removeTaskAssigneeCandidateWithReason(taskId, tenantId, taskAssigneeCandidateInstance, reason, null);
+    }
+
+    @Override
+    public void removeTaskAssigneeCandidateWithReason(String taskId, String tenantId, TaskAssigneeCandidateInstance taskAssigneeCandidateInstance, String reason, String operatorUserId) {
         // 执行原有的减签逻辑
         removeTaskAssigneeCandidate(taskId, tenantId, taskAssigneeCandidateInstance);
 
@@ -433,9 +455,10 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
         // 获取任务实例以获取操作人
         TaskInstance taskInstance = taskInstanceStorage.find(taskId, tenantId, processEngineConfiguration);
-        if (taskInstance != null) {
-            record.setOperatorUserId(taskInstance.getClaimUserId());
-        }
+        // 操作人优先用调用方显式传入的真实操作人；缺省时回退到任务认领人。
+        record.setOperatorUserId(operatorUserId != null
+            ? operatorUserId
+            : (taskInstance != null ? taskInstance.getClaimUserId() : null));
 
         record.setOperationType("remove_assignee");
         record.setTargetUserId(taskAssigneeCandidateInstance.getAssigneeId());
