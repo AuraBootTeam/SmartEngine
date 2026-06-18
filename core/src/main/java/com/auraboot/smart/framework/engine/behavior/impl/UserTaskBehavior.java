@@ -78,6 +78,11 @@ public class UserTaskBehavior extends AbstractActivityBehavior<UserTask> {
 
             if(multiInstanceLoopCharacteristics.isSequential()){
                  newTaskAssigneeCandidateInstanceList = UserTaskBehaviorHelper.findBatchOfHighestPriorityTaskAssigneeList(allTaskAssigneeCandidateInstanceList);
+                 // Cache the full ordered candidate list so later sequential iterations can resolve the
+                 // next assignee at complete time, when the original request no longer carries the
+                 // collection. No-op when variable persistence is not backed by a real store.
+                 UserTaskBehaviorHelper.cacheSequentialCandidates(context, activityInstance,
+                     allTaskAssigneeCandidateInstanceList, this.variableInstanceStorage, this.processEngineConfiguration);
             }else{
                 newTaskAssigneeCandidateInstanceList = allTaskAssigneeCandidateInstanceList;
             }
@@ -188,6 +193,20 @@ public class UserTaskBehavior extends AbstractActivityBehavior<UserTask> {
 
         // 针对顺序会签,这里totalInstanceCount 为目前已经创建出来的count,未来还会补偿新增; 但是针对非顺序会签,则是最终的全量,不会再变.
         Integer totalInstanceCount  = totalExecutionInstanceList.size();
+
+        // Sequential MI fix: totalInstanceCount must reflect the FULL expected candidate count
+        // (cached at enter), not just the already-created instances. Otherwise after the first task
+        // completes (created==1, completed==1) the activity wrongly judges itself finished and never
+        // spawns the next approver. Falls back to created-count when no cache is available
+        // (non-persistent variable store), preserving legacy behavior for single/empty collections.
+        if (multiInstanceLoopCharacteristics.isSequential()) {
+            List<TaskAssigneeCandidateInstance> cachedCandidates = UserTaskBehaviorHelper.loadSequentialCandidates(
+                activityInstance, this.variableInstanceStorage, this.processEngineConfiguration);
+            if (cachedCandidates != null && !cachedCandidates.isEmpty()) {
+                totalInstanceCount = cachedCandidates.size();
+            }
+        }
+
         Integer passedTaskInstanceCount = 0;
         Integer rejectedTaskInstanceCount = 0;
 
@@ -297,8 +316,18 @@ public class UserTaskBehavior extends AbstractActivityBehavior<UserTask> {
         //针对 顺序会签,需要业务传入所需要的任务处理者,以便未来补偿创建.
         Map<String, TaskAssigneeCandidateInstance> taskAssigneeMap = new HashMap<String, TaskAssigneeCandidateInstance>();
 
+        // Prefer the candidate list cached at enter time: the original command request that carried
+        // the collection (e.g. smart:miCollection) is gone by complete time, so re-resolving via the
+        // dispatcher would yield 0 candidates and no next task would be created.
         List<TaskAssigneeCandidateInstance> taskAssigneeCandidateInstanceList = UserTaskBehaviorHelper
-         .getTaskAssigneeCandidateInstances(context, userTask);
+            .loadSequentialCandidates(context.getActivityInstance(), this.variableInstanceStorage,
+                this.processEngineConfiguration);
+
+        if (taskAssigneeCandidateInstanceList == null) {
+            // Fallback (non-persistent variable store): legacy dispatcher re-resolution.
+            taskAssigneeCandidateInstanceList = UserTaskBehaviorHelper
+                .getTaskAssigneeCandidateInstances(context, userTask);
+        }
 
         if(taskAssigneeCandidateInstanceList != null) {
             for(TaskAssigneeCandidateInstance assigneeCandidateInstance : taskAssigneeCandidateInstanceList) {

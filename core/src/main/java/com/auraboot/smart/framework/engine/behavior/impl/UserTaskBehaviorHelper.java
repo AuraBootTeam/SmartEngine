@@ -22,16 +22,20 @@ import com.auraboot.smart.framework.engine.exception.EngineException;
 import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
 import com.auraboot.smart.framework.engine.instance.factory.ExecutionInstanceFactory;
 import com.auraboot.smart.framework.engine.instance.factory.TaskInstanceFactory;
+import com.auraboot.smart.framework.engine.configuration.VariablePersister;
 import com.auraboot.smart.framework.engine.instance.impl.DefaultTaskAssigneeInstance;
+import com.auraboot.smart.framework.engine.instance.impl.DefaultVariableInstance;
 import com.auraboot.smart.framework.engine.instance.storage.ExecutionInstanceStorage;
 import com.auraboot.smart.framework.engine.instance.storage.TaskAssigneeStorage;
 import com.auraboot.smart.framework.engine.instance.storage.TaskInstanceStorage;
+import com.auraboot.smart.framework.engine.instance.storage.VariableInstanceStorage;
 import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
 import com.auraboot.smart.framework.engine.model.instance.ExecutionInstance;
 import com.auraboot.smart.framework.engine.model.instance.InstanceStatus;
 import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
 import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeInstance;
 import com.auraboot.smart.framework.engine.model.instance.TaskInstance;
+import com.auraboot.smart.framework.engine.model.instance.VariableInstance;
 import com.auraboot.smart.framework.engine.service.param.query.TaskInstanceQueryParam;
 
 /**
@@ -225,6 +229,124 @@ public class UserTaskBehaviorHelper {
         List<TaskInstance> allTaskInstanceList = taskInstanceStorage.findTaskList(taskInstanceQueryParam,
                 processEngineConfiguration);
         return allTaskInstanceList;
+    }
+
+    /**
+     * Variable key under which a sequential multi-instance userTask caches its full ordered
+     * candidate list at enter time. Scoped to the activity instance.
+     */
+    static final String SEQ_MI_CANDIDATES_KEY = "$mi_seq_candidates$";
+
+    private static final char FIELD_SEP = '\t';
+    private static final char ENTRY_SEP = '\n';
+
+    /**
+     * Cache the full ordered candidate list of a SEQUENTIAL multi-instance userTask at enter time.
+     *
+     * <p>Rationale: in sequential countersign the next assignee is only created when the current task
+     * completes (a separate transaction), at which point the original command request no longer carries
+     * the collection (e.g. {@code smart:miCollection="${approverList}"}). Re-resolving via the dispatcher
+     * then yields 0 candidates. Caching the full list at enter and reading it back at complete time fixes
+     * this. Scoped by {@code activityInstanceId} so every sequential iteration of the same activity reads
+     * the same list.
+     *
+     * <p>No-op when the candidate list is empty or when variable persistence is not enabled / not backed
+     * by a real store (e.g. the in-memory {@code storage-custom}), in which case callers fall back to the
+     * legacy dispatcher re-resolution path.
+     */
+    static void cacheSequentialCandidates(ExecutionContext context, ActivityInstance activityInstance,
+                                          List<TaskAssigneeCandidateInstance> candidates,
+                                          VariableInstanceStorage variableInstanceStorage,
+                                          ProcessEngineConfiguration processEngineConfiguration) {
+        if (CollectionUtil.isEmpty(candidates) || variableInstanceStorage == null) {
+            return;
+        }
+        VariablePersister variablePersister = processEngineConfiguration.getVariablePersister();
+        if (variablePersister == null || !variablePersister.isPersisteVariableInstanceEnabled()) {
+            return;
+        }
+        VariableInstance variableInstance = new DefaultVariableInstance();
+        variableInstance.setTenantId(activityInstance.getTenantId());
+        processEngineConfiguration.getIdGenerator().generate(variableInstance);
+        variableInstance.setProcessInstanceId(activityInstance.getProcessInstanceId());
+        variableInstance.setExecutionInstanceId(activityInstance.getInstanceId());
+        variableInstance.setFieldKey(SEQ_MI_CANDIDATES_KEY);
+        variableInstance.setFieldType(String.class);
+        variableInstance.setFieldValue(serializeCandidates(candidates));
+        variableInstanceStorage.insert(variablePersister, variableInstance, processEngineConfiguration);
+    }
+
+    /**
+     * Load the cached full candidate list of a sequential multi-instance userTask, or {@code null} when
+     * none is cached (variable persistence disabled / non-persistent store / not found).
+     */
+    static List<TaskAssigneeCandidateInstance> loadSequentialCandidates(ActivityInstance activityInstance,
+                                          VariableInstanceStorage variableInstanceStorage,
+                                          ProcessEngineConfiguration processEngineConfiguration) {
+        if (variableInstanceStorage == null) {
+            return null;
+        }
+        VariablePersister variablePersister = processEngineConfiguration.getVariablePersister();
+        if (variablePersister == null || !variablePersister.isPersisteVariableInstanceEnabled()) {
+            return null;
+        }
+        List<VariableInstance> list = variableInstanceStorage.findList(activityInstance.getProcessInstanceId(),
+            activityInstance.getInstanceId(), variablePersister, activityInstance.getTenantId(),
+            processEngineConfiguration);
+        if (CollectionUtil.isEmpty(list)) {
+            return null;
+        }
+        for (VariableInstance variableInstance : list) {
+            if (SEQ_MI_CANDIDATES_KEY.equals(variableInstance.getFieldKey())) {
+                Object raw = variableInstance.getFieldValue();
+                if (raw == null) {
+                    return null;
+                }
+                return deserializeCandidates(String.valueOf(raw));
+            }
+        }
+        return null;
+    }
+
+    private static String serializeCandidates(List<TaskAssigneeCandidateInstance> candidates) {
+        StringBuilder sb = new StringBuilder();
+        for (TaskAssigneeCandidateInstance candidate : candidates) {
+            if (sb.length() > 0) {
+                sb.append(ENTRY_SEP);
+            }
+            // priority<FS>assigneeType<FS>assigneeId — assigneeId last so a (theoretical) separator
+            // inside it would still be recovered by the limited split.
+            sb.append(candidate.getPriority()).append(FIELD_SEP)
+              .append(candidate.getAssigneeType() == null ? "" : candidate.getAssigneeType()).append(FIELD_SEP)
+              .append(candidate.getAssigneeId() == null ? "" : candidate.getAssigneeId());
+        }
+        return sb.toString();
+    }
+
+    private static List<TaskAssigneeCandidateInstance> deserializeCandidates(String raw) {
+        List<TaskAssigneeCandidateInstance> result = new ArrayList<TaskAssigneeCandidateInstance>();
+        if (raw == null || raw.isEmpty()) {
+            return result;
+        }
+        for (String line : raw.split(String.valueOf(ENTRY_SEP))) {
+            if (line.isEmpty()) {
+                continue;
+            }
+            String[] parts = line.split(String.valueOf(FIELD_SEP), 3);
+            if (parts.length < 3) {
+                continue;
+            }
+            TaskAssigneeCandidateInstance candidate = new TaskAssigneeCandidateInstance();
+            try {
+                candidate.setPriority(Integer.parseInt(parts[0]));
+            } catch (NumberFormatException e) {
+                candidate.setPriority(500);
+            }
+            candidate.setAssigneeType(parts[1]);
+            candidate.setAssigneeId(parts[2]);
+            result.add(candidate);
+        }
+        return result;
     }
 
     public static void abortAndSetNeedPause(ExecutionContext context, ExecutionInstance executionInstance, SmartEngine smartEngine) {
