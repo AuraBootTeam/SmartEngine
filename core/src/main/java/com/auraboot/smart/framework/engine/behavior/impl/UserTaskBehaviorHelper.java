@@ -250,9 +250,10 @@ public class UserTaskBehaviorHelper {
      * this. Scoped by {@code activityInstanceId} so every sequential iteration of the same activity reads
      * the same list.
      *
-     * <p>No-op when the candidate list is empty or when variable persistence is not enabled / not backed
-     * by a real store (e.g. the in-memory {@code storage-custom}), in which case callers fall back to the
-     * legacy dispatcher re-resolution path.
+     * <p>No-op when the candidate list is empty or when variable persistence is not backed by a real
+     * store (e.g. the in-memory {@code storage-custom}), in which case callers fall back to the legacy
+     * dispatcher re-resolution path. This is engine-internal state, so it must not depend on the
+     * business variable persistence enable flag.
      */
     static void cacheSequentialCandidates(ExecutionContext context, ActivityInstance activityInstance,
                                           List<TaskAssigneeCandidateInstance> candidates,
@@ -262,7 +263,7 @@ public class UserTaskBehaviorHelper {
             return;
         }
         VariablePersister variablePersister = processEngineConfiguration.getVariablePersister();
-        if (variablePersister == null || !variablePersister.isPersisteVariableInstanceEnabled()) {
+        if (variablePersister == null) {
             return;
         }
         VariableInstance variableInstance = new DefaultVariableInstance();
@@ -278,7 +279,7 @@ public class UserTaskBehaviorHelper {
 
     /**
      * Load the cached full candidate list of a sequential multi-instance userTask, or {@code null} when
-     * none is cached (variable persistence disabled / non-persistent store / not found).
+     * none is cached (non-persistent store / not found).
      */
     static List<TaskAssigneeCandidateInstance> loadSequentialCandidates(ActivityInstance activityInstance,
                                           VariableInstanceStorage variableInstanceStorage,
@@ -287,7 +288,7 @@ public class UserTaskBehaviorHelper {
             return null;
         }
         VariablePersister variablePersister = processEngineConfiguration.getVariablePersister();
-        if (variablePersister == null || !variablePersister.isPersisteVariableInstanceEnabled()) {
+        if (variablePersister == null) {
             return null;
         }
         List<VariableInstance> list = variableInstanceStorage.findList(activityInstance.getProcessInstanceId(),
@@ -357,4 +358,3 @@ public class UserTaskBehaviorHelper {
     }
 
 }
-

@@ -1,0 +1,20 @@
+<definitions xmlns:smart="http://smartengine.org/schema/process"
+             id="sequential-multi-instance-cache-test" version="1.0.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             targetNamespace="Examples">
+
+    <process id="sequential-multi-instance-cache-test" version="1.0.0">
+
+        <startEvent id="start"/>
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="sequentialUserTask"/>
+
+        <userTask id="sequentialUserTask" name="Sequential User Task" smart:class="userTaskTestDelegation">
+            <multiInstanceLoopCharacteristics isSequential="true"/>
+        </userTask>
+
+        <sequenceFlow id="flow2" sourceRef="sequentialUserTask" targetRef="end"/>
+        <endEvent id="end"/>
+
+    </process>
+
+</definitions>
