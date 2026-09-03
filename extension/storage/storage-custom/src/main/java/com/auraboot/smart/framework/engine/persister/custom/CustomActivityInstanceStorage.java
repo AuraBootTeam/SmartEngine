@@ -12,7 +12,7 @@ import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
 import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
 import com.auraboot.smart.framework.engine.persister.custom.session.PersisterSession;
 
-import static com.auraboot.smart.framework.engine.persister.common.constant.StorageConstant.NOT_IMPLEMENT_INTENTIONALLY;
+
 
 /**
  * Created by 高海军 帝奇 74394 on 2017 February  11:54.
@@ -29,7 +29,34 @@ public class CustomActivityInstanceStorage implements ActivityInstanceStorage {
     @Override
     public ActivityInstance update(ActivityInstance instance,
                                    ProcessEngineConfiguration processEngineConfiguration) {
-        throw new EngineException(NOT_IMPLEMENT_INTENTIONALLY);
+        PersisterSession session = PersisterSession.currentSession();
+        ProcessInstance owner = PersisterSessionTreeUtil.findProcessInstance(
+            session, instance.getProcessInstanceId());
+        if (owner == null) {
+            owner = PersisterSessionTreeUtil.findActivityInstanceOwner(session, instance.getInstanceId());
+        }
+        if (owner == null || owner.getActivityInstances() == null) {
+            // Nothing to reconcile against: the caller mutated the instance in
+            // place and the session tree will adopt it on the next insert.
+            return instance;
+        }
+        ActivityInstance stored = PersisterSessionTreeUtil.findActivityInstanceIn(
+            owner, instance.getInstanceId());
+        if (stored == null) {
+            owner.getActivityInstances().add(instance);
+        } else if (stored != instance) {
+            // Different object with the same identity: point the tree at the
+            // caller's authoritative view.
+            List<ActivityInstance> activityInstances = owner.getActivityInstances();
+            for (int i = 0; i < activityInstances.size(); i++) {
+                if (instance.getInstanceId().equals(
+                    activityInstances.get(i) == null ? null : activityInstances.get(i).getInstanceId())) {
+                    activityInstances.set(i, instance);
+                    break;
+                }
+            }
+        }
+        return instance;
     }
 
     @Override
@@ -62,14 +89,25 @@ public class CustomActivityInstanceStorage implements ActivityInstanceStorage {
     @Override
     public ActivityInstance findWithShading(String processInstanceId, String activityInstanceId,String tenantId,
             ProcessEngineConfiguration processEngineConfiguration) {
-        throw new EngineException(NOT_IMPLEMENT_INTENTIONALLY);
+        ProcessInstance owner = PersisterSessionTreeUtil.findProcessInstance(
+            PersisterSession.currentSession(), processInstanceId);
+        return owner == null ? null
+            : PersisterSessionTreeUtil.findActivityInstanceIn(owner, activityInstanceId);
     }
 
 
     @Override
     public void remove(String instanceId,String tenantId,
                        ProcessEngineConfiguration processEngineConfiguration) {
-        throw new EngineException(NOT_IMPLEMENT_INTENTIONALLY);
+        PersisterSession session = PersisterSession.currentSession();
+        for (ProcessInstance processInstance : session.getProcessInstances().values()) {
+            List<ActivityInstance> activityInstances = processInstance.getActivityInstances();
+            if (activityInstances == null) {
+                continue;
+            }
+            activityInstances.removeIf(activityInstance ->
+                activityInstance != null && instanceId.equals(activityInstance.getInstanceId()));
+        }
     }
 
     @Override

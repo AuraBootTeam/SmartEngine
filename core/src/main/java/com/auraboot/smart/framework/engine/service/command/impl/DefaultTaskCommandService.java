@@ -12,7 +12,16 @@ import com.auraboot.smart.framework.engine.common.util.InstanceUtil;
 import com.auraboot.smart.framework.engine.common.util.MarkDoneUtil;
 import com.auraboot.smart.framework.engine.configuration.ConfigurationOption;
 import com.auraboot.smart.framework.engine.configuration.TaskEventPublisher;
+import com.auraboot.smart.framework.engine.pvm.PvmActivity;
+import com.auraboot.smart.framework.engine.pvm.PvmProcessDefinition;
+import com.auraboot.smart.framework.engine.pvm.PvmTransition;
 import com.auraboot.smart.framework.engine.pvm.event.EventConstant;
+import com.auraboot.smart.framework.engine.context.ExecutionContext;
+import com.auraboot.smart.framework.engine.context.factory.ContextFactory;
+import com.auraboot.smart.framework.engine.deployment.ProcessDefinitionContainer;
+import com.auraboot.smart.framework.engine.exception.EngineException;
+import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
+import com.auraboot.smart.framework.engine.model.instance.ActivityInstance;
 import com.auraboot.smart.framework.engine.configuration.IdGenerator;
 import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
 import com.auraboot.smart.framework.engine.configuration.aware.ProcessEngineConfigurationAware;
@@ -65,6 +74,8 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
     private TaskTransferRecordStorage taskTransferRecordStorage;
     private AssigneeOperationRecordStorage assigneeOperationRecordStorage;
     private RollbackRecordStorage rollbackRecordStorage;
+    private ProcessDefinitionContainer processContainer;
+    private ContextFactory contextFactory;
 
     @Override
     public void start() {
@@ -76,6 +87,9 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
         this.activityInstanceStorage = annotationScanner.getExtensionPoint(ExtensionConstant.COMMON,ActivityInstanceStorage.class);
         this.executionInstanceStorage = annotationScanner.getExtensionPoint(ExtensionConstant.COMMON,ExecutionInstanceStorage.class);
         this.taskInstanceStorage = annotationScanner.getExtensionPoint(ExtensionConstant.COMMON,TaskInstanceStorage.class);
+        this.processContainer = annotationScanner.getExtensionPoint(ExtensionConstant.SERVICE,
+            ProcessDefinitionContainer.class);
+        this.contextFactory = annotationScanner.getExtensionPoint(ExtensionConstant.COMMON, ContextFactory.class);
 
         // Initialize Storage for operation records
         this.taskTransferRecordStorage = annotationScanner.getExtensionPoint(ExtensionConstant.COMMON, TaskTransferRecordStorage.class);
@@ -363,11 +377,38 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
             throw new ValidationException("Task instance not found for taskId: " + taskId);
         }
 
+        // 只有 pending 的任务可以被回退；已完成/已取消的任务属于历史，回退无意义。
+        if (!TaskInstanceConstant.PENDING.equals(taskInstance.getStatus())) {
+            throw new ValidationException("Only a pending task can be rolled back, current status: "
+                + taskInstance.getStatus());
+        }
+
         // 获取流程实例
         ProcessInstance processInstance = processInstanceStorage.findOne(
             taskInstance.getProcessInstanceId(), tenantId, processEngineConfiguration);
 
         String currentActivityId = taskInstance.getProcessDefinitionActivityId();
+        String processDefinitionId = processInstance.getProcessDefinitionId();
+        String version = processInstance.getProcessDefinitionVersion();
+
+        // 回退目标必须是当前节点的一个真正的上游节点：先确认目标在定义中存在，
+        // 再沿 income transitions 反向遍历验证可达，避免回退到一个不可达的下游节点。
+        PvmProcessDefinition pvmDefinition = processContainer.getPvmProcessDefinition(
+            processDefinitionId, version, tenantId);
+        if (pvmDefinition == null) {
+            throw new ValidationException("Process definition not found: " + processDefinitionId + ":" + version);
+        }
+        if (targetActivityId.equals(currentActivityId)) {
+            throw new ValidationException("Rollback target equals the current activity: " + targetActivityId);
+        }
+        PvmActivity targetActivity = pvmDefinition.getActivities().get(targetActivityId);
+        if (targetActivity == null) {
+            throw new ValidationException("Rollback target activity not found in definition: " + targetActivityId);
+        }
+        if (!isUpstream(pvmDefinition, currentActivityId, targetActivityId)) {
+            throw new ValidationException("Rollback target '" + targetActivityId
+                + "' is not an upstream activity of '" + currentActivityId + "'");
+        }
 
         // 记录回退操作（在执行回退之前）
         IdGenerator idGenerator = processEngineConfiguration.getIdGenerator();
@@ -386,15 +427,86 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
         rollbackRecordStorage.insert(record, processEngineConfiguration);
 
-        // 执行回退
-        return executionCommandService.jumpTo(
+        // 取消当前 pending 任务（历史保留：pending -> canceled），而不是像旧实现那样
+        // 把任务留在原地造成"回退后旧任务仍然存活"的空转语义。
+        MarkDoneUtil.markDoneTaskInstance(taskInstance, TaskInstanceConstant.CANCELED,
+            TaskInstanceConstant.PENDING, null, taskInstanceStorage, processEngineConfiguration);
+
+        // 停用被放弃分支上停留在当前节点的活跃 execution（jumpTo 只创建目标 execution，
+        // 不会处理旧分支——旧的活跃 execution 若不停用，会与回退产生双活分支）。
+        List<ExecutionInstance> activeExecutions = executionInstanceStorage.findActiveExecution(
+            processInstance.getInstanceId(), tenantId, processEngineConfiguration);
+        if (null != activeExecutions) {
+            for (ExecutionInstance executionInstance : activeExecutions) {
+                if (currentActivityId.equals(executionInstance.getProcessDefinitionActivityId())) {
+                    MarkDoneUtil.markDoneExecutionInstance(executionInstance, executionInstanceStorage,
+                        processEngineConfiguration);
+                }
+            }
+        }
+
+        // 重建目标 execution 并按目标节点的正常 behavior 进入：userTask 节点会在进入时
+        // 按定义解析 assignee 并创建新的 pending task，同时通过 TaskEventPublisher SPI
+        // 触发标准引擎事件（task_assigned 等）。
+        ProcessInstance jumpedInstance = executionCommandService.jumpTo(
             taskInstance.getProcessInstanceId(),
-            processInstance.getProcessDefinitionId(),
-            processInstance.getProcessDefinitionVersion(),
+            processDefinitionId,
+            version,
             processInstance.getStatus(),
             targetActivityId,
             tenantId
         );
+
+        List<ActivityInstance> jumpedActivityInstances = jumpedInstance.getActivityInstances();
+        ActivityInstance targetActivityInstance = jumpedActivityInstances.isEmpty()
+            ? null
+            : jumpedActivityInstances.get(jumpedActivityInstances.size() - 1);
+        ExecutionInstance targetExecution = null;
+        if (targetActivityInstance != null && null != targetActivityInstance.getExecutionInstanceList()
+            && !targetActivityInstance.getExecutionInstanceList().isEmpty()) {
+            List<ExecutionInstance> targetExecutionList = targetActivityInstance.getExecutionInstanceList();
+            targetExecution = targetExecutionList.get(targetExecutionList.size() - 1);
+        }
+        if (targetActivityInstance == null || targetExecution == null) {
+            throw new ValidationException("Rollback jump produced no target execution for activity: "
+                + targetActivityId);
+        }
+
+        ProcessDefinition processDefinition = processContainer.getProcessDefinition(
+            processDefinitionId, version, tenantId);
+        ExecutionContext executionContext = contextFactory.createSignalContext(
+            null, processEngineConfiguration, targetExecution, targetActivityInstance,
+            jumpedInstance, processDefinition);
+        targetActivity.enter(executionContext);
+
+        return jumpedInstance;
+    }
+
+    /**
+     * 反向可达性判定：从 {@code fromActivityId} 沿 income transitions 反向遍历，
+     * 判断 {@code candidateId} 是否是它的上游节点。访问环由 visited 集合剪枝。
+     */
+    private boolean isUpstream(PvmProcessDefinition pvmDefinition, String fromActivityId, String candidateId) {
+        java.util.Deque<String> pending = new java.util.ArrayDeque<>();
+        java.util.Set<String> visited = new java.util.HashSet<>();
+        pending.add(fromActivityId);
+        visited.add(fromActivityId);
+        while (!pending.isEmpty()) {
+            PvmActivity current = pvmDefinition.getActivities().get(pending.poll());
+            if (current == null) {
+                continue;
+            }
+            for (PvmTransition incoming : current.getIncomeTransitions().values()) {
+                String sourceId = incoming.getSource().getModel().getId();
+                if (candidateId.equals(sourceId)) {
+                    return true;
+                }
+                if (visited.add(sourceId)) {
+                    pending.add(sourceId);
+                }
+            }
+        }
+        return false;
     }
 
     @Override
