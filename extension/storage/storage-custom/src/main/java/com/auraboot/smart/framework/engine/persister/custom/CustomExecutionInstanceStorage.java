@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.auraboot.smart.framework.engine.common.util.InstanceUtil;
 import com.auraboot.smart.framework.engine.configuration.ProcessEngineConfiguration;
+
 import com.auraboot.smart.framework.engine.exception.EngineException;
 import com.auraboot.smart.framework.engine.extension.annotation.ExtensionBinding;
 import com.auraboot.smart.framework.engine.extension.constant.ExtensionConstant;
@@ -86,14 +87,30 @@ public class CustomExecutionInstanceStorage implements ExecutionInstanceStorage 
     @Override
     public ExecutionInstance findWithShading(String processInstanceId, String executionInstanceId,String tenantId,
                                              ProcessEngineConfiguration processEngineConfiguration) {
-        throw new EngineException(NOT_IMPLEMENT_INTENTIONALLY);
-
+        ProcessInstance owner = PersisterSessionTreeUtil.findProcessInstance(
+            PersisterSession.currentSession(), processInstanceId);
+        return owner == null ? null
+            : PersisterSessionTreeUtil.findExecutionInstanceIn(owner, executionInstanceId);
     }
 
     @Override
     public void remove(String instanceId,String tenantId,
                        ProcessEngineConfiguration processEngineConfiguration) {
-        throw new EngineException(NOT_IMPLEMENT_INTENTIONALLY);
+        PersisterSession session = PersisterSession.currentSession();
+        for (ProcessInstance processInstance : session.getProcessInstances().values()) {
+            List<ActivityInstance> activityInstances = processInstance.getActivityInstances();
+            if (activityInstances == null) {
+                continue;
+            }
+            for (ActivityInstance activityInstance : activityInstances) {
+                List<ExecutionInstance> executionInstances = activityInstance.getExecutionInstanceList();
+                if (executionInstances == null) {
+                    continue;
+                }
+                executionInstances.removeIf(executionInstance ->
+                    executionInstance != null && instanceId.equals(executionInstance.getInstanceId()));
+            }
+        }
     }
 
     @Override
