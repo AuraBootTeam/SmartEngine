@@ -474,10 +474,41 @@ public class DefaultTaskCommandService implements TaskCommandService, LifeCycleH
 
         ProcessDefinition processDefinition = processContainer.getProcessDefinition(
             processDefinitionId, version, tenantId);
+        // 请求体传空 Map 而非 null:assignee 解析器会用请求上下文构造变量表,
+        // null 会在候选解析时 NPE(被捕获后候选列表为空,新任务无人认领)。
         ExecutionContext executionContext = contextFactory.createSignalContext(
-            null, processEngineConfiguration, targetExecution, targetActivityInstance,
+            new java.util.HashMap<>(), processEngineConfiguration, targetExecution, targetActivityInstance,
             jumpedInstance, processDefinition);
         targetActivity.enter(executionContext);
+
+        // enter() built its own target activity/execution/task in memory
+        // (context now points at them). Persist that delta explicitly — the
+        // jumpTo shell is already persisted, and re-inserting it would collide
+        // on se_activity_instance's primary key. Without this the re-opened
+        // task never reaches se_task_instance and the rollback is a silent
+        // no-op.
+        ActivityInstance enteredActivity = executionContext.getActivityInstance();
+        if (enteredActivity != null) {
+            activityInstanceStorage.insert(enteredActivity, processEngineConfiguration);
+        }
+        // enter()'s own execution (NOT the jumpTo shell — that one is already
+        // persisted by jumpTo's createExecution) carries the fresh task.
+        ExecutionInstance enteredExecution = executionContext.getExecutionInstance();
+        if (enteredExecution != null) {
+            executionInstanceStorage.insert(enteredExecution, processEngineConfiguration);
+        }
+        TaskInstance createdTask = enteredExecution == null ? null : enteredExecution.getTaskInstance();
+        if (createdTask != null) {
+            taskInstanceStorage.insert(createdTask, processEngineConfiguration);
+            List<TaskAssigneeInstance> createdAssignees = createdTask.getTaskAssigneeInstanceList();
+            if (null != createdAssignees) {
+                for (TaskAssigneeInstance assigneeInstance : createdAssignees) {
+                    assigneeInstance.setProcessInstanceId(createdTask.getProcessInstanceId());
+                    assigneeInstance.setTaskInstanceId(createdTask.getInstanceId());
+                    taskAssigneeStorage.insert(assigneeInstance, processEngineConfiguration);
+                }
+            }
+        }
 
         return jumpedInstance;
     }
