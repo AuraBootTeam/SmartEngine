@@ -1,8 +1,11 @@
 package com.auraboot.smart.framework.engine.test.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.auraboot.smart.framework.engine.constant.AssigneeTypeConstant;
+import com.auraboot.smart.framework.engine.constant.RequestMapSpecialKeyConstant;
 import com.auraboot.smart.framework.engine.model.assembly.ProcessDefinition;
 import com.auraboot.smart.framework.engine.model.instance.ProcessInstance;
 import com.auraboot.smart.framework.engine.model.instance.TaskAssigneeCandidateInstance;
@@ -60,20 +63,36 @@ public class TaskCommandServiceOperatorUserTest extends DatabaseBaseTestCase {
 
     @Test
     public void explicitOperatorIsRecordedForRollbackOnUnclaimedTask() throws Exception {
-        ProcessInstance processInstance = startSingleUserTaskProcess();
-        TaskInstance taskInstance = findOnlyPendingTask(processInstance);
-        Assert.assertNull(taskInstance.getClaimUserId());
+        ProcessDefinition processDefinition = repositoryCommandService
+            .deploy("double-usertask-rollback.bpmn20.xml").getFirstProcessDefinition();
+        ProcessInstance processInstance = processCommandService.start(
+            processDefinition.getId(), processDefinition.getVersion());
 
-        taskCommandService.rollbackTask(
-            taskInstance.getInstanceId(), "userTask1", "rollback for correction", "operator-rollback", null);
+        // 认领并完成 userTask1 上的任务，流程推进到 userTask2
+        TaskInstance firstTask = findOnlyPendingTask(processInstance);
+        Map<String, Object> completeRequest = new HashMap<>();
+        completeRequest.put(RequestMapSpecialKeyConstant.TASK_INSTANCE_CLAIM_USER_ID, "1");
+        taskCommandService.complete(firstTask.getInstanceId(), completeRequest);
+
+        // userTask2 上的待办任务未被认领；回退目标必须是当前节点的上游节点 userTask1
+        TaskInstance unclaimedTask = findOnlyPendingTask(processInstance);
+        Assert.assertEquals("userTask2", unclaimedTask.getProcessDefinitionActivityId());
+        Assert.assertNull(unclaimedTask.getClaimUserId());
+
+        ProcessInstance rolledBackInstance = taskCommandService.rollbackTask(
+            unclaimedTask.getInstanceId(), "userTask1", "rollback for correction", "operator-rollback", null);
 
         List<RollbackRecordEntity> records = rollbackRecordDAO
             .selectByProcessInstanceId(Long.valueOf(processInstance.getInstanceId()), null);
 
         Assert.assertEquals(1, records.size());
         Assert.assertEquals("operator-rollback", records.get(0).getOperatorUserId());
-        Assert.assertEquals("userTask1", records.get(0).getFromActivityId());
+        Assert.assertEquals("userTask2", records.get(0).getFromActivityId());
         Assert.assertEquals("userTask1", records.get(0).getToActivityId());
+
+        // 回退后 userTask1 上重新生成待办任务
+        TaskInstance newTask = findOnlyPendingTask(rolledBackInstance);
+        Assert.assertEquals("userTask1", newTask.getProcessDefinitionActivityId());
     }
 
     private ProcessInstance startSingleUserTaskProcess() throws Exception {
